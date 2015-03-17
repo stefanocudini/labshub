@@ -6,8 +6,8 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="google-site-verification" content="rO0NU6dhQAZpHrpdYc8J0m55wJ7xwUk7eDO8Ahj6k5U" />
-	<link rel="image_src" href="http://labs.easyblog.it/images/logo.png" />
-	<link rel="stylesheet" type="text/css" href="../labs.css" />
+	<link rel="image_src" href="../images/logo.png" />
+	<link rel="stylesheet" type="text/css" href="../index.css" />
 <style>
 body {
 	background:url('../images/backmap.jpg') top left #EEFAF6;
@@ -36,13 +36,12 @@ li a {
 #leaflet-plugins {
 	background: url('../images/leaflet-logo.png') no-repeat top center;	
 	padding-top: 5em;
-	margin-top: 2em;
+	margin-top: 100px;
 }
 </style>
 </head>
 <body>
 <div id="content">
-	<div id="bubbles"></div>
 	<h1><img height="50" width="50" alt="logo easyblog" src="../images/logo.png"> Easyblog.it  <em> &bull;&nbsp;Labs</em></h1>
 	<p id="desc">
 		<b>Web Mapping Applications</b>
@@ -87,7 +86,10 @@ li a {
 			</li>
 			<li><a href="/maps/leaflet-layerjson/">Leaflet Dynamic JSON Layer</a><br />
 				Build <b>dynamic JSON Layer</b> via Ajax/JSONP with <b>Caching requests</b>.
-			</li>			
+			</li>
+			<li><a href="/maps/leaflet-geojson-encoded/">Leaflet.GeoJSON.Encoded</a><br />
+				Leaflet plugin extends <b>L.GeoJSON</b> layer using <b>Google polyline encoding algorithm</b>.
+			</li>
 			<li><a href="/maps/leaflet-gps/">Leaflet Control Gps</a><br />
 				Simple Leaflet Control plugin for <b>tracking gps</b> position, highly customizable.
 			</li>
@@ -102,7 +104,11 @@ li a {
 			</li>
 		</ul>
 	</div>
-	<div id="footer">&copy; Stefano Cudini</div>	
+	<div id="footer">powered by <a href="http://gruntjs.com/" target="_blank"><b>GruntJs</b></a></div>
+	<a id="ribbon" href="https://github.com/stefanocudini/labs.easyblog.it/">
+		<img src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
+	</a>	
+	<div id="bubbles"></div>	
 </div>
 <script src="/labs-common.js"></script>
 </body>
