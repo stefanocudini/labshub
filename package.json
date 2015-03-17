@@ -1,0 +1,223 @@
+{
+  "name": "labs.easyblog.it",
+  "description": "Advanced Web Applications dev by",
+  "license": "MIT",
+  "homepage": "http://labs.easyblog.it/",
+  "keywords": [
+    "jquery",
+    "javascript",
+    "grunt",
+    "html5"
+  ],
+  "version": "0.1.0",
+  "author": {
+    "name": "Stefano Cudini",
+    "gitusername": "stefanocudini",
+    "email": "stefano.cudini@gmail.com",
+    "url": "http://labs.easyblog.it/stefano-cudini/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefanocudini/labs.easyblog.it"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sitemap": "^1.2.1",
+    "handlebars": "^3.0.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "lodash": "^3.5.0",
+    "marked": "~0.3.3",
+    "underscore": "^1.8.2",
+    "underscore.string": "^3.0.3"
+  },
+  "apps": {
+    "bootstrap-confirm-button": {
+      "tags": "bootstrap,javascript,css3",
+      "stars": 2
+    },
+    "bootstrap-list-filter": {
+      "tags": "bootstrap,javascript,css3",
+      "stars": 2
+    },
+    "crop-avatar": {
+      "tags": "jquery,jquery-ui,ajax,mysql",
+      "stars": 2
+    },
+    "demo": {
+      "tags": "jquery,ajax,php,html5",
+      "stars": 3
+    },
+    "dirgraph": {
+      "tags": "jquery,json,php",
+      "stars": 1
+    },
+    "diz": {
+      "tags": "jquery,sqlite,mysql,php,postgresql,ajax,pdo",
+      "stars": 1
+    },
+    "dns-320-command-line": {
+      "tags": "php,bash",
+      "stars": 3
+    },
+    "download-limiter-php": {
+      "tags": "php,jquery,apache",
+      "stars": 2
+    },
+    "effectize": {
+      "tags": "jquery,css3",
+      "stars": 2
+    },
+    "googletrace": {
+      "tags": "map,jquery,ajax,geojson,openlayers",
+      "stars": 3
+    },
+    "gps-network-tracking-system": {
+      "tags": "map,gis,jquery-ui,postgis,ajax,openlayers,gps",
+      "stars": 3
+    },
+    "gpx-simplify-optimizer": {
+      "tags": "map,gis,leaflet,html5,bootstrap",
+      "stars": 3
+    },
+    "gpsdata_server": {
+      "tags": "gps,nodejs,bash,javascript,websocket,debian,mysql",
+      "stars": 3
+    },
+    "jsautocompiler": {
+      "tags": "php,javascript,apache",
+      "stars": 2
+    },
+    "json-indent-beautifier": {
+      "tags": "json,javascript,php,ajax",
+      "stars": 1
+    },
+    "jquery-filterbox": {
+      "tags": "jquery,css3",
+      "stars": 2
+    },
+    "jquery-jsonbuilder": {
+      "tags": "jquery,json",
+      "stars": 1
+    },
+    "labs.easyblog.it": {
+      "tags": "jquery,php,html5,bash,mercurial",
+      "stars": 3
+    },
+    "leaflet-layerjson": {
+      "tags": "map,leaflet,json,ajax,css3,jsonp",
+      "stars": 3
+    },
+    "leaflet-compass": {
+      "tags": "map,leaflet,html5,css3",
+      "stars": 3
+    },
+    "leaflet-list-markers": {
+      "tags": "map,leaflet,json,css3",
+      "stars": 2
+    },
+    "leaflet-loader": {
+      "tags": "map,leaflet,json,css3",
+      "stars": 2
+    },
+    "leaflet-panel-layers": {
+      "tags": "map,leaflet,json,css3",
+      "stars": 3
+    },
+    "leaflet-search": {
+      "tags": "map,leaflet,json,ajax,css3,jsonp",
+      "stars": 3
+    },
+    "leaflet-gps": {
+      "tags": "map,gps,leaflet,json,ajax,css3,jsonp,html5",
+      "stars": 3
+    },
+    "lesscss": {
+      "tags": "javascript,ajax,css3,lesscss",
+      "stars": 1
+    },
+    "mega-python-commandline-tools": {
+      "tags": "python,bash",
+      "stars": 1
+    },
+    "mixtags.com": {
+      "tags": "jquery,css3,ajax,gruntjs,json,mysql,html5",
+      "stars": 3
+    },
+    "mobile-web-monitor": {
+      "tags": "jquery,bash,debian,gruntjs,php",
+      "stars": 2
+    },
+    "osm-contributors-by-area": {
+      "tags": "jquery,osm,leaflet,bootstrap",
+      "stars": 3
+    },
+    "phpdoc": {
+      "tags": "jquery,ajax,php,mysql,sqlite",
+      "stars": 1
+    },
+    "python-geotiff-picker": {
+      "tags": "python,gis,json,map",
+      "stars": 2
+    },
+    "qr-code-generator": {
+      "tags": "php,jquery,ajax",
+      "stars": 1
+    },
+    "randomcolor": {
+      "tags": "javascript,jquery",
+      "stars": 1
+    },
+    "realtime-access-map": {
+      "tags": "map,openlayers,geoip,apache,geojson,ajax",
+      "stars": 2
+    },
+    "realtime-access-tracking": {
+      "tags": "nodejs,php,python,websocket,bash",
+      "stars": 2
+    },
+    "routeservice": {
+      "tags": "map,openlayers,php,geojson,jsonp",
+      "stars": 2
+    },
+    "scacchi": {
+      "tags": "jquery,websocket,php",
+      "stars": 2
+    },
+    "share-tracks": {
+      "tags": "leaflet,map,gpx",
+      "stars": 2
+    },
+    "share-location": {
+      "tags": "leaflet,map,gpx,gps",
+      "stars": 2
+    }
+  },
+  "appsignore": [
+    "arbor",
+    "csscompiler",
+    "dirgraph",
+    "divx",
+    "diz",
+    "jqueryapi",
+    "jquery-better-autocomplete",
+    "jquery-tmpl",
+    "jquery-ui.anglepicker",
+    "labs.easyblog.it",
+    "leaflet-master",
+    "leaflet-plugins",
+    "luna",
+    "myip",
+    "node-websocket-server",
+    "picasaweb",
+    "sendmsn",
+    "share-location",
+    "websocket-client"
+  ]
+}

@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow: /portfolio/
+Disallow: /portfolio/abramomax.it/

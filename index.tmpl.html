@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>{{pkg.name}}</title>
+	<meta name="description" content="{{pkg.description}}" />
+	<meta name="author" content="{{pkg.author.name}}" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="google-site-verification" content="rO0NU6dhQAZpHrpdYc8J0m55wJ7xwUk7eDO8Ahj6k5U" />
+	<link rel="image_src" href="logo.png" />
+	<link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<body>
+<div id="content">
+	<div id="bubbles"></div>
+	<h1><img height="50" width="50" alt="logo easyblog" src="logo.png" /> {{pkg.name}}</h1>
+	<p id="desc">
+		{{pkg.description}} <a href="{{pkg.author.url}}" rel="author"><b>{{pkg.author.name}}</b></a>.
+		<br />
+		<!-- TODO SUB SECTIONS -->
+		<a href="web-mapping/"><b>Web Mapping</b></a>, <a href="web-mapping/#leaflet-plugins"><b>Leaflet plugins</b></a> and <b>WebGIS</b>. 
+		<br />
+	</p>
+	<div id="likepage">
+		<iframe src="http://ghbtns.com/github-btn.html?user={{pkg.author.gitusername}}&count=true&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="185" height="20"></iframe>
+	</div>
+	<div id="tech">
+		<h4>Topics</h4>
+		<div id="tags">
+
+		{{#each tags}}
+			<a class="tag" href="#{{this}}"><b>&bull; </b><span>{{this}}</span></a>
+		{{/each}}
+		
+		</div>
+		<br />		
+		<h4 style="float:left">Applications</h4>
+		<input style="float:right" id="findapps" type="text" size="16" />		
+		<br />
+	</div>
+	<br />
+	<div id="actives">
+
+	{{#each apps}}
+		{{#with this}}
+		<div class="box" data-title="{{title}}">
+			<h5><a href="{{url}}">{{title}}</a></h5>
+			<div class="stars" title="complexity">
+			{{#each stars}}
+				<i class="icon{{#if this}} start {{else}} unstar {{/if}}"></i>
+			{{/each}}
+			</div>
+			<p class="desc">{{description}}</p>
+			<div class="repos">
+				<a class="icon {{repository.type}}" target="_blank" href="{{repository.url}}"></a>
+			</div>
+			<div class="tags" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
+			{{#each tags}}
+				<a class="tag" href="#{{this}}"><b>&bull; </b><span>{{this}}</span></a>
+			{{/each}}
+			</div>
+		</div>
+		{{/with}}
+	{{/each}}
+
+	</div>
+
+	<div id="deactives">
+	</div>
+	<div id="footer">&copy; {{pkg.author.name}}</div>
+</div>
+
+<script>
+	var allTags = {{{tagsjson}}};
+</script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="index.js"></script>
+<script src="labs-common.js"></script>
+
+</body>
+</html>

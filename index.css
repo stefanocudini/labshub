@@ -1,0 +1,306 @@
+body {
+	background:#f2f9ff;
+	margin:0;
+	padding:0;
+	color:#666;
+	font-family:Arial;
+}
+#content {
+	margin:2em auto;
+	/*width:49em;*/
+	width:900px;
+	max-width:90%;
+	padding:16px;
+	border:2px solid #c5cdd4;
+	border-radius:.6em;
+	position:relative;
+	box-shadow: 0 0 18px rgba(90,90,90,0.15);
+	background:#fff;	
+}
+#footer {
+	font-style: italic;
+	font-size: small;
+	color: #c5cdd4;
+	text-align: center;
+	margin-top: 100px;
+}
+#desc {
+	margin:0 120px 0 0;
+	font-size:.85em;
+	line-height:1.35em;
+}
+#likepage {
+	margin:0;
+	min-height: 2em;
+	float:right;
+	clear: both;
+	text-align: right;
+}
+#tech {
+	clear:both;
+}
+#bubbles {
+	position:absolute;
+	top:-34px;
+	right:24px;
+	z-index: 0;	
+	width:120px;
+	height:160px;
+	background: url('labs.png') center -70px no-repeat;
+	opacity: 0.8
+}
+h1 {
+	position: relative;
+	color:#f90;
+	font-size:2em;
+	letter-spacing:.125em;
+	text-shadow: 0 0 6px #ccd;
+	margin:10px 0;
+	z-index: 100
+}
+h1 em {
+	color:  #aae;
+	font-size:.65em;
+}
+h1 img {
+	vertical-align: middle;
+}
+h4 {
+	margin:10px 0 2px 0;
+	color: #c5cdd4;
+	font-size:1em;
+}
+hr {
+	border:none;
+	border-top:2px solid #c5cdd4;
+	margin:20px 0;
+	clear:both;
+}
+label {
+	margin:2px;
+}
+a {
+	color:#f80;
+	text-decoration:none;
+}
+a:hover {
+	color:#635f94;
+	text-decoration:underline;
+}
+#findapps {
+	border:1px solid #c5cdd4;
+    background:#fff;	
+	color: #666;
+	border-radius: .4em;
+	margin:.5em 0;
+	background:url('labs.png') no-repeat 0 -20px;
+	padding-left:20px;
+	height:22px;
+	line-height:22px;
+}
+#findapps.inactive {
+	color: #ccc;
+	font-style: italic;
+}
+
+
+#actives,
+#deactives {
+
+	overflow:hidden;
+	clear:both;
+	margin: 10px 0;
+	padding-top:10px;
+}
+#actives {
+	border:none;
+	margin-top:0;
+	padding-top:0;	
+}
+
+#feedback {
+	clear:both
+}
+
+
+#copy {
+	position:fixed;
+	z-index:1000;
+	right:-6px;
+	top:-6px;
+	font-style:italic;
+	font-size:.85em;
+	padding:5px 8px;
+	background: #fff;
+	border:2px solid #c5cdd4;
+	border-radius:.7em;
+	opacity: 0.8; 		
+}
+#tags,
+.tags {
+	clear:both;
+	overflow:hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;	
+}
+.box {
+	position:relative;
+	float:left;
+	width:28%;
+	height:9.5em;
+	background:#fffadd;
+	border:2px solid #fa3;
+	margin:0 1.2em 1.2em 0;
+	padding:.5em;
+	border-radius:.5em;
+}
+.box.hover {
+	background:#ffecb8;
+}
+.box h5 {
+	text-transform:capitalize;
+	font-size:1em;
+	margin:0;
+}
+.icon {
+	display: inline-block;
+	float: left;
+	width:18px;
+	height:18px;
+	border-radius: 4px;
+	border: 1px solid #c1bad4;
+	background: url('labs.png') no-repeat;
+}
+.icon.git {
+	background-position: 0 0;
+}
+.icon.bit {
+	background-position: -20px 0;
+}
+.icon.hg {
+	background-position: -40px 0;
+}
+.icon.star {
+	background-position: -90px 0;
+}
+.icon.unstar {
+	background-position: -110px 0;
+}
+.stars {
+	height:18px;
+	float:right;
+	clear:both;
+}
+.repos {
+	height: 20px;
+}
+.stars .icon {
+	border: none;
+}
+.repos .icon {
+	margin-right: 5px;	
+	background-color: #fff;	
+}
+.desc {
+	clear:both;
+	height: 3.8em;
+	font-size:.7em;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+}
+.tags {
+	margin:.25em -0.125em .25em -0.125em;
+	height:4.5em;
+}
+a.tag {
+	cursor:pointer;
+	float:left;
+	display:block;
+	margin:.125em;
+	border-radius:.4em;
+	background:#d4cce8;
+	border:1px solid #c1bad4;
+	color:#5a6770;
+	padding:2px 4px;
+	text-decoration:none;
+	font-size:.75em;
+	box-shadow: 1px 1px 1px #ddd;
+}
+#tags a.tag {
+	margin:.25em;
+}
+a.tag.sel {
+	border:1px solid #f80;
+	background:#fa4;
+}
+
+a.tag b {
+	color:#fff;
+	text-shadow: -1px -1px 0 #aaa;
+}
+a.tag small {
+	display:none;
+}
+a.tag.sel small {
+	display:inline;
+}
+
+a.tag:hover,
+a.tag.sel:hover {
+	color:#fff;
+	text-decoration:none;
+}
+
+#deactives .box {
+	background:#f2f2f2;
+	border:2px solid #d4d4d4;
+	color: #666;
+	font-size:.85em;
+	width:20.4%;
+	height:10em;	
+}
+#deactives a {
+	color: #5a6770
+}
+#deactives .tag {
+	box-shadow: none;
+}
+#deactives .box.hover {
+	background:#ffe6a1;
+	border:2px solid #f80;
+}
+#deactives .desc {
+	height:5em;
+}
+#deactives .tags {
+	height:4.5em;
+}
+#deactives .stars {
+	display:none;
+}
+#deactives .repos {
+	display:none;
+}
+
+@media screen and (max-width: 420px) {
+	#content {
+		padding:16px 8px;
+		margin:2em 0;
+		width:auto;
+		max-width:100%;
+		border-left:none;
+		border-right:none;
+		border-radius:0;
+	}
+	#desc {
+		margin:0;
+	}
+	.box {
+		min-width:284px;
+	}
+}
