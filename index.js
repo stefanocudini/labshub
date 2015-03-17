@@ -20,7 +20,7 @@ $(function() {
 		allTagsFalse = allFalse;
 	}
 	
-	function filterBox(box$,active)
+	function filterBox(box$, active)
 	{		
 		if(active)
 		{
@@ -36,11 +36,11 @@ $(function() {
 	{	
 		boxes$.each(function() {
 			
-			var boxTags = $(this).children('.tags').data('tags').split(',');
+			var boxTags = $(this).data('tags').split(',');
 			//i tags del box
 			
 			var active = false;
-			for(t in boxTags)
+			for(var t in boxTags)
 				if(allTags[boxTags[t]])
 					active = true;
 				//se il tag e' tra quell attivi show=true senno show RIMANE INVARIATO al valore precedente
@@ -48,7 +48,7 @@ $(function() {
 			if(allTagsFalse)	//se tutti i tags sono disattivi non filtra nulla! e li mostra tutti
 				active = true;
 			
-			filterBox($(this),active);
+			filterBox($(this), active);
 
 		});//*/
 	}

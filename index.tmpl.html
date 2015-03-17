@@ -42,18 +42,18 @@
 
 	{{#each apps}}
 		{{#with this}}
-		<div class="box" data-title="{{title}}">
+		<div class="box" data-title="{{title}}" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
 			<h5><a href="{{url}}">{{title}}</a></h5>
 			<div class="stars" title="complexity">
 			{{#each stars}}
-				<i class="icon{{#if this}} start {{else}} unstar {{/if}}"></i>
+				<i class="icon{{#if this}} star {{else}} unstar {{/if}}"></i>
 			{{/each}}
 			</div>
 			<p class="desc">{{description}}</p>
 			<div class="repos">
 				<a class="icon {{repository.type}}" target="_blank" href="{{repository.url}}"></a>
 			</div>
-			<div class="tags" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
+			<div class="tags">
 			{{#each tags}}
 				<a class="tag" href="#{{this}}"><b>&bull; </b><span>{{this}}</span></a>
 			{{/each}}
@@ -64,9 +64,9 @@
 
 	</div>
 
-	<div id="deactives">
-	</div>
-	<div id="footer">&copy; {{pkg.author.name}}</div>
+	<div id="deactives"></div>
+	
+	<div id="footer">&copy; {{pkg.author.name}} &bull; powered by <a href="http://gruntjs.com/" target="_blank">GruntJs</a></div>
 </div>
 
 <script>

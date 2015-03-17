@@ -35,168 +35,129 @@
     "lodash": "^3.5.0",
     "marked": "~0.3.3",
     "underscore": "^1.8.2",
-    "underscore.string": "^3.0.3"
+    "underscore.string": "^3.0.3",
+    "bootstrap": "~3.3.4"
   },
   "apps": {
     "bootstrap-confirm-button": {
-      "tags": "bootstrap,javascript,css3",
-      "stars": 2
+      "tags": "bootstrap,javascript,css3", "stars": 2
     },
     "bootstrap-list-filter": {
-      "tags": "bootstrap,javascript,css3",
-      "stars": 2
+      "tags": "bootstrap,javascript,css3", "stars": 2
     },
     "crop-avatar": {
-      "tags": "jquery,jquery-ui,ajax,mysql",
-      "stars": 2
+      "tags": "jquery,jquery-ui,ajax,mysql", "stars": 2
     },
     "demo": {
-      "tags": "jquery,ajax,php,html5",
-      "stars": 3
+      "tags": "jquery,ajax,php,html5", "stars": 3
     },
     "dirgraph": {
-      "tags": "jquery,json,php",
-      "stars": 1
+      "tags": "jquery,json,php", "stars": 1
     },
     "diz": {
-      "tags": "jquery,sqlite,mysql,php,postgresql,ajax,pdo",
-      "stars": 1
+      "tags": "jquery,sqlite,mysql,php,postgresql,ajax,pdo", "stars": 1
     },
     "dns-320-command-line": {
-      "tags": "php,bash",
-      "stars": 3
+      "tags": "php,bash", "stars": 3
     },
     "download-limiter-php": {
-      "tags": "php,jquery,apache",
-      "stars": 2
+      "tags": "php,jquery,apache", "stars": 2
     },
     "effectize": {
-      "tags": "jquery,css3",
-      "stars": 2
+      "tags": "jquery,css3", "stars": 2
     },
     "googletrace": {
-      "tags": "map,jquery,ajax,geojson,openlayers",
-      "stars": 3
+      "tags": "map,jquery,ajax,geojson,openlayers", "stars": 3
     },
     "gps-network-tracking-system": {
-      "tags": "map,gis,jquery-ui,postgis,ajax,openlayers,gps",
-      "stars": 3
+      "tags": "map,gis,jquery-ui,postgis,ajax,openlayers,gps", "stars": 3
     },
     "gpx-simplify-optimizer": {
-      "tags": "map,gis,leaflet,html5,bootstrap",
-      "stars": 3
+      "tags": "map,gis,leaflet,html5,bootstrap", "stars": 3
     },
     "gpsdata_server": {
-      "tags": "gps,nodejs,bash,javascript,websocket,debian,mysql",
-      "stars": 3
+      "tags": "gps,nodejs,bash,javascript,websocket,debian,mysql", "stars": 3
     },
     "jsautocompiler": {
-      "tags": "php,javascript,apache",
-      "stars": 2
+      "tags": "php,javascript,apache", "stars": 2
     },
     "json-indent-beautifier": {
-      "tags": "json,javascript,php,ajax",
-      "stars": 1
+      "tags": "json,javascript,php,ajax", "stars": 1
     },
     "jquery-filterbox": {
-      "tags": "jquery,css3",
-      "stars": 2
+      "tags": "jquery,css3", "stars": 2
     },
     "jquery-jsonbuilder": {
-      "tags": "jquery,json",
-      "stars": 1
+      "tags": "jquery,json", "stars": 1
     },
     "labs.easyblog.it": {
-      "tags": "jquery,php,html5,bash,mercurial",
-      "stars": 3
+      "tags": "jquery,php,html5,bash,mercurial", "stars": 3
     },
     "leaflet-layerjson": {
-      "tags": "map,leaflet,json,ajax,css3,jsonp",
-      "stars": 3
+      "tags": "map,leaflet,json,ajax,css3,jsonp", "stars": 3
     },
     "leaflet-compass": {
-      "tags": "map,leaflet,html5,css3",
-      "stars": 3
+      "tags": "map,leaflet,html5,css3", "stars": 3
     },
     "leaflet-list-markers": {
-      "tags": "map,leaflet,json,css3",
-      "stars": 2
+      "tags": "map,leaflet,json,css3", "stars": 2
     },
     "leaflet-loader": {
-      "tags": "map,leaflet,json,css3",
-      "stars": 2
+      "tags": "map,leaflet,json,css3", "stars": 2
     },
     "leaflet-panel-layers": {
-      "tags": "map,leaflet,json,css3",
-      "stars": 3
+      "tags": "map,leaflet,json,css3", "stars": 3
     },
     "leaflet-search": {
-      "tags": "map,leaflet,json,ajax,css3,jsonp",
-      "stars": 3
+      "tags": "map,leaflet,json,ajax,css3,jsonp", "stars": 3
     },
     "leaflet-gps": {
-      "tags": "map,gps,leaflet,json,ajax,css3,jsonp,html5",
-      "stars": 3
+      "tags": "map,gps,leaflet,json,ajax,css3,jsonp,html5", "stars": 3
     },
     "lesscss": {
-      "tags": "javascript,ajax,css3,lesscss",
-      "stars": 1
+      "tags": "javascript,ajax,css3,lesscss", "stars": 1
     },
     "mega-python-commandline-tools": {
-      "tags": "python,bash",
-      "stars": 1
+      "tags": "python,bash", "stars": 1
     },
     "mixtags.com": {
-      "tags": "jquery,css3,ajax,gruntjs,json,mysql,html5",
-      "stars": 3
+      "tags": "jquery,css3,ajax,gruntjs,json,mysql,html5", "stars": 3
     },
     "mobile-web-monitor": {
-      "tags": "jquery,bash,debian,gruntjs,php",
-      "stars": 2
+      "tags": "jquery,bash,debian,gruntjs,php", "stars": 2
     },
     "osm-contributors-by-area": {
-      "tags": "jquery,osm,leaflet,bootstrap",
-      "stars": 3
+      "tags": "jquery,osm,leaflet,bootstrap", "stars": 3
     },
     "phpdoc": {
-      "tags": "jquery,ajax,php,mysql,sqlite",
-      "stars": 1
+      "tags": "jquery,ajax,php,mysql,sqlite", "stars": 1
     },
     "python-geotiff-picker": {
-      "tags": "python,gis,json,map",
-      "stars": 2
+      "tags": "python,gis,json,map", "stars": 2
     },
     "qr-code-generator": {
-      "tags": "php,jquery,ajax",
-      "stars": 1
+      "tags": "php,jquery,ajax", "stars": 1
     },
     "randomcolor": {
-      "tags": "javascript,jquery",
-      "stars": 1
+      "tags": "javascript,jquery", "stars": 1
     },
     "realtime-access-map": {
-      "tags": "map,openlayers,geoip,apache,geojson,ajax",
-      "stars": 2
+      "tags": "map,openlayers,geoip,apache,geojson,ajax", "stars": 2
     },
     "realtime-access-tracking": {
-      "tags": "nodejs,php,python,websocket,bash",
-      "stars": 2
+      "tags": "nodejs,php,python,websocket,bash", "stars": 2
     },
     "routeservice": {
-      "tags": "map,openlayers,php,geojson,jsonp",
-      "stars": 2
+      "tags": "map,openlayers,php,geojson,jsonp", "stars": 2
     },
     "scacchi": {
-      "tags": "jquery,websocket,php",
-      "stars": 2
+      "tags": "jquery,websocket,php", "stars": 2
     },
     "share-tracks": {
-      "tags": "leaflet,map,gpx",
-      "stars": 2
+      "tags": "leaflet,map,gpx", "stars": 2
     },
     "share-location": {
-      "tags": "leaflet,map,gpx,gps",
-      "stars": 2
+      "tags": "leaflet,map,gpx,gps", "stars": 2
     }
   },
   "appsignore": [

@@ -17,6 +17,7 @@ module.exports = function (grunt) {
 			return grunt.file.readJSON(file);
 		}),
 		tags = _(configs).pluck('keywords').flatten().uniq().compact().value().sort(),
+		activeTags = _.object(tags, _.fill(_.range(tags.length),0) ),
 		apps = _.map(configs, function(conf) {
 			return {
 				name: conf.name,
@@ -30,10 +31,11 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('makeIndex', 'build new index.html', function() {
 
+
 		grunt.file.write('index.html', indexTmpl({
 			pkg: pkg,
 			tags: tags,
-			tagsjson: JSON.stringify(tags),
+			tagsjson: JSON.stringify( activeTags ),
 			apps: apps
 		}) );
 
@@ -59,15 +61,19 @@ module.exports = function (grunt) {
 		watch: {
 			dist: {
 				options: { livereload: true },
-				files: ['*'],
+				files: ['index.tmpl.html','index.js','index.css'],
 				tasks: ['clean','jshint']
-			}		
+			}
 		}
 	});
 
 	grunt.registerTask('default', [
 		'clean',
-		'makeIndex',
+		'makeIndex'
+	]);
+
+	grunt.registerTask('sitemap', [
+		'clean',
 		'sitemap'
 	]);
 
