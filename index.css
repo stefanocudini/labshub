@@ -27,7 +27,7 @@ body {
 	margin-top: 100px;
 	padding-right: 60px;
 	opacity: 0.6;
-	background: url('grunt.png') no-repeat right top;
+	background: url('images/grunt.png') no-repeat right top;
 	height: 60px;
 }
 #desc {
@@ -59,7 +59,7 @@ body {
 	z-index:0;	
 	width:90px;
 	height:150px;
-	background: url('labs.png') -25px -70px no-repeat;
+	background: url('images/labs.png') -25px -70px no-repeat;
 	opacity: 0.8;
 }
 h1 {
@@ -111,7 +111,7 @@ a:hover {
 	color: #666;
 	border-radius: .4em;
 	margin:0 30px;
-	background:url('labs.png') no-repeat 1px -19px;
+	background:url('images/labs.png') no-repeat 1px -19px;
 	box-shadow: inset 1px 1px 3px #ddd;
 	padding-left:20px;
 	height:24px;
@@ -192,7 +192,7 @@ a:hover {
 	height:18px;
 	border-radius: 4px;
 	border: 1px solid #c1bad4;
-	background: url('labs.png') no-repeat;
+	background: url('images/labs.png') no-repeat;
 }
 .icon.git {
 	background-position: 0 0;
