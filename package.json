@@ -1,6 +1,6 @@
 {
   "name": "labs.easyblog.it",
-  "description": "Advanced Web Applications dev by",
+  "description": "Interface navigation for Easyblog projects, with interactive filter by tags",
   "license": "MIT",
   "homepage": "http://labs.easyblog.it/",
   "keywords": [
