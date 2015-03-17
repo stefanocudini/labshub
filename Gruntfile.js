@@ -48,8 +48,11 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: pkg,
 		clean: {
-			dist: {
-				src: ['index.html','sitemap.xml']
+			index: {
+				src: ['index.html']
+			},
+			sitemap: {
+				src: ['sitemap.xml']
 			}
 		},
 		sitemap: {
@@ -68,12 +71,12 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('default', [
-		'clean',
+		'clean:index',
 		'makeIndex'
 	]);
 
 	grunt.registerTask('sitemap', [
-		'clean',
+		'clean:sitemap',
 		'sitemap'
 	]);
 
