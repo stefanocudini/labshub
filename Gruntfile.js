@@ -22,7 +22,8 @@ module.exports = function (grunt) {
 		activeTags = _.object(tags, _.fill(_.range(tags.length),0) ),
 		apps = _.map(configs, function(conf) {
 
-			conf.repository.url = conf.repository && conf.repository.url.replace('git://','https://').replace('git@github.com:','https://github.com/').replace(/\.git$/,'');
+			if(conf.repository)
+				conf.repository.url = conf.repository.url.replace('git://','https://').replace('git@github.com:','https://github.com/').replace(/\.git$/,'');
 
 			return {
 				name: conf.name,
