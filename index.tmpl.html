@@ -14,10 +14,10 @@
 <div id="content">
 	<h1><img height="50" width="50" alt="logo easyblog" src="images/logo.png"> Easyblog.it  <em> •&nbsp;Labs</em></h1>
 	<p id="desc">
-		Advanced Web Applications dev by <a href="{{pkg.author.url}}" rel="author"><b>{{pkg.author.name}}</b></a>.
+		Advanced Web Applications dev by <a href="{{pkg.author.url}}" rel="author">{{pkg.author.name}}</a>.
 		<br />
 		<!-- TODO SUB SECTIONS -->
-		<a href="web-mapping/"><b>Web Mapping</b></a>, <a href="web-mapping/#leaflet-plugins"><b>Leaflet plugins</b></a> and <b>WebGIS</b>. 
+		<a href="web-mapping/">Web Mapping</a>, <a href="web-mapping/#leaflet-plugins">Leaflet plugins</a> and <em>WebGIS</em>. 
 		<br />
 	</p>
 	<div id="likepage">
@@ -28,11 +28,11 @@
 		<div id="tags">
 
 		{{#each tags}}
-			<a class="tag" href="#{{this}}"><b>&bull; </b><span>{{this}}</span></a>
+			<a class="tag" href="#{{this}}"><span>{{this}}</span></a>
 		{{/each}}
 		
 		</div>
-		<br />		
+		<br />
 		<h4 style="float:left">Applications</h4>
 		<input style="float:right" id="findapps" type="text" size="16" />		
 		<br />
@@ -44,18 +44,16 @@
 		{{#with this}}
 		<div class="box" data-title="{{title}}" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
 			<h5><a href="{{url}}">{{title}}</a></h5>
+			<a class="icon repo {{repository.type}}" title="Github repository" target="_blank" href="{{repository.url}}"></a>
 			<div class="stars" title="complexity">
 			{{#each stars}}
-				<i class="icon{{#if this}} star {{else}} unstar {{/if}}"></i>
+				<i class="icon{{#if this}} star {{else}} unstar {{/if}}">*</i>
 			{{/each}}
 			</div>
 			<p class="desc">{{description}}</p>
-			<div class="repos">
-				<a class="icon {{repository.type}}" target="_blank" href="{{repository.url}}"></a>
-			</div>
 			<div class="tags">
 			{{#each tags}}
-				<a class="tag" href="#{{this}}"><b>&bull; </b><span>{{this}}</span></a>
+				<a class="tag" href="#{{this}}"><span>{{this}}</span></a>
 			{{/each}}
 			</div>
 		</div>

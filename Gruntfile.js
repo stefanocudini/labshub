@@ -22,8 +22,7 @@ module.exports = function (grunt) {
 		activeTags = _.object(tags, _.fill(_.range(tags.length),0) ),
 		apps = _.map(configs, function(conf) {
 
-			if(conf.repository)
-				conf.repository.url = conf.repository.url.replace('git://','https://').replace('git@github.com:','https://github.com/').replace(/\.git$/,'');
+			conf.repository.url = conf.repository && conf.repository.url.replace('git://','https://').replace('git@github.com:','https://github.com/').replace(/\.git$/,'');
 
 			return {
 				name: conf.name,
@@ -74,7 +73,7 @@ module.exports = function (grunt) {
 					livereload: true
 				},
 				files: ['index.tmpl.html','*.js'],
-				tasks: ['clean','jshint']
+				tasks: ['clean:index','makeIndex']
 			},
 			css: {
 				options: {
