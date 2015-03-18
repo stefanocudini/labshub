@@ -165,6 +165,7 @@
     "!divx",
 	"!diz",
 	"!js",
+	"!portfolio",
     "!maps/osm-contributors-by-area/*/**"
   ]
 }
