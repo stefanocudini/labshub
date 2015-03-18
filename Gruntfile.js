@@ -69,11 +69,19 @@ module.exports = function (grunt) {
 			}
 		},
 		watch: {
-			dist: {
-				options: { livereload: true },
-				files: ['index.tmpl.html','index.js','index.css'],
+			js: {
+				options: {
+					livereload: true
+				},
+				files: ['index.tmpl.html','*.js'],
 				tasks: ['clean','jshint']
-			}
+			},
+			css: {
+				options: {
+					livereload: true
+				},
+				files: ['index.css']
+			}			
 		}
 	});
 
