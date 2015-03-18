@@ -161,24 +161,10 @@
     }
   },
   "appsignore": [
-    "arbor",
-    "csscompiler",
-    "dirgraph",
-    "divx",
-    "diz",
-    "jqueryapi",
-    "jquery-better-autocomplete",
-    "jquery-tmpl",
-    "jquery-ui.anglepicker",
-    "labs.easyblog.it",
-    "leaflet-master",
-    "leaflet-plugins",
-    "luna",
-    "myip",
-    "node-websocket-server",
-    "picasaweb",
-    "sendmsn",
-    "share-location",
-    "websocket-client"
+	"!**/node_modules/**",
+    "!divx",
+	"!diz",
+	"!js",
+    "!maps/osm-contributors-by-area/*/**"
   ]
 }

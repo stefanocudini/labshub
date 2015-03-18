@@ -7,25 +7,32 @@ module.exports = function (grunt) {
 	_.str = require('underscore.string');
 
 	var pkg = grunt.file.readJSON('package.json'),
-		indexTmpl = handlebars.compile( grunt.file.read('index.tmpl.html') );
+		indexTmpl = handlebars.compile( grunt.file.read('index.tmpl.html') ),
+		patterns = _.union(['**/package.json'], pkg.appsignore);
 
-	var files = grunt.file.expand({cwd: './' }, ['**/package.json','!**/node_modules/**']),
-		dirs = _.map(files, function(file) {
-			return file.replace('package.json','index.html');
-		}),
-		configs = _.map(files, function(file) {
-			return grunt.file.readJSON(file);
+	var files = grunt.file.expand({cwd: './' }, patterns );
+
+
+	var	configs = _.map(files, function(file) {
+			var conf = grunt.file.readJSON(file);
+			conf.url = file.replace('package.json','');
+			return conf;
 		}),
 		tags = _(configs).pluck('keywords').flatten().uniq().compact().value().sort(),
 		activeTags = _.object(tags, _.fill(_.range(tags.length),0) ),
 		apps = _.map(configs, function(conf) {
+
+			if(conf.repository)
+				conf.repository.url = conf.repository.url.replace('git://','https://').replace('git@github.com:','https://github.com/').replace(/\.git$/,'');
+
 			return {
 				name: conf.name,
 				title: _.str.humanize( conf.name ),
 				description: conf.description,
-				url: conf.homepage || conf.name,
+				url: conf.url,
 				tags: conf.keywords ? conf.keywords.sort() : [],
-				stars: [1, 1, 0]
+				stars: [1, 1, 0],
+				repository: conf.repository
 			};
 		});
 
