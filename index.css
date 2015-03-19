@@ -3,7 +3,7 @@ body {
 	padding:0;
 	color:#666;
 	font-family:Arial;
-	background: #fcfcfc;
+	background: #DFF7FF;
 }
 #content {
 	margin:2em auto;
@@ -23,7 +23,7 @@ body {
 	line-height: 40px;
 	margin: 0 -16px;
 	padding: 5px 40px;
-	background: url('images/grunt.png') no-repeat right center #eee;
+	background: url('images/grunt.png') no-repeat right center #ddd;
 }
 #desc {
 	margin:0 120px 0 0;
@@ -142,7 +142,7 @@ a:hover {
 #deactives {
 	margin: 0 -16px;
 	padding: 16px;
-	border-top: 8px solid #fcfcfc;
+	border-top: 8px solid #DFF7FF;
 }
 
 #feedback {
