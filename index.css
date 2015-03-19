@@ -49,6 +49,10 @@ body {
 	right: -1px;
 	opacity: 0.3;
 }
+#ribbon img {
+	width: 120px;
+	height: 120px;
+}
 #bubbles {
 	position:absolute;
 	top:-34px;
