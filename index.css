@@ -250,7 +250,7 @@ a:hover {
 	display: inline-block;
 	border: none;
 }
-.icon.repo {
+.repo-btn {
 	position: absolute;
 	right: 16px;
 	top: 16px;
