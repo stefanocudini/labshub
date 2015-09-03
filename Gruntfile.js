@@ -3,13 +3,8 @@
 module.exports = function (grunt) {
 
 	var handlebars = require('handlebars'),
-		_ = require('lodash'),
-		fs    = require('fs'),
-		https = require('https'),
-		path  = require('path'),
-		util  = require('util'),
-		githubapi = require('github');
-
+		_ = require('lodash');
+		
 	_.str = require('underscore.string');
 
 	var pkg = grunt.file.readJSON('package.json'),
