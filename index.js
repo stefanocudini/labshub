@@ -133,7 +133,7 @@ $(function() {
 	}
 	checkAllTagsFalse();
 	filterBoxesForTags();
-
+/*
 	$.ajax({
 		url: "https://api.github.com/users/stefanocudini/repos",
 		jsonp: "callback",
@@ -145,19 +145,29 @@ $(function() {
 		success: function( response ) {
 
 		    $('.box').each(function() {
-		    	var user = 'stefanocudini',
-		    		name = $(this).data('name'),
-		    		btnWatch = '<iframe class="repo-btn" src="'+
-		    				'http://ghbtns.com/github-btn.html?user='+user+'&amp;repo='+name+'&amp;type=watch&amp;count=true'+
-						'" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>',
-		    		btnStars = '<iframe class="repo-btn" src="'+
-		    				'http://ghbtns.com/github-btn.html?user='+user+'&amp;repo='+name+'&amp;type=watch&amp;count=true'+
-						'" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>';
 
-				$(this).find('.btns').append(btnStars, btnWatch);
+				if(response.data && $.isArray(response.data))
+				{
+					var user = 'stefanocudini',
+						name = $(this).data('name'),
+						btnWatch = '<iframe class="repo-btn" src="'+
+								'http://ghbtns.com/github-btn.html?user='+user+'&amp;repo='+name+'&amp;type=watch&amp;count=true'+
+							'" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>',
+						btnStars = '<iframe class="repo-btn" src="'+
+								'http://ghbtns.com/github-btn.html?user='+user+'&amp;repo='+name+'&amp;type=watch&amp;count=true'+
+							'" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>';
+					
+					var exists = response.data.filter(function(o) {
+						return o.name == name;
+					});
+
+					console.log(name, exists);
+
+					$(this).find('.btns').append(btnStars, btnWatch);
+				}
 	    	});
 		}
-	});
+	});*/
 		
 });
 

@@ -253,6 +253,7 @@ a:hover {
 .btns {
 	clear: both;
 	height: 20px;
+	opacity: 0.8
 }
 .repo {
 	position: absolute;
@@ -267,7 +268,6 @@ a:hover {
 	color: #888;
 	padding:0;
 	margin:4px 0;
-	overflow:hidden;
 	text-overflow: ellipsis;
 }
 .tags {
@@ -276,6 +276,7 @@ a:hover {
 	left: 16px;
 	right: 16px;
 	margin:.25em -0.125em .25em -0.125em;
+	overflow: hidden;
 }
 .tag {
 	cursor:pointer;
