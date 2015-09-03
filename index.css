@@ -178,7 +178,7 @@ a:hover {
 	position:relative;
 	float:left;
 	width:26%;
-	height:9.5em;
+	height:11em;
 	margin:10px;
 	padding:16px;
 	border: 1px dotted #ccc;
@@ -242,20 +242,25 @@ a:hover {
 .icon.unstar {
 	color: #ccc;
 }
-.stars {
-	float:left;
-	clear:both;
-}
 .stars .icon {
 	display: inline-block;
 	border: none;
 }
-.repo-btn {
+.stars {
+	float: left;
+	height: 20px;	
+}
+.btns {
+	clear: both;
+	height: 20px;
+}
+.repo {
 	position: absolute;
 	right: 16px;
 	top: 16px;
 }
 .desc {
+	display: inline-block;
 	clear:both;
 	height: 3.8em;
 	font-size:13px;
@@ -263,6 +268,7 @@ a:hover {
 	padding:0;
 	margin:4px 0;
 	overflow:hidden;
+	text-overflow: ellipsis;
 }
 .tags {
 	position: absolute;

@@ -42,19 +42,16 @@
 
 	{{#each apps}}
 		{{#with this}}
-		<div class="box" data-title="{{title}}" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
+		<div class="box" data-name="{{name}}" data-title="{{title}}" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
 			<h5><a href="{{url}}">{{title}}</a></h5>
-			<!-- <a class="icon repo {{repository.type}}" title="Github repository" target="_blank" href="{{repository.url}}"></a> -->			
-			{{#if repository}}
-				<iframe class="repo-btn" src="{{repository.btn}}" frameborder="0" scrolling="0" width="60px" height="20px"></iframe>
-			{{/if}}
-
+			<a class="icon repo {{repository.type}}" title="Github repository" target="_blank" href="{{repository.url}}"></a>
 			<div class="stars" title="complexity">
 			{{#each stars}}
 				<i class="icon{{#if this}} star {{else}} unstar {{/if}}">*</i>
 			{{/each}}
 			</div>
 			<p class="desc">{{description}}</p>
+			<div class="btns"></div>
 			<div class="tags">
 			{{#each tags}}
 				<a class="tag" href="#{{this}}"><span>{{this}}</span></a>

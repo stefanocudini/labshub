@@ -3,7 +3,13 @@
 module.exports = function (grunt) {
 
 	var handlebars = require('handlebars'),
-		_ = require('lodash');
+		_ = require('lodash'),
+		fs    = require('fs'),
+		https = require('https'),
+		path  = require('path'),
+		util  = require('util'),
+		githubapi = require('github');
+
 	_.str = require('underscore.string');
 
 	var pkg = grunt.file.readJSON('package.json'),
@@ -20,10 +26,8 @@ module.exports = function (grunt) {
 		activeTags = _.object(tags, _.fill(_.range(tags.length),0) ),
 		apps = _.map(configs, function(conf) {
 
-			if(conf.repository) {
+			if(conf.repository)
 				conf.repository.url = conf.repository.url.replace('git://','https://').replace('git@github.com:','https://github.com/').replace(/\.git$/,'');
-				conf.repository.btn = "https://ghbtns.com/github-btn.html?user=stefanocudini&amp;repo="+conf.name+"&amp;count=true";
-			}
 
 			return {
 				name: conf.name,
@@ -37,7 +41,6 @@ module.exports = function (grunt) {
 		});
 
 	grunt.registerTask('makeIndex', 'build new index.html', function() {
-
 
 		grunt.file.write('index.html', indexTmpl({
 			pkg: pkg,
