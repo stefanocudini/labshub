@@ -4,16 +4,15 @@ module.exports = function (grunt) {
 
 	var handlebars = require('handlebars'),
 		_ = require('lodash');
+		
 	_.str = require('underscore.string');
 
 	var pkg = grunt.file.readJSON('package.json'),
 		indexTmpl = handlebars.compile( grunt.file.read('index.tmpl.html') ),
 		patterns = _.union(['**/package.json'], pkg.appsignore);
 
-	var files = grunt.file.expand({cwd: './' }, patterns );
-
-
-	var	configs = _.map(files, function(file) {
+	var files = grunt.file.expand({cwd: './' }, patterns ),
+		configs = _.map(files, function(file) {
 			var conf = grunt.file.readJSON(file);
 			conf.url = file.replace('package.json','');
 			return conf;
@@ -37,7 +36,6 @@ module.exports = function (grunt) {
 		});
 
 	grunt.registerTask('makeIndex', 'build new index.html', function() {
-
 
 		grunt.file.write('index.html', indexTmpl({
 			pkg: pkg,
@@ -67,7 +65,7 @@ module.exports = function (grunt) {
 				pattern: ['**/index.html','**/index.php','!**/node_modules/**'],
 				siteRoot: './'
 			}
-		},
+		},	
 		watch: {
 			js: {
 				options: {
@@ -88,11 +86,6 @@ module.exports = function (grunt) {
 	grunt.registerTask('default', [
 		'clean:index',
 		'makeIndex'
-	]);
-
-	grunt.registerTask('sitemap', [
-		'clean:sitemap',
-		'sitemap'
 	]);
 
 };

@@ -131,8 +131,44 @@ $(function() {
 		allTags[tag] = 1;
 		$(".tag[href='#"+tag+"']").addClass('sel');
 	}
-	checkAllTagsFalse();  //se tutti i tag sono disattivi mostra tutto!
+	checkAllTagsFalse();
 	filterBoxesForTags();
+/*
+	$.ajax({
+		url: "https://api.github.com/users/stefanocudini/repos",
+		jsonp: "callback",
+		dataType: "jsonp",
+		data: {
+			type: "owner",
+			access_token: '275e02f70a38c1dc818a60993124441589f3ad06'
+		},
+		success: function( response ) {
+
+		    $('.box').each(function() {
+
+				if(response.data && $.isArray(response.data))
+				{
+					var user = 'stefanocudini',
+						name = $(this).data('name'),
+						btnWatch = '<iframe class="repo-btn" src="'+
+								'http://ghbtns.com/github-btn.html?user='+user+'&amp;repo='+name+'&amp;type=watch&amp;count=true'+
+							'" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>',
+						btnStars = '<iframe class="repo-btn" src="'+
+								'http://ghbtns.com/github-btn.html?user='+user+'&amp;repo='+name+'&amp;type=watch&amp;count=true'+
+							'" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>';
+					
+					var exists = response.data.filter(function(o) {
+						return o.name == name;
+					});
+
+					console.log(name, exists);
+
+					$(this).find('.btns').append(btnStars, btnWatch);
+				}
+	    	});
+		}
+	});*/
+		
 });
 
 $(window).on('load', function(e) {
