@@ -12,10 +12,14 @@ module.exports = function (grunt) {
 		indexTmpl = handlebars.compile( grunt.file.read('index.tmpl.html') ),
 		patterns = _.union(['**/package.json'], conf.appsignore);
 
+
+	grunt.log.ok('searching repository...');
+
 	var files = grunt.file.expand({cwd: './' }, patterns ),
 		configs = _.map(files, function(file) {
 			var conf = grunt.file.readJSON(file);
 			conf.url = file.replace('package.json','');
+			grunt.log.ok(conf.url);
 			return conf;
 		}),
 		tags = _(configs).pluck('keywords').flatten().uniq().compact().value().sort(),
