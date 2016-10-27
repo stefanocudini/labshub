@@ -8,8 +8,9 @@ module.exports = function (grunt) {
 	_.str = require('underscore.string');
 
 	var pkg = grunt.file.readJSON('package.json'),
+		conf = grunt.file.readJSON('config.json'),
 		indexTmpl = handlebars.compile( grunt.file.read('index.tmpl.html') ),
-		patterns = _.union(['**/package.json'], pkg.appsignore);
+		patterns = _.union(['**/package.json'], conf.appsignore);
 
 	var files = grunt.file.expand({cwd: './' }, patterns ),
 		configs = _.map(files, function(file) {
