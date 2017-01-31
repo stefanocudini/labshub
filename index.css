@@ -60,6 +60,10 @@ body {
 	height:150px;
 	background: url('images/labs.png') -25px -70px no-repeat;
 	opacity: 0.8;
+	transition: 1s;
+}
+#bubbles:hover {
+    -webkit-filter: hue-rotate(180deg);
 }
 h1 {
 	position: relative;
