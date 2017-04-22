@@ -7,10 +7,7 @@
     "diz",
     "js",
     "portfolio",
-    "stefano-cudini",
-    "diz",
-    "portfolio",
-    "maps/osm-contributors-by-area/*/**"
+    "stefano-cudini"
   ],
   "packages": {
     "bootstrap-confirm-button": {
@@ -39,19 +36,15 @@
     },
     "dns-320-command-line": {
       "keywords": ["php","bash"],
-      "complexity": 2
+      "complexity": 1
     },
     "download-limiter-php": {
       "keywords": ["php","jquery","apache"],
-      "complexity": 2
-    },
-    "effectize": {
-      "keywords": ["jquery","css3"],
-      "complexity": 2
+      "complexity": 1
     },
     "googletrace": {
       "keywords": ["map","jquery","ajax","geojson","openlayers"],
-      "complexity": 3
+      "complexity": 2
     },
     "gps-network-tracking-system": {
       "keywords": ["map","gis","jquery-ui","postgis","ajax","openlayers","gps"],
@@ -61,7 +54,7 @@
       "keywords": ["map","gis","leaflet","html5","bootstrap"],
       "complexity": 3
     },
-    "gpsdata_server": {
+    "gpsdata-server": {
       "keywords": ["gps","nodejs","bash","javascript","websocket","debian","mysql"],
       "complexity": 3
     },
@@ -91,19 +84,19 @@
     },
     "leaflet-compass": {
       "keywords": ["map","leaflet","html5","css3"],
-      "complexity": 3
+      "complexity": 2
     },
     "leaflet-list-markers": {
       "keywords": ["map","leaflet","json","css3"],
-      "complexity": 2
+      "complexity": 1
     },
     "leaflet-loader": {
       "keywords": ["map","leaflet","json","css3"],
-      "complexity": 2
+      "complexity": 1
     },
     "leaflet-panel-layers": {
       "keywords": ["map","leaflet","json","css3"],
-      "complexity": 2
+      "complexity": 3
     },
     "leaflet-search": {
       "keywords": ["map","leaflet","json","ajax","css3","jsonp"],
@@ -119,9 +112,9 @@
     },
     "mega-python-commandline-tools": {
       "keywords": ["python","bash"],
-      "complexity": 1
+      "complexity": 2
     },
-    "mixkeywords.com": {
+    "mixtags.com": {
       "keywords": ["jquery","css3","ajax","gruntjs","json","mysql","html5"],
       "complexity": 3
     },
@@ -131,7 +124,7 @@
     },
     "osm-contributors-by-area": {
       "keywords": ["jquery","osm","leaflet","bootstrap"],
-      "complexity": 3
+      "complexity": 1
     },
     "phpdoc": {
       "keywords": ["jquery","ajax","php","mysql","sqlite"],
@@ -139,7 +132,7 @@
     },
     "python-geotiff-picker": {
       "keywords": ["python","gis","json","map"],
-      "complexity": 2
+      "complexity": 1
     },
     "qr-code-generator": {
       "keywords": ["php","jquery","ajax"],
@@ -151,7 +144,7 @@
     },
     "realtime-access-map": {
       "keywords": ["map","openlayers","geoip","apache","geojson","ajax"],
-      "complexity": 2
+      "complexity": 1
     },
     "realtime-access-tracking": {
       "keywords": ["nodejs","php","python","websocket","bash"],
@@ -159,17 +152,21 @@
     },
     "routeservice": {
       "keywords": ["map","openlayers","php","geojson","jsonp"],
-      "complexity": 2
+      "complexity": 3
     },
     "scacchi": {
       "keywords": ["jquery","websocket","php"],
-      "complexity": 2
+      "complexity": 1
     },
     "share-tracks": {
       "keywords": ["leaflet","map","gpx"],
-      "complexity": 2
+      "complexity": 1
     },
     "share-location": {
+      "keywords": ["leaflet","map","gpx","gps"],
+      "complexity": 1
+    },
+    "leaflet-location-picker": {
       "keywords": ["leaflet","map","gpx","gps"],
       "complexity": 2
     }
