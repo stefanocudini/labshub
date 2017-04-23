@@ -2,48 +2,59 @@
 
 module.exports = function (grunt) {
 
-	var handlebars = require('handlebars'),
+	var Path = require('path'),
+		Handlebars = require('handlebars'),
 		_ = require('lodash');
-		
+	
 	_.str = require('underscore.string');
 
-	var pkg = grunt.file.readJSON('package.json'),
-		conf = grunt.file.readJSON('config.json'),
-		indexTmpl = handlebars.compile( grunt.file.read('index.tmpl.html') ),
-		patterns = _.union(['**/package.json'], conf.appsignore);
+	function git2Web(giturl) {
+		return giturl.replace('git://','https://')
+					 .replace('git@github.com:','https://github.com/')
+					 .replace(/\.git$/,'');
+	}
 
+	var Pkg = grunt.file.readJSON('package.json'),
+		Conf = grunt.file.readJSON('config.json'),
+		pageTmpl = Handlebars.compile( grunt.file.read(Conf.pageTmpl) );
+		
+	grunt.log.ok('searching packages...');
 
-	grunt.log.ok('searching repository...');
+	var ignores = _.map(Conf.packagesIgnore, function(exp) { return '!'+exp; }),
+		patterns = _.union(['**/package.json'], ignores),
+		pkgpaths = grunt.file.expand({cwd: './' }, patterns );
 
-	var files = grunt.file.expand({cwd: './' }, patterns ),
-		configs = _.map(files, function(file) {
-			var conf = grunt.file.readJSON(file);
-			conf.url = file.replace('package.json','');
-			grunt.log.ok(conf.url);
-			return conf;
-		}),
-		tags = _(configs).pluck('keywords').flatten().uniq().compact().value().sort(),
+	var pkgs = _.map(pkgpaths, function(f) {
+			var pkg = grunt.file.readJSON(f);
+			pkg = _.omit(pkg, 'devDependencies','dependencies','author');
+			_.defaults(pkg, {
+				path: Path.dirname(f),
+				complexity: 1,
+				keywords: []
+			});
+			return _.extend(pkg, Conf.packages[ pkg.name ] );
+		});
+
+	pkgs = _.sortBy(pkgs,'complexity').reverse();
+
+	var tags = _(pkgs).pluck('keywords').flatten().uniq().compact().value().sort(),
 		activeTags = _.object(tags, _.fill(_.range(tags.length),0) ),
-		apps = _.map(configs, function(conf) {
-
-			if(conf.repository)
-				conf.repository.url = conf.repository.url.replace('git://','https://').replace('git@github.com:','https://github.com/').replace(/\.git$/,'');
-
+		apps = _.map(pkgs, function(pkg) {
 			return {
-				name: conf.name,
-				title: _.str.humanize( conf.name ),
-				description: conf.description,
-				url: conf.url,
-				tags: conf.keywords ? conf.keywords.sort() : [],
-				stars: [1, 1, 0],
-				repository: conf.repository
+				name: pkg.name,
+				title: _.str.humanize( pkg.name ),
+				description: pkg.description,
+				path: pkg.path,
+				tags: pkg.keywords ? pkg.keywords.sort() : [],
+				complexity: [pkg.complexity>0, pkg.complexity>1, pkg.complexity>2],
+				repository: pkg.repository && git2Web(pkg.repository.url)
 			};
 		});
 
-	grunt.registerTask('makeIndex', 'build new index.html', function() {
+	grunt.registerTask('createPage', 'build new output page', function() {
 
-		grunt.file.write('index.html', indexTmpl({
-			pkg: pkg,
+		grunt.file.write(Conf.pageOut, pageTmpl({
+			pkg: Pkg,
 			tags: tags,
 			tagsjson: JSON.stringify( activeTags ),
 			apps: apps
@@ -56,9 +67,9 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.initConfig({
-		pkg: pkg,
+		pkg: Pkg,
 		clean: {
-			index: {
+			page: {
 				src: ['index.html']
 			},
 			sitemap: {
@@ -76,8 +87,8 @@ module.exports = function (grunt) {
 				options: {
 					livereload: true
 				},
-				files: ['index.tmpl.html','*.js'],
-				tasks: ['clean:index','makeIndex']
+				files: ['index.tmpl.html','*.js','*.json'],
+				tasks: ['clean:page','createPage']
 			},
 			css: {
 				options: {
@@ -89,8 +100,8 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('default', [
-		'clean:index',
-		'makeIndex'
+		'clean:page',
+		'createPage'
 	]);
 
 };

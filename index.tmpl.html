@@ -17,7 +17,7 @@
 		Advanced Web Applications dev by <a href="{{pkg.author.url}}" rel="author">{{pkg.author.name}}</a>.
 		<br />
 		<!-- TODO SUB SECTIONS -->
-		<a href="maps/">Web Mapping</a>, <a href="maps/#leaflet-plugins">Leaflet plugins</a> and <em>WebGIS</em>. 
+		<a href="maps/">Web Mapping</a>, <a href="maps/#leaflet-plugins">Leaflet plugins</a> and <a href="maps/#webgis-projects">WebGIS</a>. 
 		<br />
 	</p>
 	<div id="likepage">
@@ -43,10 +43,10 @@
 	{{#each apps}}
 		{{#with this}}
 		<div class="box" data-name="{{name}}" data-title="{{title}}" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
-			<h5><a href="{{url}}">{{title}}</a></h5>
+			<h5><a href="{{path}}">{{title}}</a></h5>
 			<a class="icon repo {{repository.type}}" title="Github repository" target="_blank" href="{{repository.url}}"></a>
 			<div class="stars" title="complexity">
-			{{#each stars}}
+			{{#each complexity}}
 				<i class="icon{{#if this}} star {{else}} unstar {{/if}}">*</i>
 			{{/each}}
 			</div>
@@ -65,19 +65,20 @@
 
 	<div id="deactives"></div>
 	
-	<div id="footer">powered by <a href="http://gruntjs.com/" target="_blank"><b>GruntJs</b></a></div>
+	<footer>powered by Grunt,jQuery,CSS3</footer>
+
 	<a id="ribbon" href="https://github.com/stefanocudini/labs.easyblog.it/">
 		<img src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
 	</a>	
 	<div id="bubbles"></div>
 </div>
 
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
 	var allTags = {{{tagsjson}}};
 </script>
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="index.js"></script>
 <script src="labs-common.js"></script>
-
 </body>
 </html>
