@@ -12,163 +12,163 @@
   "packages": {
     "bootstrap-confirm-button": {
       "keywords": ["bootstrap","javascript","css3"],
-      "rank": 2
+      "complexity": 2
     },
     "bootstrap-list-filter": {
       "keywords": ["bootstrap","javascript","css3"],
-      "rank": 2
+      "complexity": 2
     },
     "crop-avatar": {
       "keywords": ["jquery","jquery-ui","ajax","mysql"],
-      "rank": 1
+      "complexity": 1
     },
     "demo": {
       "keywords": ["jquery","ajax","php","html5"],
-      "rank": 3
+      "complexity": 3
     },
     "dirgraph": {
       "keywords": ["jquery","json","php"],
-      "rank": 1
+      "complexity": 1
     },
     "diz": {
       "keywords": ["jquery","sqlite","mysql","php","postgresql","ajax","pdo"],
-      "rank": 1
+      "complexity": 1
     },
     "dns-320-command-line": {
       "keywords": ["php","bash"],
-      "rank": 1
+      "complexity": 1
     },
     "download-limiter-php": {
       "keywords": ["php","jquery","apache"],
-      "rank": 1
+      "complexity": 1
     },
     "googletrace": {
       "keywords": ["map","jquery","ajax","geojson","openlayers"],
-      "rank": 2
+      "complexity": 2
     },
     "gps-network-tracking-system": {
       "keywords": ["map","gis","jquery-ui","postgis","ajax","openlayers","gps"],
-      "rank": 3
+      "complexity": 3
     },
     "gpx-simplify-optimizer": {
       "keywords": ["map","gis","leaflet","html5","bootstrap"],
-      "rank": 3
+      "complexity": 3
     },
     "gpsdata-server": {
       "keywords": ["gps","nodejs","bash","javascript","websocket","debian","mysql"],
-      "rank": 3
+      "complexity": 3
     },
     "jsautocompiler": {
       "keywords": ["php","javascript","apache"],
-      "rank": 2
+      "complexity": 2
     },
     "json-indent-beautifier": {
       "keywords": ["json","javascript","php","ajax"],
-      "rank": 1
+      "complexity": 1
     },
     "jquery-filterbox": {
       "keywords": ["jquery","css3"],
-      "rank": 2
+      "complexity": 2
     },
     "jquery-jsonbuilder": {
       "keywords": ["jquery","json"],
-      "rank": 1
+      "complexity": 1
     },
     "labs.easyblog.it": {
       "keywords": ["jquery","php","html5","bash","mercurial"],
-      "rank": 1
+      "complexity": 1
     },
     "leaflet-layerjson": {
       "keywords": ["map","leaflet","json","ajax","css3","jsonp"],
-      "rank": 3
+      "complexity": 3
     },
     "leaflet-compass": {
       "keywords": ["map","leaflet","html5","css3"],
-      "rank": 2
+      "complexity": 2
     },
     "leaflet-list-markers": {
       "keywords": ["map","leaflet","json","css3"],
-      "rank": 1
+      "complexity": 1
     },
     "leaflet-loader": {
       "keywords": ["map","leaflet","json","css3"],
-      "rank": 1
+      "complexity": 1
     },
     "leaflet-panel-layers": {
       "keywords": ["map","leaflet","json","css3"],
-      "rank": 3
+      "complexity": 3
     },
     "leaflet-search": {
       "keywords": ["map","leaflet","json","ajax","css3","jsonp"],
-      "rank": 3
+      "complexity": 3
     },
     "leaflet-gps": {
       "keywords": ["map","gps","leaflet","json","ajax","css3","jsonp","html5"],
-      "rank": 3
+      "complexity": 3
     },
     "lesscss": {
       "keywords": ["javascript","ajax","css3","lesscss"],
-      "rank": 1
+      "complexity": 1
     },
     "mega-python-commandline-tools": {
       "keywords": ["python","bash"],
-      "rank": 2
+      "complexity": 2
     },
     "mixtags.com": {
       "keywords": ["jquery","css3","ajax","gruntjs","json","mysql","html5"],
-      "rank": 3
+      "complexity": 3
     },
     "mobile-web-monitor": {
       "keywords": ["jquery","bash","debian","gruntjs","php"],
-      "rank": 2
+      "complexity": 2
     },
     "osm-contributors-by-area": {
       "keywords": ["jquery","osm","leaflet","bootstrap"],
-      "rank": 1
+      "complexity": 1
     },
     "phpdoc": {
       "keywords": ["jquery","ajax","php","mysql","sqlite"],
-      "rank": 1
+      "complexity": 1
     },
     "python-geotiff-picker": {
       "keywords": ["python","gis","json","map"],
-      "rank": 1
+      "complexity": 1
     },
     "qr-code-generator": {
       "keywords": ["php","jquery","ajax"],
-      "rank": 1
+      "complexity": 1
     },
     "randomcolor": {
       "keywords": ["javascript","jquery"],
-      "rank": 1
+      "complexity": 1
     },
     "realtime-access-map": {
       "keywords": ["map","openlayers","geoip","apache","geojson","ajax"],
-      "rank": 1
+      "complexity": 1
     },
     "realtime-access-tracking": {
       "keywords": ["nodejs","php","python","websocket","bash"],
-      "rank": 2
+      "complexity": 2
     },
     "routeservice": {
       "keywords": ["map","openlayers","php","geojson","jsonp"],
-      "rank": 3
+      "complexity": 3
     },
     "scacchi": {
       "keywords": ["jquery","websocket","php"],
-      "rank": 1
+      "complexity": 1
     },
     "share-tracks": {
       "keywords": ["leaflet","map","gpx"],
-      "rank": 1
+      "complexity": 1
     },
     "share-location": {
       "keywords": ["leaflet","map","gpx","gps"],
-      "rank": 1
+      "complexity": 1
     },
     "leaflet-location-picker": {
       "keywords": ["leaflet","map","gpx","gps"],
-      "rank": 2
+      "complexity": 2
     }
   }
 }
