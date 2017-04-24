@@ -8,53 +8,27 @@
 	<meta name="google-site-verification" content="rO0NU6dhQAZpHrpdYc8J0m55wJ7xwUk7eDO8Ahj6k5U" />
 	<link rel="image_src" href="../images/logo.png" />
 	<link rel="stylesheet" type="text/css" href="../index.css" />
-<style>
-body {
-	background-image: url('../images/backmap.jpg');
-}
-section {
-	margin: 20px 0;
-}
-h2,h3 {
-	margin:0;
-}
-ul {
-	clear:both;
-}
-li {
-	margin-bottom:1em;
-}
-li a {
-	font-size: 1em;
-	font-weight: bold;
-}
-#header {
-	margin: 10px 0 30px -12px;
-	padding:4px 18px;
-	border-radius:12px;
-	border: 4px solid rgba(0, 50, 0, 0.3);
-	background-color: rgba(255, 255, 255, 0.7);
-}
-#donate {
-	text-align: right;
-}
-</style>
 </head>
-<body>
+<body class="maps">
 <div id="content">
-	<h1><img height="50" width="50" alt="logo easyblog" src="../images/logo.png"> Easyblog.it  <em> &bull;&nbsp;Labs</em></h1>
-	<p id="desc">
-		<b>Web Mapping Applications</b>
-		<span>dev by <a style="color:#f80" href="http://labs.easyblog.it/stefano-cudini/" rel="author"><b>Stefano Cudini</b></a></span>
-		<br />
-		<a href="../"><b>&laquo; more apps</b></a>
-	</p>
-	<div id="likepage">
-		<iframe src="http://ghbtns.com/github-btn.html?user=stefanocudini&count=true&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="185" height="20"></iframe>
-	</div>
+	<header>
+		<h1><a href="/"><em> Labs.</em>easyblog.it</a></h1>
+		<p id="desc">
+			This section concerns projects about <b>Web Mapping</b> and <b>GIS</b> Applications.
+		</p>
+		<nav>
+		  <a href="../"><b>&laquo; All projects</b></a></li>
+		</nav>
+	</header>
 
 	<section id="leaflet-plugins">
 		<h2>Leaflet plugins</h2>
+		<p>
+			<b><a href="http://leafletjs.com/">Leaflet</a></b> is a modern JavaScript library for interactive maps supports <b>WMS</b>, <b>GeoJSON</b> and <b>Tile layers</b> natively.
+			<br />
+			Many other types of layers and widgets are supported via plugins.
+			<br />
+		</p>
 		<ul>
 			<li><a href="/maps/leaflet-search/">Leaflet Search</a><br />
 				Control for <b>searching markers</b> and features by custom fields from layer or <b>remote source</b>.
@@ -108,7 +82,7 @@ li a {
 	</section>
 
 	<section id="donate">
-		<p style="color:#e33">
+		<p style="color:#33e">
 			If any of these open source solutions helped your work <br>
 			you can contribute with code or money
 		</p>
@@ -120,13 +94,15 @@ li a {
 		<img alt="" border="0" src="https://www.paypalobjects.com/it_IT/i/scr/pixel.gif" width="1" height="1">
 		</form>
 	</section>
-
-	<footer>powered by Grunt,jQuery,CSS3</footer>
 	
-	<a id="ribbon" href="https://github.com/stefanocudini/labs.easyblog.it/">
-		<img src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
-	</a>	
-	<div id="bubbles"></div>	
+	<footer>powered by <a href="https://github.com/stefanocudini/labs">Labs</a></footer>	
+
+	<div id="bubbles">
+		<a id="ribbon" href="https://github.com/stefanocudini/labs">
+			<img src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
+		</a>	
+		<iframe id="githubbtn" src="http://ghbtns.com/github-btn.html?user=stefanocudini&count=true&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="185" height="20"></iframe>
+	</div>
 </div>
 <script src="/labs-common.js"></script>
 </body>

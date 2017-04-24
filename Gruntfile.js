@@ -29,25 +29,25 @@ module.exports = function (grunt) {
 			pkg = _.omit(pkg, 'devDependencies','dependencies','author');
 			_.defaults(pkg, {
 				path: Path.dirname(f),
-				complexity: 1,
-				keywords: []
+				keywords: [],
+				rank: 0
 			});
 			return _.extend(pkg, Conf.packages[ pkg.name ] );
 		});
 
-	pkgs = _.sortBy(pkgs,'complexity').reverse();
+	pkgs = _.sortBy(pkgs,'rank').reverse();
 
 	var tags = _(pkgs).pluck('keywords').flatten().uniq().compact().value().sort(),
 		activeTags = _.object(tags, _.fill(_.range(tags.length),0) ),
 		apps = _.map(pkgs, function(pkg) {
 			return {
 				name: pkg.name,
-				title: _.str.humanize( pkg.name ),
 				description: pkg.description,
+				title: _.str.humanize( pkg.name ),
 				path: pkg.path,
 				tags: pkg.keywords ? pkg.keywords.sort() : [],
-				complexity: [pkg.complexity>0, pkg.complexity>1, pkg.complexity>2],
-				repository: pkg.repository && git2Web(pkg.repository.url)
+				repository: pkg.repository && git2Web(pkg.repository.url),
+				rank: [pkg.rank>0, pkg.rank>1, pkg.rank>2]
 			};
 		});
 

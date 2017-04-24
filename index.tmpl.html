@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>{{pkg.name}}</title>
-	<meta name="description" content="Advanced Web Applications" />
+	<meta name="description" content="demo and production projects" />
 	<meta name="author" content="{{pkg.author.name}}" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -12,65 +12,97 @@
 </head>
 <body>
 <div id="content">
-	<h1><img height="50" width="50" src="images/logo.png"> Easyblog.it  <em> •&nbsp;Labs</em></h1>
-	<p id="desc">
-		Advanced Web Applications dev by <a href="{{pkg.author.url}}" rel="author">{{pkg.author.name}}</a>.
-		<br />
-		<!-- TODO SUB SECTIONS -->
-		<a href="maps/">Web Mapping</a>, <a href="maps/#leaflet-plugins">Leaflet plugins</a> and <a href="maps/#webgis-projects">WebGIS</a>. 
-		<br />
-	</p>
-	<div id="likepage">
-		<iframe src="http://ghbtns.com/github-btn.html?user={{pkg.author.gitusername}}&count=true&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="185" height="20"></iframe>
-	</div>
-	<div id="tech">
-		<h4>Topics</h4>
-		<div id="tags">
+	<header>
+		<h1><a href="/"><em> Labs.</em>easyblog.it</a></h1>
+		<p id="desc">
+			<b>Labs</b> is created by <a href="{{pkg.author.url}}" rel="author">{{pkg.author.name}}</a> to demonstrate and test his own projects and works.
+			<br /><br />
+			This space is a playground where the more adventurous visitors can play 
+			around with prototypes of some wild and crazy ideas and offer 
+			feedback directly to the author who developed them.
+			Most of the projects is freely available on <a href="https://github.com/stefanocudini">GitHub</a> 
+			distributed under <b>open source</b> license for forking or contributing.
+			<br />
+			<a href="https://github.com/stefanocudini/labs">Labs</a> is itself a useful software for organizing a set of <a href="https://docs.npmjs.com/files/package.json">NPM packages</a> by keywords.
+			<br />
+			<br />
+		</p>
+		<nav>
+		  An interesting collection of these projects concerns:
+		  <ul>
+		    <li><a href="maps/"><span>Web Mapping</span></a></li>
+		    <li><a href="maps/#leaflet-plugins"><span>Leaflet plugins</span></a></li>
+		  </ul>
+		</nav>
+	</header>
 
+	<section id="topics">
+		<h2>Topics</h2>
+		<div id="tags">
 		{{#each tags}}
 			<a class="tag" href="#{{this}}"><span>{{this}}</span></a>
 		{{/each}}
-		
 		</div>
-		<br />
-		<h4 style="float:left">Applications</h4>
-		<input style="float:right" id="findapps" type="text" size="16" />		
-		<br />
-	</div>
-	<br />
-	<div id="actives">
+	</section>
 
-	{{#each apps}}
-		{{#with this}}
-		<div class="box" data-name="{{name}}" data-title="{{title}}" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
-			<h5><a href="{{path}}">{{title}}</a></h5>
-			<a class="icon repo {{repository.type}}" title="Github repository" target="_blank" href="{{repository.url}}"></a>
-			<div class="stars" title="complexity">
-			{{#each complexity}}
-				<i class="icon{{#if this}} star {{else}} unstar {{/if}}">*</i>
-			{{/each}}
+	<section>
+		<h2>Applications</h2>
+		<input id="findapps" type="text" size="16" />
+		<div id="actives">
+		{{#each apps}}
+			{{#with this}}
+			<div class="box" data-name="{{name}}" data-title="{{title}}" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
+				<h3 class="title"><a href="{{path}}">{{title}}</a></h3>
+				<a class="icon repo {{repository.type}}" title="Github repository" target="_blank" href="{{repository.url}}"></a>
+				<div class="stars" title="complexity">
+				{{#each rank}}
+					<i class="icon{{#if this}} star {{else}} unstar {{/if}}">*</i>
+				{{/each}}
+				</div>
+				<p class="desc">{{description}}</p>
+				<div class="btns"></div>
+				<div class="tags">
+				{{#each tags}}
+					<a class="tag" href="#{{this}}"><span>{{this}}</span></a>
+				{{/each}}
+				</div>
 			</div>
-			<p class="desc">{{description}}</p>
-			<div class="btns"></div>
-			<div class="tags">
-			{{#each tags}}
-				<a class="tag" href="#{{this}}"><span>{{this}}</span></a>
-			{{/each}}
-			</div>
+			{{/with}}
+		{{/each}}
 		</div>
-		{{/with}}
-	{{/each}}
+	</section>
 
-	</div>
-
-	<div id="deactives"></div>
+	<section id="deactives">
+		{{#each deactives}}
+			{{#with this}}
+			<div class="box" data-name="{{name}}" data-title="{{title}}" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
+				<h3 class="title"><a href="{{path}}">{{title}}</a></h3>
+				<a class="icon repo {{repository.type}}" title="Github repository" target="_blank" href="{{repository.url}}"></a>
+				<div class="stars" title="complexity">
+				{{#each rank}}
+					<i class="icon{{#if this}} star {{else}} unstar {{/if}}">*</i>
+				{{/each}}
+				</div>
+				<p class="desc">{{description}}</p>
+				<div class="btns"></div>
+				<div class="tags">
+				{{#each tags}}
+					<a class="tag" href="#{{this}}"><span>{{this}}</span></a>
+				{{/each}}
+				</div>
+			</div>
+			{{/with}}
+		{{/each}}	
+	</section>
 	
-	<footer>powered by Grunt,jQuery,CSS3</footer>
-
-	<a id="ribbon" href="https://github.com/stefanocudini/labs.easyblog.it/">
-		<img src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
-	</a>	
-	<div id="bubbles"></div>
+	<footer>powered by <a href="https://github.com/stefanocudini/labs">Labs</a></footer>
+		
+	<div id="bubbles">
+		<a id="ribbon" href="https://github.com/stefanocudini/labs">
+			<img src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
+		</a>	
+		<iframe id="githubbtn" src="http://ghbtns.com/github-btn.html?user={{pkg.author.gitusername}}&count=true&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="185" height="20"></iframe>
+	</div>
 </div>
 
 

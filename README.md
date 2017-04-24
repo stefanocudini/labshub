@@ -1,2 +1,6 @@
-# labs.easyblog.it
-Navigation interface for easyblog projects, with interactive tags filter
+
+# Labs
+
+Hub to organizing a set of NPM packages by keywords
+
+Using interactive tags filter and search tool

@@ -1,15 +1,19 @@
 {
-  "name": "labs.easyblog.it",
-  "description": "Interface navigation for Easyblog Labs projects, with interactive filter by tags",
+  "name": "labs",
+  "version": "0.5.0",  
+  "description": "Hub to organizing a set of NPM packages by keywords",
   "license": "MIT",
   "homepage": "http://labs.easyblog.it/",
   "keywords": [
-    "jquery",
-    "javascript",
+    "keywords",
+    "package.json",
+    "tags",
     "grunt",
-    "html5"
+    "html5",
+    "css3",
+    "npm",
+    "hub"
   ],
-  "version": "0.1.0",
   "author": {
     "name": "Stefano Cudini",
     "gitusername": "stefanocudini",
@@ -18,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stefanocudini/labs.easyblog.it"
+    "url": "https://github.com/stefanocudini/labs"
   },
   "devDependencies": {
     "github": "^0.2.4",

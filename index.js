@@ -3,7 +3,8 @@
 
 $(function() {
 	
-	var boxes$ = $(".box");
+	var tags$ = $('#tags'),
+		boxes$ = $(".box");
 
 	var allTagsFalse = true;
 

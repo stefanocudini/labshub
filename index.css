@@ -2,35 +2,34 @@ body {
 	margin:0;
 	padding:0;
 	color:#666;
-	font-family:Arial;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size:.85em;	
 	background: #e2f7fd;
+}
+body.maps {
+	background-image: url('images/backmap.jpg');
 }
 h1 {
 	position: relative;
 	color:#f90;
 	float: left;
-	font-size:2em;
-	letter-spacing:.125em;
 	font-weight: normal;
-	text-transform: capitalize;
-	margin:16px 0;
-	z-index: 100
+	font-weight: bold;	
+	z-index: 100;
+	letter-spacing: .125em
 }
 h1 em {
 	color:  #aae;
-	font-size:.65em;
 }
 h1 img {
 	vertical-align: middle;
 }
-h4 {
+h2 {
 	font-weight: normal;
 	letter-spacing: 2px;
-	margin:10px 0 2px 0;
 	color: #c5cdd4;
-	font-size:1em;
 }
-h5 {
+h3 {
 	letter-spacing: 1px;
 }
 hr {
@@ -45,22 +44,34 @@ label {
 a {
 	color:#f90;
 	text-decoration:none;
+	cursor: pointer;
 }
 a:hover {
 	text-decoration:underline;
 }
+ul {
+	padding-left: 16px;
+	clear:both;
+}
+li {
+	margin-bottom:1em;
+}
+li a {
+	font-size: 1em;
+	font-weight: bold;
+}
 #content {
-	margin:2em auto;
-	/*width:49em;*/
-	width:900px;
+	margin:20px auto;
 	padding: 0 16px;
+	width:900px;
 	max-width:90%;
 	position:relative;
 	background:#fff;
 }
+#donate {
+	text-align: right;
+}
 footer {
-	font-style: italic;
-	font-size: small;
 	text-align: right;
 	letter-spacing: 2px;
 	vertical-align: bottom;
@@ -69,14 +80,9 @@ footer {
 	padding: 5px 40px;
 	background: #d7e5ea;
 	color: #fff;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.2)
-}
-footer a {
-	color:#aaa;
 }
 #desc {
-	margin:0 120px 0 0;
-	font-size:.85em;
+	margin:0 200px 0 0;
 	line-height:1.35em;
 }
 #likepage {
@@ -86,43 +92,45 @@ footer a {
 	clear: both;
 	text-align: right;
 }
-#tech {
+#topics {
 	clear:both;
 }
-#ribbon {
-	display: block;
-	position: absolute;
-	top: -1px;
-	right: -1px;
-	opacity: 0.4;
-}
-#ribbon img {
-	width: 120px;
-	height: 120px;
-}
 #bubbles {
-	position:absolute;
-	top:-34px;
-	right:90px;
+	position: absolute;
+	top:-20px;
+	right:0;
 	z-index:0;	
-	width:90px;
-	height:150px;
-	background: url('images/labs.png') -25px -70px no-repeat;
+	height:180px;
+	width: 200px;
+	background: url('images/labs.png') -20px -70px no-repeat;
 	opacity: 0.8;
 	transition: 1s;
 }
 #bubbles:hover {
     -webkit-filter: hue-rotate(180deg);
 }
+#ribbon {
+	position: absolute;
+	top: 19px;
+	right: -1px;
+	opacity: 0.4;
+}
+#githubbtn {
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+}
+
 #desc {
 	clear: both;
 }
 #findapps:focus,
 #findapps {
+	float: right;
 	border:1px solid #e5edf4;
     background:#fff;	
 	color: #666;
-	margin:0 30px;
+	margin: 10px 0 2px 0;
 	background:url('images/labs.png') no-repeat 1px -19px;
 	padding-left:20px;
 	height:24px;
@@ -215,7 +223,7 @@ footer a {
 	border-right-bottom-radius: 4px;
 }
 
-.box h5 {
+.title {
 	text-transform:capitalize;
 	font-size:1em;
 	margin:0;
@@ -249,7 +257,7 @@ footer a {
 	color:#f80;
 }
 .icon.unstar {
-	color: #ccc;
+	color: #ddd;
 }
 .stars .icon {
 	display: inline-block;
@@ -366,9 +374,11 @@ footer a {
 }
 
 @media screen and (max-width: 420px) {
+	#bubbles {
+		display: none;
+	}
 	#content {
-		padding:16px 8px;
-		margin:2em 0;
+		margin:0;
 		width:auto;
 		max-width:100%;
 		border-left:none;
