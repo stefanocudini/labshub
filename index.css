@@ -18,8 +18,11 @@ h1 {
 	z-index: 100;
 	letter-spacing: .125em
 }
-h1 em {
+h1 big {
 	color:  #aae;
+}
+h1 a:hover {
+	text-decoration: none;
 }
 h1 img {
 	vertical-align: middle;
@@ -102,7 +105,7 @@ footer {
 	z-index:0;	
 	height:180px;
 	width: 200px;
-	background: url('images/labs.png') -20px -70px no-repeat;
+	background: url('images/labs.png') 0 -80px no-repeat;
 	opacity: 0.8;
 	transition: 1s;
 }
@@ -131,8 +134,8 @@ footer {
     background:#fff;	
 	color: #666;
 	margin: 10px 0 2px 0;
-	background:url('images/labs.png') no-repeat 1px -19px;
-	padding-left:20px;
+	background:url('images/labs.png') no-repeat 0 -26px;
+	padding-left:26px;
 	height:24px;
 	line-height:24px;
 }
@@ -232,9 +235,9 @@ footer {
 .icon {
 	display: inline-block;
 	float: left;
-	width:18px;
-	height:18px;
-	background: url('images/labs.png') no-repeat;
+	width:24px;
+	height:24px;
+	background: url('images/labs.png') no-repeat #eee;
 }
 .icon.git {
 	background-position: 0 0;
@@ -273,6 +276,7 @@ footer {
 	opacity: 0.8
 }
 .repo {
+	opacity: 0.6;
 	position: absolute;
 	right: 16px;
 	top: 16px;
