@@ -1,4 +1,8 @@
 {
+  "pages": {
+    "index.tmpl.html": "index.html",
+    "maps.tmpl.html": "maps/index.html"
+  },
   "pageOut": "index.html",
   "pageTmpl": "index.tmpl.html",
   "packagesIgnore": [

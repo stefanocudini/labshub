@@ -15,8 +15,7 @@ module.exports = function (grunt) {
 	}
 
 	var Pkg = grunt.file.readJSON('package.json'),
-		Conf = grunt.file.readJSON('config.json'),
-		pageTmpl = Handlebars.compile( grunt.file.read(Conf.pageTmpl) );
+		Conf = grunt.file.readJSON('config.json');
 		
 	grunt.log.ok('searching packages...');
 
@@ -51,31 +50,30 @@ module.exports = function (grunt) {
 			};
 		});
 
-	grunt.registerTask('createPage', 'build new output page', function() {
+	grunt.registerTask('createPages', 'build new output pages', function() {
 
-		grunt.file.write(Conf.pageOut, pageTmpl({
-			pkg: Pkg,
-			tags: tags,
-			tagsjson: JSON.stringify( activeTags ),
-			apps: apps
-		}) );
+		_.each(Conf.pages, function(out, tmpl) {
+
+			var pageTmpl = Handlebars.compile( grunt.file.read(tmpl) )
+
+			grunt.log.ok('create page... '+out);
+
+			grunt.file.write(out, pageTmpl({
+				pkg: Pkg,
+				tags: tags,
+				tagsjson: JSON.stringify( activeTags ),
+				apps: apps
+			}) );
+
+		});
 
 	});
 
 	grunt.loadNpmTasks('grunt-sitemap');
-	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.initConfig({
 		pkg: Pkg,
-		clean: {
-			page: {
-				src: ['index.html']
-			},
-			sitemap: {
-				src: ['sitemap.xml']
-			}
-		},
 		sitemap: {
 			dist: {
 				pattern: ['**/index.html','**/index.php','!**/node_modules/**'],
@@ -83,25 +81,24 @@ module.exports = function (grunt) {
 			}
 		},	
 		watch: {
-			js: {
+			html: {
 				options: {
 					livereload: true
 				},
-				files: ['index.tmpl.html','*.js','*.json'],
-				tasks: ['clean:page','createPage']
+				files: ['*.tmpl.html','*.json'],
+				tasks: ['createPages']
 			},
-			css: {
+			jscss: {
 				options: {
 					livereload: true
 				},
-				files: ['index.css']
+				files: ['*.js','*.css']
 			}			
 		}
 	});
 
 	grunt.registerTask('default', [
-		'clean:page',
-		'createPage'
+		'createPages'
 	]);
 
 };

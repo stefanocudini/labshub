@@ -9,23 +9,28 @@ body {
 body.maps {
 	background-image: url('images/backmap.jpg');
 }
+#logo {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-top: -40px;
+	transition: 2s;
+}
+#logo:hover {
+    filter: hue-rotate(180deg);    
+}
 h1 {
-	position: relative;
+	display: inline;
 	color:#f90;
-	float: left;
 	font-weight: normal;
 	font-weight: bold;	
 	z-index: 100;
 	letter-spacing: .125em
 }
 h1 big {
-	color:  #aae;
+	color: #9f8bc8;
 }
 h1 a:hover {
 	text-decoration: none;
-}
-h1 img {
-	vertical-align: middle;
 }
 h2 {
 	font-weight: normal;
@@ -84,48 +89,15 @@ footer {
 	background: #d7e5ea;
 	color: #fff;
 }
-#desc {
-	margin:0 200px 0 0;
-	line-height:1.35em;
-}
-#likepage {
-	margin:8px;
-	min-height: 2em;
-	float:right;
-	clear: both;
-	text-align: right;
-}
 #topics {
 	clear:both;
 }
-#bubbles {
-	position: absolute;
-	top:-20px;
-	right:0;
-	z-index:0;	
-	height:180px;
-	width: 200px;
-	background: url('images/labs.png') 0 -80px no-repeat;
-	opacity: 0.8;
-	transition: 1s;
-}
-#bubbles:hover {
-    -webkit-filter: hue-rotate(180deg);
-}
 #ribbon {
 	position: absolute;
-	top: 19px;
-	right: -1px;
-	opacity: 0.4;
-}
-#githubbtn {
-	position: absolute;
-	bottom: 0;
-	right: 10px;
-}
-
-#desc {
-	clear: both;
+	top: 0;
+	right: 0;
+	margin: -1px;
+	opacity: 0.3;
 }
 #findapps:focus,
 #findapps {
@@ -134,7 +106,7 @@ footer {
     background:#fff;	
 	color: #666;
 	margin: 10px 0 2px 0;
-	background:url('images/labs.png') no-repeat 0 -26px;
+	background:url('images/sprite.png') no-repeat 0 -26px;
 	padding-left:26px;
 	height:24px;
 	line-height:24px;
@@ -237,7 +209,7 @@ footer {
 	float: left;
 	width:24px;
 	height:24px;
-	background: url('images/labs.png') no-repeat #eee;
+	background: url('images/sprite.png') no-repeat #eee;
 }
 .icon.git {
 	background-position: 0 0;
@@ -388,9 +360,6 @@ footer {
 		border-left:none;
 		border-right:none;
 		border-radius:0;
-	}
-	#desc {
-		margin:0;
 	}
 	.box {
 		min-width:284px;

@@ -13,8 +13,9 @@
 <body>
 <div id="content">
 	<header>
+		<img id="logo" src="images/logo.png" />
 		<h1><a href="/"><big>Labs</big>.easyblog.it</a></h1>
-		<p id="desc">
+		<p>
 			Labs is created by <a href="{{pkg.author.url}}" rel="author">{{pkg.author.name}}</a> to demonstrate and test his own projects and works.
 			<br /><br />
 			This space is a playground where the more adventurous visitors can play 
@@ -23,15 +24,15 @@
 			Most of the projects is freely available on <a href="https://github.com/stefanocudini">GitHub</a> 
 			distributed under <b>open source</b> license for forking or contributing.
 			<br />
-			<a href="https://github.com/stefanocudini/labs">Labs</a> is itself a useful software for organizing a set of <a href="https://docs.npmjs.com/files/package.json">NPM packages</a> by keywords.
+			<iframe style="float: right;" id="githubbtn" src="http://ghbtns.com/github-btn.html?user={{pkg.author.gitusername}}&count=true&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe>
 			<br />
-			<br />
+			<a href="{{pkg.repository.url}}">Labs</a> is itself a useful software for organizing a set of <a href="https://docs.npmjs.com/files/package.json">NPM packages</a> by keywords.
 		</p>
 		<nav>
-		  An interesting collection of these projects concerns:
+		  An interesting set of these projects concerns:
 		  <ul>
+		  	<li><a href="maps/#leaflet-plugins"><span>Leaflet plugins</span></a></li>
 		    <li><a href="maps/#webgis-projects"><span>WebGIS projects</span></a></li>
-		    <li><a href="maps/#leaflet-plugins"><span>Leaflet plugins</span></a></li>
 		  </ul>
 		</nav>
 	</header>
@@ -96,13 +97,10 @@
 	</section>
 	
 	<footer>powered by <a href="https://github.com/stefanocudini/labs">Labs</a></footer>
-		
-	<div id="bubbles">
-		<a id="ribbon" href="https://github.com/stefanocudini/labs">
-			<img src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
-		</a>	
-		<iframe id="githubbtn" src="http://ghbtns.com/github-btn.html?user={{pkg.author.gitusername}}&count=true&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="185" height="20"></iframe>
-	</div>
+
+	<a id="ribbon" href="{{pkg.repository.url}}">
+		<img src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
+	</a>
 </div>
 
 
