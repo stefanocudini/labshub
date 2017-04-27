@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 	_.str = require('underscore.string');
 
 	function git2Web(giturl) {
-		return giturl.replace('git://','https://')
+		return giturl && giturl.replace('git://','https://')
 					 .replace('git@github.com:','https://github.com/')
 					 .replace(/\.git$/,'');
 	}
@@ -24,10 +24,12 @@ module.exports = function (grunt) {
 		pkgpaths = grunt.file.expand({cwd: './' }, patterns );
 
 	var pkgs = _.map(pkgpaths, function(f) {
+			var path = Path.dirname(f);
+			grunt.log.ok(path);
 			var pkg = grunt.file.readJSON(f);
 			pkg = _.omit(pkg, 'devDependencies','dependencies','author');
 			_.defaults(pkg, {
-				path: Path.dirname(f),
+				path: path,
 				keywords: [],
 				rank: 0
 			});
@@ -38,8 +40,10 @@ module.exports = function (grunt) {
 
 	var tags = _(pkgs).pluck('keywords').flatten().uniq().compact().value().sort(),
 		activeTags = _.object(tags, _.fill(_.range(tags.length),0) ),
-		apps = _.map(pkgs, function(pkg) {
-			return {
+		apps = [], others = [];
+
+		_.each(pkgs, function(pkg) {
+			var p = {
 				name: pkg.name,
 				description: pkg.description,
 				title: _.str.humanize( pkg.name ),
@@ -48,6 +52,11 @@ module.exports = function (grunt) {
 				repository: pkg.repository && git2Web(pkg.repository.url),
 				rank: [pkg.rank>0, pkg.rank>1, pkg.rank>2]
 			};
+
+			//if(!!pkg.rank)
+				apps.push(p);
+			/*else
+				others.push(p);*/
 		});
 
 	grunt.registerTask('createPages', 'build new output pages', function() {
@@ -62,7 +71,8 @@ module.exports = function (grunt) {
 				pkg: Pkg,
 				tags: tags,
 				tagsjson: JSON.stringify( activeTags ),
-				apps: apps
+				apps: apps,
+				//others: others
 			}) );
 
 		});

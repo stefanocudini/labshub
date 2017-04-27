@@ -210,7 +210,7 @@ footer {
 	float: left;
 	width:24px;
 	height:24px;
-	background: url('images/sprite.png') no-repeat #eee;
+	background: url('images/sprite.png') no-repeat;
 }
 .icon.git {
 	background-position: 0 0;
@@ -243,11 +243,6 @@ footer {
 	float: left;
 	height: 20px;	
 }
-.btns {
-	clear: both;
-	height: 20px;
-	opacity: 0.8
-}
 .repo {
 	opacity: 0.6;
 	position: absolute;
@@ -278,21 +273,21 @@ footer {
 	display:block;
 	margin:.125em;
 	background: #fff;
-	border:1px solid #c1bad4;
+	border:1px solid #e3e3e3;
 	color:#7A738B;
 	padding:3px 6px;
 	text-decoration:none;
 	font-size:12px;
-	letter-spacing: 1px
+	letter-spacing: 1px;
 }
 .tag span:before {
 	font-size: 18px;
 	vertical-align: middle;
 	line-height: 15px;
-	margin-left: -4px;
-	/*content: '•';*/
-	content: '∘';
-	color: #c1bad4;
+	margin-left: -4px;	
+/*	content: '∘';	
+	content: '#';	*/
+	color: #e3e3e3;
 }
 #tags a.tag {
 	margin:.25em;
@@ -304,7 +299,6 @@ footer {
 .tag.sel span:before {
 	color: #f80;
 }
-
 .tag b {
 	text-shadow: -1px -1px 0 #aaa;
 }
@@ -350,6 +344,14 @@ footer {
 	display:none;
 }
 
+#others .box {
+	float: none;
+	width: auto;
+	height: auto;
+}
+#others .desc {
+	height:auto;
+}
 @media screen and (max-width: 420px) {
 	#bubbles {
 		display: none;
