@@ -88,6 +88,12 @@ module.exports = function (grunt) {
 				files: ['*.tmpl.html','*.json'],
 				tasks: ['createPages']
 			},
+			images: {
+				options: {
+					livereload: true
+				},
+				files: ['images/*']
+			},
 			jscss: {
 				options: {
 					livereload: true
