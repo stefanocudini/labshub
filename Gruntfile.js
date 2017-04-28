@@ -8,8 +8,8 @@ module.exports = function (grunt) {
 	
 	_.str = require('underscore.string');
 
-	function git2Web(giturl) {
-		return giturl && giturl.replace('git://','https://')
+	function repo2Web(url) {
+		return url.replace('git://','https://')
 					 .replace('git@github.com:','https://github.com/')
 					 .replace(/\.git$/,'');
 	}
@@ -43,13 +43,15 @@ module.exports = function (grunt) {
 		apps = [], others = [];
 
 		_.each(pkgs, function(pkg) {
+	
 			var p = {
 				name: pkg.name,
 				description: pkg.description,
 				title: _.str.humanize( pkg.name ),
 				path: pkg.path,
 				tags: pkg.keywords ? pkg.keywords.sort() : [],
-				repository: pkg.repository && git2Web(pkg.repository.url),
+				repository: pkg.repository,
+				url: pkg.repository && repo2Web(pkg.repository.url),
 				rank: [pkg.rank>0, pkg.rank>1, pkg.rank>2]
 			};
 

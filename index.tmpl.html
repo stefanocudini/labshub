@@ -54,7 +54,7 @@
 			{{#with this}}
 			<div class="box" data-name="{{name}}" data-title="{{title}}" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
 				<h3 class="title"><a href="{{path}}">{{title}}</a></h3>
-				<a class="icon repo {{repository.type}}" title="Github repository" target="_blank" href="{{repository.url}}"></a>
+				<a class="icon repo {{repository.type}}" title="Github repository" target="_blank" href="{{url}}"></a>
 				<div class="stars" title="complexity">
 				{{#each rank}}
 					<i class="icon{{#if this}} star {{else}} unstar {{/if}}">*</i>
@@ -73,18 +73,6 @@
 	</section>
 
 	<section id="deactives">	
-	</section>
-
-	<section id="others">
-		{{#each others}}
-			{{#with this}}
-			<div class="box" data-name="{{name}}" data-title="{{title}}" data-tags="{{#each tags}}{{#if @index}},{{/if}}{{this}}{{/each}}">
-				<h3 class="title"><a href="{{path}}">{{title}}</a></h3>
-				<a class="icon repo {{repository.type}}" title="Github repository" target="_blank" href="{{repository.url}}"></a>
-				<p class="desc">{{description}}</p>
-			</div>
-			{{/with}}
-		{{/each}}	
 	</section>
 
 	<footer>powered by <a href="https://github.com/stefanocudini/labs">Labs</a></footer>

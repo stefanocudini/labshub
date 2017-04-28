@@ -343,15 +343,6 @@ footer {
 #deactives .repos {
 	display:none;
 }
-
-#others .box {
-	float: none;
-	width: auto;
-	height: auto;
-}
-#others .desc {
-	height:auto;
-}
 @media screen and (max-width: 420px) {
 	#bubbles {
 		display: none;
