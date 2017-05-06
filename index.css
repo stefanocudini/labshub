@@ -349,6 +349,7 @@ footer {
 	}
 	#content {
 		margin:0;
+		padding: 0 8px;
 		width:auto;
 		max-width:100%;
 		border-left:none;
@@ -357,5 +358,7 @@ footer {
 	}
 	.box {
 		min-width:284px;
+		margin: 8px 0;
+		padding: 8px;
 	}
 }
