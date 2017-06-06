@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 	_.str = require('underscore.string');
 
 	function repo2Web(url) {
-		return url.replace('git://','https://')
+		return url && url.replace('git://','https://')
 					 .replace('git@github.com:','https://github.com/')
 					 .replace(/\.git$/,'');
 	}
