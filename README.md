@@ -2,7 +2,8 @@
 # Labs
 
 Hub to organizing a set of NPM packages by keywords
-Using interactive tags filter and search tool
+
+Labs generate automatically a nice and simple user interface that shows projects including their name, description and allows you to search through the keywords defined in the individual package.json files.
 
 [Demo](http://labs.easyblog.it/)
 
