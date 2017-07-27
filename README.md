@@ -11,8 +11,7 @@ Copy or linking projects directories inside root path
 ```bash
 cp -r /var/www/my-npm-projects/* ./
 ```
-
-Edit [labs.json](https://github.com/stefanocudini/labs/blob/master/labs.json) adding details about npm packages inside the root directory.
+Labs allows you to centrally manage all of npm projects(contains package.json file) deployed in your website through a single configuration file(labs.json). Edit [labs.json](https://github.com/stefanocudini/labs/blob/master/labs.json) adding details about npm packages inside the root directory.
 ```javascript
 {
   "pages": {
