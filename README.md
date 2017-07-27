@@ -4,6 +4,8 @@
 Hub to organizing a set of NPM packages by keywords
 Using interactive tags filter and search tool
 
+[Demo](http://labs.easyblog.it/)
+
 ## Usage
 Copy or linking projects directories inside root path
 ```bash
