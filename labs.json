@@ -14,6 +14,7 @@
   ],
   "packages": {
     "ultra-light-gallery": {
+	  "path": "http://easyblog.it/photos/demo/",
       "keywords": ["ajax","jquery","css3"],
       "rank": 3
     },
@@ -53,7 +54,7 @@
       "keywords": ["map","jquery","ajax","geojson","openlayers"],
       "rank": 1
     },
-    "gps-network-tracking-system": {
+    "network-tracking-system": {
       "keywords": ["map","gis","jquery-ui","postgis","ajax","openlayers","gps","server"],
       "rank": 3
     },
@@ -127,7 +128,9 @@
       "rank": 1
     },
     "mixtags.com": {
-      "keywords": ["jquery","css3","ajax","gruntjs","json","mysql","html5"],
+      "path": "http://mixtags.com/", 
+	  "description": "Advanced service of bookmarking with folksonomy",
+	  "keywords": ["jquery","css3","php","gruntjs","json","mysql","html5"],
       "rank": 3
     },
     "mwm": {
