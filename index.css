@@ -13,10 +13,10 @@ body.maps {
 	display: inline-block;
 	vertical-align: bottom;
 	margin: -40px -30px 0 -30px;
-	transition: 2s;
 	cursor: pointer;
 }
 #logo:hover {
+	transition: 2s;
     filter: hue-rotate(180deg);    
 }
 h1 {
