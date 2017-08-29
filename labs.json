@@ -22,6 +22,12 @@
       "keywords": ["bootstrap","jquery","css3"],
       "rank": 2
     },
+    "keplerjs.io": {
+      "path": "http://keplerjs.io/",
+	  "repository": {"url": "https://github.com/Keplerjs"},
+      "keywords": ["osm","meteor","nodejs","map","gis","javascript"],
+      "rank": 3
+    },
     "bootstrap-list-filter": {
       "keywords": ["bootstrap","jquery","css3"],
       "rank": 2
@@ -129,6 +135,7 @@
     },
     "mixtags.com": {
       "path": "http://mixtags.com/", 
+	  "repository": {"url": "https://github.com/mixtags"},
 	  "description": "Advanced service of bookmarking with folksonomy",
 	  "keywords": ["jquery","css3","php","gruntjs","json","mysql","html5"],
       "rank": 3
@@ -138,7 +145,7 @@
       "rank": 2
     },
     "orthogonalize-js": {
-      "keywords": ["maps","javascript","leaflet"],
+      "keywords": ["map","javascript","leaflet"],
       "rank": 1
     },
     "osm-contributors-by-area": {
