@@ -63,10 +63,10 @@ ul {
 	clear:both;
 }
 li {
-	margin-bottom:1em;
+	margin-bottom:2em;
 }
 li a {
-	font-size: 1em;
+	font-size: 1.2em;
 	font-weight: bold;
 }
 #content {
