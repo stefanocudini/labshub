@@ -1,3 +1,18 @@
+(function() {
+	var css = "display:block;z-index:6000;position:fixed;width:200px;height:100px;bottom:50%;right:0;"+
+			  "background:url('http://keplerjs.io/images/keplerjs.png');padding: 0 3px;"+
+			  "background-size:200px 100px;color:#479;font-size:12px;font-style:italic;"+
+			  "box-shadow:0 0 16px rgba(0,0,0,0.3);text-align:right;text-decoration:none";
+
+	var div = document.createElement('a');
+	div.setAttribute('id','banner');
+	document.body.appendChild(div);
+	div.setAttribute('style', css);
+	div.setAttribute('href', 'http://keplerjs.io/');
+	div.innerHTML = 'The new open source <br>geo-social platform';
+	
+})();
+
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-38393469-1']);
 _gaq.push(['_trackPageview']);
@@ -19,3 +34,4 @@ if( disqusDiv && disqusDiv.style.display!='none' )
 	})();
 
 }
+
