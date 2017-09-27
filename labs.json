@@ -156,7 +156,7 @@
       "keywords": ["jquery","ajax","php","mysql","sqlite"],
       "rank": 1
     },
-    "python-geotiff-picker": {
+    "geotiff-picker": {
       "keywords": ["python","gis","json","map"],
       "rank": 2
     },
