@@ -13,6 +13,23 @@
     "stefano-cudini"
   ],
   "packages": {
+    "keplerjs.io": {
+      "path": "http://keplerjs.io/",
+	  "repository": {"url": "https://github.com/Keplerjs"},
+      "keywords": ["osm","meteor","nodejs","map","gis","javascript","geosocial"],
+      "rank": 4
+    },
+    "gpsdata-server": {
+      "keywords": ["gps","nodejs","bash","server","websocket","debian","mysql"],
+      "rank": 4
+    },
+    "mixtags.com": {
+      "path": "http://mixtags.com/", 
+	  "repository": {"url": "https://github.com/mixtags"},
+	  "description": "Advanced service of bookmarking with folksonomy",
+	  "keywords": ["jquery","css3","php","gruntjs","json","mysql","html5"],
+      "rank": 4
+    },
     "ultra-light-gallery": {
 	  "path": "http://easyblog.it/photos/demo/",
       "keywords": ["ajax","jquery","css3"],
@@ -21,12 +38,6 @@
     "bootstrap-confirm-button": {
       "keywords": ["bootstrap","jquery","css3"],
       "rank": 2
-    },
-    "keplerjs.io": {
-      "path": "http://keplerjs.io/",
-	  "repository": {"url": "https://github.com/Keplerjs"},
-      "keywords": ["osm","meteor","nodejs","map","gis","javascript"],
-      "rank": 3
     },
     "bootstrap-list-filter": {
       "keywords": ["bootstrap","jquery","css3"],
@@ -66,10 +77,6 @@
     },
     "gpx-simplify-optimizer": {
       "keywords": ["map","gis","leaflet","html5","bootstrap"],
-      "rank": 3
-    },
-    "gpsdata-server": {
-      "keywords": ["gps","nodejs","bash","server","websocket","debian","mysql"],
       "rank": 3
     },
     "jsautocompiler": {
@@ -132,13 +139,6 @@
     "mega-python-commandline-tools": {
       "keywords": ["python","bash"],
       "rank": 1
-    },
-    "mixtags.com": {
-      "path": "http://mixtags.com/", 
-	  "repository": {"url": "https://github.com/mixtags"},
-	  "description": "Advanced service of bookmarking with folksonomy",
-	  "keywords": ["jquery","css3","php","gruntjs","json","mysql","html5"],
-      "rank": 3
     },
     "mwm": {
       "keywords": ["jquery","monitoring","bash","debian","gruntjs","php"],
