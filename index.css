@@ -9,23 +9,47 @@ body {
 body.maps {
 	background-image: url('images/backmap.jpg');
 }
-#logo {
-	display: inline-block;
-	vertical-align: bottom;
-	margin: -40px -30px 0 -30px;
-	cursor: pointer;
-}
-#logo:hover {
-	transition: 2s;
-    filter: hue-rotate(180deg);    
-}
 h1 {
 	display: inline;
 	color:#f90;
 	font-weight: normal;
 	font-weight: bold;
 	z-index: 100;
-	letter-spacing: .125em
+	letter-spacing: .125em;
+	position: relative;
+}
+#logo {
+	display: inline-block;
+	vertical-align: bottom;
+	cursor: pointer;
+}
+#bubbles {
+	position: absolute;
+	bottom: 50px;
+	left:0;
+	opacity: 0;
+}
+h1:hover #logo {
+	transition: 3s;
+	filter: hue-rotate(360deg);
+/*	animation-direction: alternate*/
+}
+h1.hover #bubbles {
+	animation-duration: 3s;
+	animation-name: anim;
+	animation-iteration-count: 1;
+	animation-direction: initial;
+	animation-fill-mode: forwards
+}
+@keyframes anim {
+  from {
+  	opacity: 0.2;
+    transform: translateY(60px) scale(0.3);
+  }
+  to {
+  	opacity: 1;
+  	transform: translateY(0) scale(1);
+  }
 }
 h1 big {
 	color: #9f8bc8;

@@ -88,6 +88,13 @@
 	var allTags = {{{tagsjson}}};
 </script>
 <script src="index.js"></script>
+<script>
+	$(function() {
+		$('h1').one('mouseenter', function(e) {
+			$(this).addClass('hover');
+		})
+	})
+</script>
 <script src="labs-common.js"></script>
 </body>
 </html>
