@@ -1,3 +1,4 @@
+/*
 (function() {
 	var css = "z-index:6000;position:fixed;width:200px;height:100px;top:270px;right:0;"+
 			  "background:url('http://keplerjs.io/images/keplerjs.png') center center;padding:3px;"+
@@ -10,8 +11,8 @@
 	div.setAttribute('style', css);
 	div.setAttribute('href', 'http://keplerjs.io/');
 	div.innerHTML = 'The new opensource <br>geosocial platform';
-	
 })();
+*/
 
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-38393469-1']);
