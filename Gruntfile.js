@@ -88,7 +88,7 @@ module.exports = function (grunt) {
 		pkg: Pkg,
 		sitemap: {
 			dist: {
-				pattern: ['**/index.html','**/index.php','!**/node_modules/**'],
+				pattern: ['**/index.html','**/index.php','!**/node_modules/**','!js/**','!portfolio/**'],
 				siteRoot: './'
 			}
 		},	
