@@ -87,11 +87,10 @@ ul {
 	clear:both;
 }
 li {
-	margin-bottom:2em;
+	margin-bottom:1em;
 }
 li a {
 	font-size: 1.2em;
-	font-weight: bold;
 }
 #content {
 	margin:20px auto;
@@ -102,7 +101,15 @@ li a {
 	background:#fff;
 }
 #donate {
-	text-align: right;
+	float: right;
+	clear: both;
+	margin: 10px 0;
+	padding: 10px;
+	color: #33d;
+	border:1px solid #33d;
+}
+section {
+	clear: both;
 }
 footer {
 	text-align: right;
