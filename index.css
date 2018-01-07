@@ -18,6 +18,9 @@ h1 {
 	letter-spacing: .125em;
 	position: relative;
 }
+.orange {
+	color: #f90;
+}
 #logo {
 	display: inline-block;
 	vertical-align: bottom;
@@ -87,7 +90,7 @@ ul {
 	clear:both;
 }
 li {
-	margin-bottom:1em;
+	margin-bottom:10px;
 }
 li a {
 	font-size: 1.2em;
@@ -102,11 +105,12 @@ li a {
 }
 #donate {
 	float: right;
-	clear: both;
-	margin: 10px 0;
-	padding: 10px;
-	color: #33d;
-	border:1px solid #33d;
+	width: 42%;
+}
+nav {
+	float: left;
+	clear: right;
+	width: 56%;
 }
 section {
 	clear: both;
@@ -403,6 +407,11 @@ footer {
 	}
 	#banner {
 		display:none
+	}
+	nav,
+	#donate {
+		float: none;
+		width: auto;
 	}
 }
 

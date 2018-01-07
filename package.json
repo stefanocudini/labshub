@@ -1,6 +1,6 @@
 {
   "name": "labs",
-  "version": "0.5.0",  
+  "version": "0.5.0",
   "description": "Hub to organizing a set of NPM packages by keywords",
   "license": "MIT",
   "homepage": "http://labs.easyblog.it/",
@@ -16,9 +16,10 @@
   ],
   "author": {
     "name": "Stefano Cudini",
-    "gitusername": "stefanocudini",
     "email": "stefano.cudini@gmail.com",
-    "url": "http://labs.easyblog.it/stefano-cudini/"
+    "url": "http://labs.easyblog.it/stefano-cudini/",
+    "git": "stefanocudini",
+    "twitter": "zakis"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,7 @@
     "marked": "~0.3.3",
     "lodash": "^3.5.0",
     "underscore": "^1.8.2",
-    "underscore.string": "^3.0.3"    
+    "underscore.string": "^3.0.3"
   },
   "dependencies": {
     "jquery": "^2.1.3",
