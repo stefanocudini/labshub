@@ -1,10 +1,11 @@
 {
   "name": "labs",
   "version": "0.5.0",
-  "description": "Hub to organizing a set of NPM packages by keywords",
+  "description": "A static site generator to create a Hub to organizing a set of NPM packages by keywords",
   "license": "MIT",
   "homepage": "http://labs.easyblog.it/",
   "keywords": [
+	"static site generator",
     "keywords",
     "package.json",
     "tags",
@@ -34,14 +35,14 @@
     "grunt-contrib-uglify": "^0.8.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-sitemap": "^1.2.1",
-    "handlebars": "^3.0.0",
+    "handlebars": "^4.0.0",
     "marked": "~0.3.3",
     "lodash": "^3.5.0",
     "underscore": "^1.8.2",
     "underscore.string": "^3.0.3"
   },
   "dependencies": {
-    "jquery": "^2.1.3",
+    "jquery": "^3.0.0",
     "bootstrap": "~3.3.4"
   }
 }

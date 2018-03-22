@@ -1,7 +1,7 @@
 
 # Labs
 
-Hub to organizing a set of NPM packages by keywords
+A static site generator to create a Hub to organizing a set of NPM packages by keywords
 
 Labs generate automatically a nice and simple user interface that shows projects including their name, description and allows you to search through the keywords defined in each *package.json* files.
 
