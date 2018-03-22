@@ -1,9 +1,9 @@
 
-# Labs
+# LabsHub
 
-A static site generator to create a Hub to organizing a set of NPM packages by keywords
+A static site generator to create an Hub to organizing a set of NPM packages by keywords
 
-Labs generate automatically a nice and simple user interface that shows projects including their name, description and allows you to search through the keywords defined in each *package.json* files.
+LabsHub generate automatically a nice and simple user interface that shows projects including their name, description and allows you to search through the keywords defined in each *package.json* files.
 
 [Demo](http://labs.easyblog.it/)
 
@@ -12,7 +12,7 @@ Copy or linking projects directories inside root path
 ```bash
 cp -r /var/www/my-npm-projects/* ./
 ```
-Labs allows you to centrally manage all of npm projects(contains package.json file) deployed in your website through a single configuration file(labs.json). Edit [labs.json](https://github.com/stefanocudini/labs/blob/master/labs.json) adding details about npm packages inside the root directory.
+LabsHub allows you to centrally manage all of npm projects(contains package.json file) deployed in your website through a single configuration file(labshub.json). Edit [labshub.json](https://github.com/stefanocudini/labs/blob/master/labshub.json) adding details about npm packages inside the root directory.
 ```javascript
 {
   "pages": {

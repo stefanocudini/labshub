@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 	}
 
 	var Pkg = grunt.file.readJSON('package.json'),
-		Conf = grunt.file.readJSON('labs.json');
+		Conf = grunt.file.readJSON('labshub.json');
 		
 	grunt.log.ok('searching packages...');
 
