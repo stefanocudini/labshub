@@ -1,11 +1,11 @@
 {
   "name": "labshub",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "description": "A static site generator to create an Hub to organizing a set of NPM packages by keywords",
   "license": "MIT",
   "homepage": "http://labs.easyblog.it/",
   "keywords": [
-	  "site generator",
+    "site generator",
     "keywords",
     "package.json",
     "tags",
