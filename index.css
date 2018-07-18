@@ -11,7 +11,7 @@ body.maps {
 }
 h1 {
 	display: inline;
-	color:#f90;
+	color: #f90;
 	font-weight: normal;
 	font-weight: bold;
 	z-index: 100;
@@ -26,32 +26,43 @@ h1 {
 	vertical-align: bottom;
 	cursor: pointer;
 }
-#bubbles {
+.bubbles {
 	position: absolute;
-	bottom: 50px;
+	/*bottom: 50px;*/
 	left:0;
 	opacity: 0;
 }
 h1:hover #logo {
-	transition: 3s;
-	filter: hue-rotate(360deg);
+	/*transition: 3s;*/
+	animation-duration: 5s;
+	animation-name: col;
+	animation-iteration-count: infinite;
 /*	animation-direction: alternate*/
 }
-h1.hover #bubbles {
+h1:hover .bubbles {
 	animation-duration: 3s;
-	animation-name: anim;
-	animation-iteration-count: 1;
+	animation-name: bub;
+	animation-iteration-count: infinite; 
 	animation-direction: initial;
-	animation-fill-mode: forwards
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
 }
-@keyframes anim {
+@keyframes col {
   from {
-  	opacity: 0.2;
-    transform: translateY(60px) scale(0.3);
+  	filter: hue-rotate(360deg);
+  }
+  to {
+  	filter: hue-rotate(0deg);
+  }
+}
+@keyframes bub {
+  from {
+  	opacity: 0.5;
+    transform: translateY(60px) scale(0.4);
   }
   to {
   	opacity: 1;
-  	transform: translateY(0) scale(1);
+  	transform: translateY(-90px) scale(1.2);
   }
 }
 h1 big {
@@ -253,7 +264,7 @@ footer {
 	opacity: 0.5;
 }
 .icon.git:hover {
-	opacity: 0.8
+	opacity: 1
 }
 .icon.bit {
 	background-position: -20px 0;
@@ -385,7 +396,7 @@ footer {
 		padding: 0;
 		overflow-x: hidden;
 	}
-	#bubbles {
+	.bubbles {
 		display: none;
 	}
 	#content {
