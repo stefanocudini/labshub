@@ -52,14 +52,16 @@ h1 {
 	left:0;
 	opacity: 0;
 }
-h1:hover #logo {
+h1:hover #logo,
+h1:active #logo {
 	/*transition: 3s;*/
 	animation-duration: 5s;
 	animation-name: col;
 	animation-iteration-count: infinite;
 /*	animation-direction: alternate*/
 }
-h1:hover .bubbles {
+h1:hover .bubbles,
+h1:active .bubbles {
 	animation-duration: 3s;
 	animation-name: bub;
 	animation-iteration-count: infinite; 
@@ -393,9 +395,6 @@ footer {
 		margin: 0;
 		padding: 0;
 		overflow-x: hidden;
-	}
-	.bubbles {
-		display: none;
 	}
 	#content {
 		border: none;
