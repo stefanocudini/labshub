@@ -9,17 +9,37 @@ body {
 body.maps {
 	background-image: url('images/backmap.jpg');
 }
+.blue {
+	color: rgba(120,140,220,1);
+}
+.blue-bg {
+	color: #fff;
+	background-color: rgba(120,140,220,0.4)
+}
+.blue-bg a {
+	text-shadow: 0 0 4px #fff;
+}
+.orange {
+	color: #f90;
+}
+.grey {
+	color: #ccc
+}
+a {
+	color:#f90;
+	text-decoration:none;
+	cursor: pointer;
+}
+a:hover {
+	text-decoration:underline;
+}
 h1 {
 	display: inline;
-	color: #f90;
 	font-weight: normal;
 	font-weight: bold;
 	z-index: 100;
 	letter-spacing: .125em;
 	position: relative;
-}
-.orange {
-	color: #f90;
 }
 #logo {
 	display: inline-block;
@@ -65,16 +85,12 @@ h1:hover .bubbles {
   	transform: translateY(-90px) scale(1.2);
   }
 }
-h1 big {
-	color: #9f8bc8;
-}
 h1 a:hover {
 	text-decoration: none;
 }
 h2 {
 	font-weight: normal;
 	letter-spacing: 2px;
-	color: #c5cdd4;
 }
 h3 {
 	letter-spacing: 1px;
@@ -88,14 +104,7 @@ hr {
 label {
 	margin:2px;
 }
-a {
-	color:#f90;
-	text-decoration:none;
-	cursor: pointer;
-}
-a:hover {
-	text-decoration:underline;
-}
+
 ul {
 	padding-left: 16px;
 	clear:both;
@@ -133,8 +142,6 @@ footer {
 	line-height: 40px;
 	margin: 0 -16px;
 	padding: 5px 40px;
-	background: #d7e5ea;
-	color: #fff;
 }
 #topics {
 	clear:both;
@@ -150,16 +157,12 @@ footer {
 #findapps {
 	float: right;
 	border:1px solid #e5edf4;
-    background:#fff;	
-	color: #666;
+    background:#fff;
 	margin: 10px 0 2px 0;
 	background:url('images/sprite.png') no-repeat 0 -26px;
 	padding-left:26px;
 	height:24px;
 	line-height:24px;
-}
-#findapps.inactive {
-	color: #ccc;
 }
 #findapps:focus {
 	border:1px solid #e5edf4;
@@ -272,15 +275,10 @@ footer {
 .icon.hg {
 	background-position: -40px 0;
 }
-.icon.star,
-.icon.unstar {
+.icon.star {
 	background: none;
 	font-size: 28px;
-	line-height: 28px;
-	color:#f80;
-}
-.icon.unstar {
-	color: #ddd;
+	line-height: 28px
 }
 .stars .icon {
 	display: inline-block;
