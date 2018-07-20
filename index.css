@@ -10,14 +10,14 @@ body.maps {
 	background-image: url('images/backmap.jpg');
 }
 .blue {
-	color: rgba(120,140,220,1);
+	color: rgba(112,160,210,1);
 }
 .blue-bg {
 	color: #fff;
-	background-color: rgba(120,140,220,0.4)
+	background-color: rgba(112,160,210,0.5)
 }
 .blue-bg a {
-	text-shadow: 0 0 4px #fff;
+	text-shadow: 0 0 1px #fff;
 }
 .orange {
 	color: #f90;
@@ -41,6 +41,9 @@ h1 {
 	letter-spacing: .125em;
 	position: relative;
 }
+h1 big {
+	margin: 0;
+}
 #logo {
 	display: inline-block;
 	vertical-align: bottom;
@@ -52,6 +55,7 @@ h1 {
 	left:0;
 	opacity: 0;
 }
+h1:hover big,
 h1:hover #logo,
 h1:active #logo {
 	/*transition: 3s;*/
