@@ -1,6 +1,6 @@
 {
   "name": "labshub",
-  "version": "0.6.8",
+  "version": "0.7.0",
   "description": "A static site generator to create an Hub to organizing a set of NPM packages by keywords",
   "license": "MIT",
   "homepage": "http://labs.easyblog.it/",

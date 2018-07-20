@@ -45,6 +45,8 @@ h1 big {
 	margin: 0;
 }
 #logo {
+	height: 100px;
+	width: 100px;
 	display: inline-block;
 	vertical-align: bottom;
 	cursor: pointer;
