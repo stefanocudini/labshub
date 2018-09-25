@@ -57,6 +57,10 @@
       "keywords": ["map","jquery","ajax","geojson","openlayers"],
       "rank": 1
     },
+    "leaflet-geojson-selector": {
+      "keywords": ["map","leaflet","geojson","gis"],
+      "rank": 2
+    },
     "network-tracking-system": {
       "keywords": ["map","gis","jquery-ui","postgis","ajax","openlayers","gps","server"],
       "rank": 3
