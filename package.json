@@ -37,7 +37,7 @@
     "grunt-sitemap": "^1.2.1",
     "handlebars": "^4.0.0",
     "marked": "~0.3.3",
-    "lodash": "^3.5.0",
+    "lodash": "^4.17.5",
     "underscore": "^1.8.2",
     "underscore.string": "^3.0.3"
   },
