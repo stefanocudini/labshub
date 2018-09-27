@@ -5,22 +5,23 @@ module.exports = function (grunt) {
 	var Path = require('path'),
 		Handlebars = require('handlebars'),
 		_ = require('lodash');
-	
+
 	_.str = require('underscore.string');
 
 	function repo2Web(url) {
 		return url && url.replace('git://','https://')
-					 .replace('git@github.com:','https://github.com/')
-					 .replace(/\.git$/,'');
+					.replace('git@github.com:','https://github.com/')
+					.replace(/\.git$/,'');
 	}
 
 	var Pkg = grunt.file.readJSON('package.json'),
 		Conf = grunt.file.readJSON('labshub.json');
-		
+
 	grunt.log.ok('searching packages...');
 
-	var ignores = _.map(Conf.packagesIgnore, function(exp) { return '!'+exp; }),
-		patterns = _.union(['**/package.json'], ignores),
+	var ignores = _.map(Conf.packagesIgnore, function(exp) { return '!'+exp; });
+
+	var	patterns = _.union(['**/package.json'], ignores),
 		pkgpaths = grunt.file.expand({cwd: './' }, patterns );
 
 	var pkgs = _.map(pkgpaths, function(f) {
@@ -43,7 +44,7 @@ module.exports = function (grunt) {
 		apps = [], others = [];
 
 		_.each(pkgs, function(pkg) {
-	
+
 			var p = {
 				name: pkg.name,
 				description: pkg.description,
@@ -111,12 +112,11 @@ module.exports = function (grunt) {
 					livereload: true
 				},
 				files: ['*.js','*.css']
-			}			
+			}
 		}
 	});
 
 	grunt.registerTask('default', [
 		'createPages'
 	]);
-
 };

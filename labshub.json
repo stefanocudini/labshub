@@ -5,10 +5,9 @@
   },
   "packagesIgnore": [
     "**/node_modules/**",
-    "diz",
     "js",
     "portfolio",
-    "stefano-cudini"
+    "stefano-cudini/**"
   ],
   "packages": {
     "keplerjs.io": {
@@ -61,7 +60,7 @@
       "keywords": ["map","leaflet","geojson","gis"],
       "rank": 2
     },
-    "network-tracking-system": {
+    "gps-network-tracking-system": {
       "keywords": ["map","gis","jquery-ui","postgis","ajax","openlayers","gps","server"],
       "rank": 3
     },
@@ -138,20 +137,12 @@
       "keywords": ["jquery","osm","leaflet","bootstrap"],
       "rank": 1
     },
-    "php-interactive-doc/": {
-      "keywords": ["jquery","ajax","php","mysql","sqlite"],
-      "rank": 1
-    },
     "geotiff-picker": {
       "keywords": ["python","gis","json","map"],
       "rank": 2
     },
     "qr-code-generator": {
       "keywords": ["php","jquery","ajax"],
-      "rank": 1
-    },
-    "realtime-access-map": {
-      "keywords": ["map","monitoring","openlayers","geoip","apache","geojson","ajax"],
       "rank": 1
     },
     "routeservice": {
