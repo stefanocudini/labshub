@@ -6,6 +6,8 @@ $(function() {
 	var tags$ = $('#tags'),
 		boxes$ = $(".box");
 
+	var locationTags = location.hash ? $.unique(location.hash.split('#')[1].split(',')) : [];
+			
 	var allTagsFalse = true;
 
 	var allTagsFalseFade = true,
@@ -67,24 +69,26 @@ $(function() {
 		});		
 	}	
 
-	$('.tag').on('click', function(e) {
+	$('article').on('click', '.tag', function(e) {
 		e.preventDefault();
 		
-		var tags = location.hash ? $.unique(location.hash.split('#')[1].split(',')) : [],
-			tag = $(this).children('span').text();
+		var tag = $(this).children('span').text();
 		
 		allTags[tag] = allTags[tag] ? 0 : 1;
 		
 		if(allTags[tag])
-			tags.push(tag);
+			locationTags.push(tag);
 		else
-			tags.splice(tags.indexOf(tag),1);
+			locationTags.splice(locationTags.indexOf(tag),1);
 
 		checkAllTagsFalse();  //se tutti i tag sono disattivi mostra tutto!
 		filterBoxesForTags();
-		$(".tag[href='#"+tag+"']").toggleClass('sel');
 
-		window.location.hash = $.unique(tags).join();
+		$(".tag[href='#"+tag+"']").toggleClass('sel');
+		
+		if(locationTags.length>0) {
+			window.location.hash = $.unique(locationTags).join();
+		}
 	});
 
 	$('#findapps')		// Ricerca tags
@@ -123,12 +127,10 @@ $(function() {
 			$(this).addClass('inactive').val(findlabel).attr('size',findappssize);
 		})
 		.addClass('inactive').val(findlabel);
-
-	var tags = location.hash ? $.unique(location.hash.split('#')[1].split(',')) : [];
 	
-	for(var t in tags)
+	for(var t in locationTags)
 	{
-		var tag = tags[t];
+		var tag = locationTags[t];
 		allTags[tag] = 1;
 		$(".tag[href='#"+tag+"']").addClass('sel');
 	}
