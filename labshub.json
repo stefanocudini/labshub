@@ -52,10 +52,6 @@
       "keywords": ["php","jquery","server"],
       "rank": 2
     },
-    "googletrace": {
-      "keywords": ["map","jquery","ajax","geojson","openlayers"],
-      "rank": 1
-    },
     "leaflet-geojson-selector": {
       "keywords": ["map","leaflet","geojson","gis"],
       "rank": 2
