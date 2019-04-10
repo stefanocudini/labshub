@@ -39,7 +39,7 @@ module.exports = function (grunt) {
 
 	pkgs = _.sortBy(pkgs,'rank').reverse();
 
-	var tags = _(pkgs).pluck('keywords').flatten().uniq().compact().value().sort(),
+	var tags = _.chain(pkgs).pluck('keywords').flatten().uniq().compact().value().sort(),
 		activeTags = _.object(tags, _.fill(_.range(tags.length),0) ),
 		apps = [], others = [];
 
