@@ -4,7 +4,8 @@ module.exports = function (grunt) {
 
 	var Path = require('path'),
 		Handlebars = require('handlebars'),
-		_ = require('lodash');
+		_ = require('lodash'),
+		__ = require('underscore');
 
 	_.str = require('underscore.string');
 
@@ -39,8 +40,8 @@ module.exports = function (grunt) {
 
 	pkgs = _.sortBy(pkgs,'rank').reverse();
 
-	var tags = _.chain(pkgs).pluck('keywords').flatten().uniq().compact().value().sort(),
-		activeTags = _.object(tags, _.fill(_.range(tags.length),0) ),
+	var tags = __.chain(pkgs).pluck('keywords').flatten().uniq().compact().value().sort(),
+		activeTags = __.object(tags, _.fill(_.range(tags.length),0) ),
 		apps = [], others = [];
 
 		_.each(pkgs, function(pkg) {
