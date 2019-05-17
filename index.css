@@ -75,6 +75,24 @@ h1:active .bubbles {
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-out;
 }
+#sections {
+	list-style: none;
+	padding-left: 0;
+	clear: both;
+}
+#sections li {
+	cursor:pointer;
+	float:left;
+	display:block;
+	margin:.125em;
+	background: #fff;
+	border:1px solid #e3e3e3;
+	color:#7A738B;
+	padding:20px 30px;
+	text-decoration:none;
+	font-size:1em;
+	letter-spacing: 1px;
+}
 @keyframes col {
   from {
   	filter: hue-rotate(360deg);
@@ -134,11 +152,12 @@ li a {
 #donate {
 	float: right;
 	width: 40%;
+	padding: 5px 10px;
+	border: 1px solid #e3e3e3
 }
 nav {
-	float: left;
-	clear: right;
-	width: 56%;
+	clear: both;
+	display: block;
 }
 section {
 	clear: both;
