@@ -138,6 +138,7 @@ li a {
 	margin: 0;
 }
 #sections li {
+	display:block;
 	cursor:pointer;
 	float:left;
 	margin:.125em;
@@ -150,8 +151,9 @@ li a {
 	letter-spacing: 1px;
 }
 nav {
-	float: left;
-	clear: right;
+	float:left;
+	clear: both;
+	margin-bottom:20px
 }
 section {
 	clear: both;
