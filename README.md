@@ -1,7 +1,7 @@
 
 # LabsHub
 
-A static site generator to create an Hub to organizing a set of NPM packages by keywords
+A static site generator for create an Hub to organizing a set of NPM packages by keywords
 
 LabsHub generate automatically a nice and simple user interface that shows projects including their name, description and allows you to search through the keywords defined in each *package.json* files.
 
