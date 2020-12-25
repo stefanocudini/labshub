@@ -23,6 +23,7 @@ _gaq.push(['_trackPageview']);
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
+/*
 var disqusDiv = document.getElementById('disqus_thread');
 
 if( disqusDiv && disqusDiv.style.display!='none' )
@@ -34,3 +35,4 @@ if( disqusDiv && disqusDiv.style.display!='none' )
 		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 	})();
 }
+*/
