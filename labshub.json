@@ -9,6 +9,9 @@
     "portfolio",
     "stefano-cudini/**"
   ],
+  "tagsIgnore": [
+    "developer","dom","cv","fetch"
+  ],
   "packages": {
     "keplerjs.io": {
       "path": "https://keplerjs.io/",
