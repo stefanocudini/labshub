@@ -5,7 +5,7 @@ A static site generator for create an Hub to organizing a set of NPM packages by
 
 LabsHub generate automatically a nice and simple user interface that shows projects including their name, description and allows you to search through the keywords defined in each *package.json* files.
 
-[Demo](http://labs.easyblog.it/)
+[Demo](https://opengeo.tech/)
 
 ## Usage
 Copy or linking projects directories inside root path
@@ -37,5 +37,5 @@ LabsHub allows you to centrally manage all of npm projects(contains package.json
 ### generate index.html
 ```bash
 npm i
-grunt
+npm run build
 ```

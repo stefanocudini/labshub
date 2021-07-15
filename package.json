@@ -3,7 +3,7 @@
   "version": "0.7.3",
   "description": "A static site generator to create an Hub to organizing a set of NPM packages by keywords",
   "license": "MIT",
-  "homepage": "http://labs.easyblog.it/",
+  "homepage": "https://opengeo.tech/",
   "keywords": [
     "site generator",
     "keywords",
@@ -18,7 +18,7 @@
   "author": {
     "name": "Stefano Cudini",
     "email": "stefano.cudini@gmail.com",
-    "url": "http://labs.easyblog.it/stefano-cudini/",
+    "url": "https://opengeo.tech/stefano-cudini/",
     "git": "stefanocudini",
     "twitter": "zakis"
   },
@@ -44,5 +44,8 @@
   "dependencies": {
     "jquery": "^3.0.0",
     "bootstrap": "~3.4.1"
+  },
+  "scripts": {
+    "build": "grunt"
   }
 }

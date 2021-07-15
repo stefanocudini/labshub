@@ -1,5 +1,5 @@
 
-var disqus_shortname = disqus_shortname || 'labs-easyblog-it';
+var disqus_shortname = disqus_shortname || 'opengeo-tech';
 (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
