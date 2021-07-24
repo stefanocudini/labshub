@@ -36,8 +36,8 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-sitemap": "^1.2.1",
     "handlebars": "^4.0.0",
-    "marked": "~0.3.3",
     "lodash": "^4.17.11",
+    "marked": "~0.3.3",
     "underscore": "^1.9.1",
     "underscore.string": "^3.0.3"
   },
