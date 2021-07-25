@@ -12,6 +12,10 @@
   "tagsIgnore": [
     "developer","dom","cv","fetch"
   ],
+  "sitemapIgnore": [
+    "**/node_modules/**",
+    "js/**"
+  ],
   "packages": {
     "keplerjs.io": {
       "path": "https://keplerjs.io/",

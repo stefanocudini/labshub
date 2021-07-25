@@ -1,13 +1,19 @@
 'use strict';
 
+var Path = require('path'),
+	Handlebars = require('handlebars'),
+	_ = require('lodash'),
+	__ = require('underscore');
+
+_.str = require('underscore.string');
+
 module.exports = function (grunt) {
 
-	var Path = require('path'),
-		Handlebars = require('handlebars'),
-		_ = require('lodash'),
-		__ = require('underscore');
+	var Pkg = grunt.file.readJSON('package.json'),
+		Conf = grunt.file.readJSON('labshub.json');
 
-	_.str = require('underscore.string');
+	var ignores = _.map(Conf.packagesIgnore, function(exp) { return '!'+exp; });
+	var sitemapIgnores = _.map(Conf.sitemapIgnore, function(exp) { return '!'+exp; });
 
 	function repo2Web(url) {
 		return url && url.replace('git://','https://')
@@ -15,34 +21,33 @@ module.exports = function (grunt) {
 					.replace(/\.git$/,'');
 	}
 
-	var Pkg = grunt.file.readJSON('package.json'),
-		Conf = grunt.file.readJSON('labshub.json');
+	grunt.registerTask('createPages', 'build new output pages', function() {
 
-	grunt.log.ok('searching packages...');
+		grunt.log.ok('searching packages...');
 
-	var ignores = _.map(Conf.packagesIgnore, function(exp) { return '!'+exp; });
+		var	patterns = _.union(['**/package.json'], ignores),
+			pkgpaths = grunt.file.expand({cwd: './' }, patterns );
 
-	var	patterns = _.union(['**/package.json'], ignores),
-		pkgpaths = grunt.file.expand({cwd: './' }, patterns );
+		var pkgs = _.map(pkgpaths, function(f) {
+				var path = Path.dirname(f);
+				
+				grunt.log.ok(path);
 
-	var pkgs = _.map(pkgpaths, function(f) {
-			var path = Path.dirname(f);
-			grunt.log.ok(path);
-			var pkg = grunt.file.readJSON(f);
-			pkg = _.omit(pkg, 'devDependencies','dependencies','author');
-			_.defaults(pkg, {
-				path: path,
-				keywords: [],
-				rank: 0
+				var pkg = grunt.file.readJSON(f);
+				pkg = _.omit(pkg, 'devDependencies','dependencies','author');
+				_.defaults(pkg, {
+					path: path,
+					keywords: [],
+					rank: 0
+				});
+				return _.extend(pkg, Conf.packages[ pkg.name ] );
 			});
-			return _.extend(pkg, Conf.packages[ pkg.name ] );
-		});
 
-	pkgs = _.sortBy(pkgs,'rank').reverse();
+		pkgs = _.sortBy(pkgs,'rank').reverse();
 
-	var tags = __.chain(pkgs).pluck('keywords').flatten().uniq().compact().value().sort(),
-		activeTags = __.object(tags, _.fill(_.range(tags.length),0) ),
-		apps = [], others = [];
+		var tags = __.chain(pkgs).pluck('keywords').flatten().uniq().compact().value().sort(),
+			activeTags = __.object(tags, _.fill(_.range(tags.length),0) ),
+			apps = [], others = [];
 
 		_.each(pkgs, function(pkg) {
 
@@ -63,8 +68,6 @@ module.exports = function (grunt) {
 				others.push(p);*/
 		});
 
-	grunt.registerTask('createPages', 'build new output pages', function() {
-
 		_.each(Conf.pages, function(out, tmpl) {
 
 			var pageTmpl = Handlebars.compile( grunt.file.read(tmpl) )
@@ -78,19 +81,14 @@ module.exports = function (grunt) {
 				apps: apps,
 				//others: others
 			}) );
-
 		});
-
 	});
-
-	grunt.loadNpmTasks('grunt-sitemap');
-	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.initConfig({
 		pkg: Pkg,
 		sitemap: {
 			dist: {
-				pattern: ['**/index.html','**/index.php','!**/node_modules/**','!js/**','!portfolio/**'],
+				pattern: _.concat("**/index.html","**/index.php", sitemapIgnores),
 				siteRoot: './'
 			}
 		},	
@@ -116,6 +114,9 @@ module.exports = function (grunt) {
 			}
 		}
 	});
+	
+	grunt.loadNpmTasks('grunt-sitemap');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', [
 		'createPages'
