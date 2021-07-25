@@ -52,14 +52,12 @@ h1 big {
 .bounce {
 	position: absolute;
 	/*bottom: 50px;*/
-	bottom:25px;
-
+	top:-50px;
 }
 .bounce.marker1 {
 	left:34px
 }
 .bounce.marker2 {
-	bottom:35px;
 	left: 15px;
 }
 h1:hover .bounce.marker1 {
@@ -415,6 +413,7 @@ footer {
 		margin: 0;
 		padding: 0;
 		overflow-x: hidden;
+		font-size:1.1em;
 	}
 	#content {
 		border: none;
@@ -425,6 +424,9 @@ footer {
 		display: block;
 		border:none;
 		border-radius:0;
+	}
+	.bounce {
+		top:-40px;
 	}
 	.box,
 	#deactives .box {
