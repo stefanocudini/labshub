@@ -4,11 +4,15 @@ body {
 	color:#666;
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size:.85em;	
-	background: #e2f7fd;
+	background-color: #e3ece9;
 	background-image: url('images/backmap.jpg');
 }
+.green {
+	color: rgb(154,204,4,1);
+}
 .blue {
-	color: rgba(112,160,210,1);
+	/*color: rgba(112,160,210,1);*/
+	color: rgb(114,145,169,1);
 }
 .blue-bg {
 	color: #fff;
@@ -76,6 +80,12 @@ h1:hover .bounce.marker2 {
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-out;  
 }
+/*h1:hover span,
+h1:active span {
+	animation-duration: 3s;
+	animation-name: colors;
+	animation-iteration-count: infinite;
+}*/
 @keyframes bounce {
   0%,
   25%,
@@ -90,6 +100,14 @@ h1:hover .bounce.marker2 {
   40% {
     transform: translateY(-20px);
   }  
+}
+@keyframes colors {
+  from {
+  	filter: hue-rotate(360deg);
+  }
+  to {
+  	filter: hue-rotate(0deg);
+  }
 }
 h1 a:hover {
 	text-decoration: none;
@@ -162,6 +180,10 @@ footer {
 	line-height: 40px;
 	margin: 0 -16px;
 	padding: 5px 40px;
+}
+footer a{
+	color: white;
+	font-weight: bold;
 }
 #topics {
 	clear:both;
@@ -244,8 +266,8 @@ footer {
 	height:11em;
 	margin:10px;
 	padding:16px;
-	border: 1px dotted #ccc;
-	ackground-image: radial-gradient(farthest-side at left top, #f4f4f4, rgba(244,244,244,0))
+	border: 1px dotted rgb(114,145,169,1);
+	/*background-image: radial-gradient(farthest-side at left top, #f4f4f4, rgba(244,244,244,0))*/
 }
 .box:before {
 	content: '';
@@ -254,8 +276,8 @@ footer {
 	left: -1px;
 	width: 20px;
 	height: 20px;
-	border-top: 1px solid #aaa;
-	border-left: 1px solid #aaa;
+	border-top: 1px solid rgb(114,145,169,1);
+	border-left: 1px solid rgb(114,145,169,1);
 }
 .box:after {
 	content: '';
@@ -264,8 +286,8 @@ footer {
 	right: -1px;
 	width: 20px;
 	height: 20px;
-	border-right: 1px solid #aaa;
-	border-bottom: 1px solid #aaa;
+	border-right: 1px solid rgb(114,145,169,1);
+	border-bottom: 1px solid rgb(114,145,169,1);
 	border-right-bottom-radius: 4px;
 }
 
@@ -273,7 +295,9 @@ footer {
 	text-transform:capitalize;
 	font-size:1em;
 	margin:0;
-	font-weight: normal;
+}
+.title a {
+	color: rgb(154,204,4,1);
 }
 .icon {
 	display: inline-block;
