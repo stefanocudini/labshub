@@ -23,19 +23,18 @@
       "keywords": ["osm","meteor","nodejs","map","gis","javascript","geosocial"],
       "rank": 6
     },
-    "mixtags.com": {
-      "path": "https://mixtags.com/", 
-	  "repository": {"url": "https://github.com/mixtags"},
-	  "description": "Advanced service of bookmarking with folksonomy",
-	  "keywords": ["jquery","css3","php","gruntjs","json","mysql","html5"],
-      "rank": 5
-    },
     "gpsdata-server": {
       "keywords": ["gps","nodejs","bash","server","websocket","debian","mysql"],
       "rank": 4
     },
+    "mixtags.com": {
+      "path": "https://mixtags.com/",
+      "repository": {"url": "https://github.com/mixtags"},
+      "description": "Advanced service of bookmarking with folksonomy",
+      "keywords": ["jquery","css3","php","gruntjs","json","mysql","html5"],
+      "rank": 5
+    },
     "ultra-light-gallery": {
-	  "path": "https://opengeo.tech/photos/demo/",
       "keywords": ["ajax","jquery","css3"],
       "rank": 3
     },
