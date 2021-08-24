@@ -82,7 +82,7 @@ h1:hover .bounce.marker2 {
 }
 #tags .sel {
 	animation-delay:0;
-	animation-duration: 1.2s;
+	animation-duration: 1.5s;
 	animation-name: enlightened;
 	animation-direction: initial;
 	animation-fill-mode: forwards;
@@ -112,9 +112,17 @@ h1:hover .bounce.marker2 {
 }
 @keyframes enlightened {
   from {
-  	box-shadow: 0 0 10px rgba(255,136,0, 0.8);
+  	box-shadow: 0 0 12px rgba(255,136,0, 0.8);
+  	text-shadow: 0 0 3px rgba(255,255,255, 0.8);
+  	background: rgba(255,136,0, 0.8);
+  	color:  white;
   }
-  90% {
+  50% {
+  	background: none;
+  	color: #f80;
+  }
+  to {
+  	text-shadow: none;
   	box-shadow: none;
   }
 }
@@ -257,9 +265,11 @@ footer a{
 	opacity: 0.8; 		
 }
 
+#tags {
+	padding: 10px 5px;
+}
 #tags,
 .tags {
-	padding: 5px;
 	clear:both;
 	overflow:hidden;
 	-webkit-touch-callout: none;
