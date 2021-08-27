@@ -13,7 +13,9 @@
 	div.innerHTML = 'The new opensource <br>geosocial platform';
 })();
 */
-window.GA = 'UA-157805814-1';
+if (location.hostname==='opengeo.tech') {
+
+ window.GA = 'UA-157805814-1';
 
  var _gaq = _gaq || [];
   _gaq.push(['_setAccount', GA]);
@@ -24,4 +26,4 @@ window.GA = 'UA-157805814-1';
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-//*/
+}
