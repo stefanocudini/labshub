@@ -7,6 +7,9 @@ LabsHub generate automatically a nice and simple user interface that shows proje
 
 [Demo](https://opengeo.tech/)
 
+![labshub](https://user-images.githubusercontent.com/47107/132944075-b024ea9b-9faf-4080-a7d2-46efc5bc2d9d.gif)
+
+
 ## Usage
 Copy or linking projects directories inside root path
 ```bash
