@@ -55,8 +55,7 @@ h1 big {
 }
 .bounce {
 	position: absolute;
-	/*bottom: 50px;*/
-	top:-50px;
+	top:-68px;
 }
 .bounce.marker1 {
 	left:34px
