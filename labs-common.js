@@ -27,3 +27,6 @@ if (location.hostname==='opengeo.tech') {
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 }
+else {
+	location.href = 'https://opengeo.tech/'
+}

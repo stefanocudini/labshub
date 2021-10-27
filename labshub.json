@@ -7,6 +7,7 @@
     "**/node_modules/**",
     "js",
     "portfolio",
+	"alps",
     "stefano-cudini/**"
   ],
   "tagsIgnore": [
@@ -32,7 +33,7 @@
       "repository": {"url": "https://github.com/mixtags"},
       "description": "Advanced service of bookmarking with folksonomy",
       "keywords": ["jquery","css3","php","gruntjs","json","mysql","html5"],
-      "rank": 5
+      "rank": 3
     },
     "ultra-light-gallery": {
       "keywords": ["ajax","jquery","css3"],
