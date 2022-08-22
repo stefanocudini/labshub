@@ -7,7 +7,8 @@
     "**/node_modules/**",
     "js",
     "portfolio",
-	"alps",
+	"alps/*",
+	"pub/*",
     "stefano-cudini/**"
   ],
   "tagsIgnore": [
@@ -36,6 +37,7 @@
       "rank": 3
     },
     "ultra-light-gallery": {
+      "path": "https://github.com/stefanocudini/UltraLightGallery",
       "keywords": ["ajax","jquery","css3"],
       "rank": 3
     },
