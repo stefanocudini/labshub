@@ -4,3 +4,4 @@ sitemap.xml
 npm-debug.log
 node_modules
 */*
+packages*
