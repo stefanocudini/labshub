@@ -157,6 +157,7 @@
       "rank": 2
     },
     "scacchi": {
+      "path": "https://github.com/stefanocudini/websocket-chess",
       "keywords": ["jquery","websocket","php"],
       "rank": 1
     },
