@@ -58,6 +58,8 @@
       "rank": 1
     },
     "download-limiter-php": {
+      "path": "https://github.com/stefanocudini/download-limiter-php",
+      "repository": {"url": "https://github.com/stefanocudini/download-limiter-php"},
       "keywords": ["php","jquery","server"],
       "rank": 2
     },
