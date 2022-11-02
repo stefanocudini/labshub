@@ -1,9 +1,9 @@
 'use strict';
 
-var Path = require('path'),
-	Handlebars = require('handlebars'),
+var {dirname, basename} = require('path'),
+	{compile} = require('handlebars'),
 	_ = require('lodash'),
-	__ = require('underscore');
+	{chain, object} = require('underscore');
 
 _.str = require('underscore.string');
 
@@ -12,65 +12,69 @@ module.exports = function (grunt) {
 	var Pkg = grunt.file.readJSON('package.json'),
 		Conf = grunt.file.readJSON('labshub.json');
 
-	var ignores = _.map(Conf.packagesIgnore, function(exp) { return '!'+exp; });
-	var sitemapIgnores = _.map(Conf.sitemapIgnore, function(exp) { return '!'+exp; });
+	var ignores = Conf.packagesIgnore.map( exp => '!'+exp );
+	var sitemapIgnores = Conf.sitemapIgnore.map( exp => '!'+exp );
 
-	function repo2Web(url) {
+	function repoUrl(url) {
 		return url && url.replace('git://','https://')
 					.replace('git@github.com:','https://github.com/')
 					.replace(/\.git$/,'');
 	}
 
-	grunt.registerTask('createPages', 'build new output pages', function() {
+	function cleanPkg(pkg) {
+		return _.omit(pkg, 'devDependencies','dependencies','author','scripts');
+	}
+
+	function tagsPkgs(pkgs) {
+		return chain(pkgs).pluck('keywords').flatten().uniq().compact().value().sort();
+	}
+
+	grunt.registerTask('createPages', 'build new output pages', () => {
 
 		grunt.log.ok('searching packages...');
 
 		var	patterns = _.union(['**/package.json'], ignores),
 			pkgpaths = grunt.file.expand({cwd: './' }, patterns );
 
-		var pkgs = _.map(pkgpaths, function(f) {
-				var path = Path.dirname(f);
-				
-				grunt.log.ok(path);
+		var pkgs = pkgpaths.map( f => {
+				var path = dirname(f);
+				var pkg = cleanPkg( grunt.file.readJSON(f) );
 
-				var pkg = grunt.file.readJSON(f);
-				pkg = _.omit(pkg, 'devDependencies','dependencies','author');
-				_.defaults(pkg, {
-					path: path,
+				pkg = _.defaults(pkg, {
+					path,
 					keywords: [],
 					rank: 0
 				});
-				return _.extend(pkg, Conf.packages[ pkg.name ] );
+
+				pkg = _.extend(pkg, Conf.packages[ basename(path) ] );
+
+				grunt.log.ok(path, JSON.stringify(pkg));
+
+				return pkg;
 			});
 
 		pkgs = _.sortBy(pkgs,'rank').reverse();
 
-		var tags = __.chain(pkgs).pluck('keywords').flatten().uniq().compact().value().sort(),
-			activeTags = __.object(tags, _.fill(_.range(tags.length),0) ),
+		var tags = tagsPkgs(pkgs),
+			activeTags = object(tags, _.fill(_.range(tags.length),0) ),
 			apps = [], others = [];
 
-		_.each(pkgs, function(pkg) {
-
-			var p = {
+		_.each(pkgs, pkg => {
+			apps.push({
 				name: pkg.name,
 				description: pkg.description,
 				title: _.str.humanize( pkg.name ),
 				path: pkg.path,
 				tags: pkg.keywords ? pkg.keywords.sort() : [],
 				repository: pkg.repository,
-				url: pkg.repository && repo2Web(pkg.repository.url),
+				url: pkg.repository && repoUrl(pkg.repository.url),
 				rank: [pkg.rank>0, pkg.rank>1, pkg.rank>2]
-			};
-
-			//if(!!pkg.rank)
-				apps.push(p);
-			/*else
-				others.push(p);*/
+			});
 		});
 
-		_.each(Conf.pages, function(out, tmpl) {
+		_.each(Conf.pages, (out, tmpl) => {
 
-			var pageTmpl = Handlebars.compile( grunt.file.read(tmpl) )
+			var pageTmpl = compile( grunt.file.read(tmpl) )
 
 			grunt.log.ok('create page... '+out);
 

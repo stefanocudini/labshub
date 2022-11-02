@@ -12,7 +12,7 @@
     "stefano-cudini/**"
   ],
   "tagsIgnore": [
-    "developer","dom","cv","fetch"
+    "developer","dom","cv"
   ],
   "sitemapIgnore": [
     "**/node_modules/**",
@@ -21,13 +21,17 @@
   "packages": {
     "keplerjs.io": {
       "path": "https://keplerjs.io/",
-	  "repository": {"url": "https://github.com/Keplerjs"},
+      "repository": {"url": "https://github.com/Keplerjs"},
       "keywords": ["osm","meteor","nodejs","map","gis","javascript","geosocial"],
       "rank": 6
     },
     "gpsdata-server": {
       "keywords": ["gps","nodejs","bash","server","websocket","debian","mysql"],
       "rank": 4
+    },
+    "node-fetch-dom": {
+		  "name": "node-fetch-dom",
+      "rank": 2
     },
     "mixtags.com": {
       "path": "https://mixtags.com/",
@@ -36,6 +40,11 @@
       "keywords": ["jquery","css3","php","gruntjs","json","mysql","html5"],
       "rank": 3
     },
+  	"peliaslite": {
+        "path": "https://github.com/stefanocudini/PeliasLite",
+    	  "repository": {"url": "https://github.com/stefanocudini/PeliasLite"},
+  		"rank": 3
+  	},
     "ultra-light-gallery": {
       "path": "https://github.com/stefanocudini/UltraLightGallery",
       "keywords": ["ajax","jquery","css3"],
@@ -116,7 +125,7 @@
       "rank": 3
     },
     "leaflet-search": {
-		"name":	"Leaflet Control Search",
+		  "name":	"Leaflet Control Search",
       "keywords": ["map","leaflet","json","ajax","css3","jsonp"],
       "rank": 3
     },
