@@ -19,7 +19,7 @@
     "js/**"
   ],
   "packages": {
-    "keplerjs.io": {
+    "keplerjs": {
       "path": "https://keplerjs.io/",
       "repository": {"url": "https://github.com/Keplerjs"},
       "keywords": ["osm","meteor","nodejs","map","gis","javascript","geosocial"],
