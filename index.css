@@ -52,16 +52,29 @@ h1 big {
 	display: inline-block;
 	vertical-align: bottom;
 	cursor: pointer;
+	background-image: url('images/logo.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0 -300px;
 }
 .bounce {
 	position: absolute;
-	top:-52px;
+	background-image: url('images/logo.svg');
+	background-repeat: no-repeat;
 }
 .bounce.marker1 {
-	left:34px
+	height: 100px;
+	width: 100px;
+	background-color: transparent;
+	background-size: 100%;
+	background-position: 0 -120px;
 }
 .bounce.marker2 {
-	left: 15px;
+	height: 100px;
+	width: 100px;
+	background-color: transparent;
+	background-size: 100%;
+	background-position: 0 -233px;
 }
 h1:hover .bounce.marker1 {
 	animation-delay:0;
