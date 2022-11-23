@@ -3,7 +3,8 @@ body {
 	padding:0;
 	color:#666;
 	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size:.85em;	
+	font-size:1em;
+	line-height: 1.3em;
 	background-color: #e3ece9;
 	background-image: url('images/backmap.jpg');
 }
@@ -295,7 +296,7 @@ footer a{
 	position:relative;
 	float:left;
 	width:25%;
-	height:11em;
+	height:12em;
 	margin:10px;
 	padding:16px;
 	border: 1px dotted rgb(114,145,169,1);
@@ -374,7 +375,7 @@ footer a{
 	display: inline-block;
 	clear:both;
 	height: 3.8em;
-	font-size:13px;
+	font-size:1em;
 	color: #888;
 	padding:0;
 	margin:4px 0;
@@ -398,7 +399,7 @@ footer a{
 	color:#7A738B;
 	padding:3px 6px;
 	text-decoration:none;
-	font-size:12px;
+	font-size:.85em;
 	letter-spacing: 1px;
 }
 .tag span:before {
@@ -482,7 +483,7 @@ footer a{
 		border-radius:0;
 	}
 	.bounce {
-		top:-40px;
+		top:-65px;
 	}
 	.box,
 	#deactives .box {
