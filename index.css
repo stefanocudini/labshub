@@ -149,6 +149,9 @@ h2 {
 h3 {
 	letter-spacing: 1px;
 }
+.maps h3 {
+  margin-top: 40px;
+}
 hr {
 	border:none;
 	border-top:2px solid #c5cdd4;
@@ -201,6 +204,7 @@ nav {
 	margin-bottom:20px
 }
 section {
+  margin-top: 50px;
 	clear: both;
 }
 footer {
