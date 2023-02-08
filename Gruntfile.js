@@ -22,6 +22,7 @@ module.exports = function (grunt) {
 	}
 
 	function cleanPkg(pkg) {
+    pkg.name = pkg.name.split('/').pop();
 		return _.omit(pkg, 'devDependencies','dependencies','author','scripts');
 	}
 
