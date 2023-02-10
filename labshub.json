@@ -17,6 +17,7 @@
   "sitemapIgnore": [
     "**/node_modules/**",
     "js/**",
+    "alps/**",
     "geopicker/tests/**",
     "maps/geotiff-picker/**"
   ],
