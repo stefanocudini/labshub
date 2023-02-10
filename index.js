@@ -137,6 +137,10 @@ $(function() {
 	
 	checkAllTagsFalse();
 
-	filterBoxesForTags();		
+	filterBoxesForTags();
+
+  setTimeout(()=>{
+    $('h1').addClass('hover')
+  },2000)
 });
 

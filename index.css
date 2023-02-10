@@ -77,6 +77,7 @@ h1 big {
 	background-size: 100%;
 	background-position: 0 -233px;
 }
+h1.hover .bounce.marker1,
 h1:hover .bounce.marker1 {
 	animation-delay:0;
 	animation-duration: 2s;
@@ -85,6 +86,7 @@ h1:hover .bounce.marker1 {
 	animation-fill-mode: forwards;
 	animation-timing-function: ease-out;  
 }
+h1.hover .bounce.marker2,
 h1:hover .bounce.marker2 {
 	animation-delay: 0.2s;
 	animation-duration: 2s;
