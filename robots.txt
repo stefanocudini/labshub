@@ -1,3 +1,7 @@
 User-Agent: *
 Disallow: /portfolio/
 Disallow: /alps/
+
+Sitemap: https://opengeo.tech/sitemap.xml
+
+
