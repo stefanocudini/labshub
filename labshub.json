@@ -7,8 +7,8 @@
     "**/node_modules/**",
     "js",
     "portfolio",
-	"alps/*",
-	"pub/*",
+  	"alps/*",
+  	"pub/*",
     "stefano-cudini/**"
   ],
   "tagsIgnore": [
@@ -16,7 +16,9 @@
   ],
   "sitemapIgnore": [
     "**/node_modules/**",
-    "js/**"
+    "js/**",
+    "geopicker/tests/**",
+    "maps/geotiff-picker/**"
   ],
   "packages": {
     "keplerjs": {
