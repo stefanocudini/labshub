@@ -7,8 +7,8 @@
     "**/node_modules/**",
     "js",
     "portfolio",
-	"alps/*",
-	"pub/*",
+  	"alps/*",
+  	"pub/*",
     "stefano-cudini/**"
   ],
   "tagsIgnore": [
@@ -16,7 +16,10 @@
   ],
   "sitemapIgnore": [
     "**/node_modules/**",
-    "js/**"
+    "js/**",
+    "alps/**",
+    "geopicker/tests/**",
+    "maps/geotiff-picker/**"
   ],
   "packages": {
     "keplerjs": {
@@ -153,9 +156,8 @@
       "keywords": ["jquery","osm","leaflet","bootstrap"],
       "rank": 1
     },
-    "geotiff-picker": {
-      "keywords": ["python","gis","json","map"],
-      "rank": 2
+    "geopicker": {
+      "rank": 3
     },
     "qr-code-generator": {
       "keywords": ["php","jquery","ajax"],

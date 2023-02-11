@@ -46,6 +46,7 @@
     "bootstrap": "~3.4.1"
   },
   "scripts": {
+    "sitemap": "grunt sitemap",
     "build": "grunt"
   }
 }
