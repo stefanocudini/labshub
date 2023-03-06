@@ -43,6 +43,9 @@
       "keywords": ["jquery","css3","php","gruntjs","json","mysql","html5"],
       "rank": 3
     },
+    "geopicker": {
+      "rank": 3
+    },
   	"peliaslite": {
         "path": "https://github.com/stefanocudini/PeliasLite",
     	  "repository": {"url": "https://github.com/stefanocudini/PeliasLite"},
@@ -155,9 +158,6 @@
     "osm-contributors-by-area": {
       "keywords": ["jquery","osm","leaflet","bootstrap"],
       "rank": 1
-    },
-    "geopicker": {
-      "rank": 3
     },
     "qr-code-generator": {
       "keywords": ["php","jquery","ajax"],
