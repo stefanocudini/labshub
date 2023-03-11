@@ -61,6 +61,7 @@ module.exports = function (grunt) {
 			apps = [], others = [];
 
 		_.each(pkgs, pkg => {
+			console.log(pkg.path)
 			apps.push({
 				name: pkg.name,
 				description: pkg.description,

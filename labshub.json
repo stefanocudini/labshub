@@ -5,6 +5,8 @@
   },
   "packagesIgnore": [
     "**/node_modules/**",
+	"geopicker/tests/**",
+	"geopicker/server/**",
     "js",
     "portfolio",
   	"alps/*",
@@ -148,7 +150,8 @@
       "rank": 1
     },
     "mwm": {
-      "keywords": ["server","jquery","monitoring","bash","debian","gruntjs","php"],
+      "path": "https://github.com/stefanocudini/mwm",
+	  "keywords": ["server","jquery","monitoring","bash","debian","gruntjs","php"],
       "rank": 2
     },
     "orthogonalize-js": {
