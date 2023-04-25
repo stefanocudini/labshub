@@ -15,4 +15,7 @@ for d in $(find . -maxdepth 3 -type d -name .git | sed 's/\.git//') ; do
   cd $DIR
 done
 
- 6247  grep -lr '<script src="/labs-common.js"></script>' . | xargs sed -i '/<script src="\/labs-common.js"><\/script>/d'
+   grep -lr '<script src="/labs-common.js"></script>' . | xargs sed -i '/<script src="\/labs-common.js"><\/script>/d'
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+	<a class="github-fork-ribbon" href="https://url.to-your.repo" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
