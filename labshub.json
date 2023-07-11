@@ -30,22 +30,22 @@
       "keywords": ["osm","meteor","nodejs","map","gis","javascript","geosocial"],
       "rank": 6
     },
+    "geopicker": {
+      "rank": 5
+    },
     "gpsdata-server": {
       "keywords": ["gps","nodejs","bash","server","websocket","debian","mysql"],
-      "rank": 4
+      "rank": 3
     },
     "node-fetch-dom": {
 		  "name": "node-fetch-dom",
-      "rank": 2
+      "rank": 3
     },
     "mixtags.com": {
       "path": "https://mixtags.com/",
       "repository": {"url": "https://github.com/mixtags"},
       "description": "Advanced service of bookmarking with folksonomy",
       "keywords": ["jquery","css3","php","gruntjs","json","mysql","html5"],
-      "rank": 3
-    },
-    "geopicker": {
       "rank": 3
     },
   	"peliaslite": {
