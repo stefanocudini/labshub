@@ -5,6 +5,8 @@
   },
   "packagesIgnore": [
     "**/node_modules/**",
+	"geopicker/tests/**",
+	"geopicker/server/**",
     "js",
     "portfolio",
   	"alps/*",
@@ -28,13 +30,16 @@
       "keywords": ["osm","meteor","nodejs","map","gis","javascript","geosocial"],
       "rank": 6
     },
+    "geopicker": {
+      "rank": 5
+    },
     "gpsdata-server": {
       "keywords": ["gps","nodejs","bash","server","websocket","debian","mysql"],
-      "rank": 4
+      "rank": 3
     },
     "node-fetch-dom": {
 		  "name": "node-fetch-dom",
-      "rank": 2
+      "rank": 3
     },
     "mixtags.com": {
       "path": "https://mixtags.com/",
@@ -145,7 +150,8 @@
       "rank": 1
     },
     "mwm": {
-      "keywords": ["server","jquery","monitoring","bash","debian","gruntjs","php"],
+      "path": "https://github.com/stefanocudini/mwm",
+	  "keywords": ["server","jquery","monitoring","bash","debian","gruntjs","php"],
       "rank": 2
     },
     "orthogonalize-js": {
@@ -155,9 +161,6 @@
     "osm-contributors-by-area": {
       "keywords": ["jquery","osm","leaflet","bootstrap"],
       "rank": 1
-    },
-    "geopicker": {
-      "rank": 3
     },
     "qr-code-generator": {
       "keywords": ["php","jquery","ajax"],
