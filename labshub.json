@@ -25,7 +25,7 @@
   ],
   "packages": {
     "keplerjs": {
-      "path": "https://keplerjs.io/",
+      "path": "https://kepler.opengeo.tech/",
       "repository": {"url": "https://github.com/Keplerjs"},
       "keywords": ["osm","meteor","nodejs","map","gis","javascript","geosocial"],
       "rank": 6
