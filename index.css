@@ -59,7 +59,7 @@ h1 big {
 	background-position: 0 -300px;
 }
 .bounce {
-	position: absolute;
+	position: fixed;
 	background-image: url('images/logo.svg');
 	background-repeat: no-repeat;
 }
