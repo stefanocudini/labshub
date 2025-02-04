@@ -1,146 +1,143 @@
-
 //allTags definito in index.php
+const $ = selector => document.querySelector(selector);
+const $$ = selector => Array.from(document.querySelectorAll(selector));
 
-$(function() {
+
+document.addEventListener('DOMContentLoaded', () => {
+
+	const tags = $('#tags');
+	const boxes = $$('.box');
 	
-	var tags$ = $('#tags'),
-		boxes$ = $(".box");
-
-	var locationTags = location.hash ? $.unique(location.hash.split('#')[1].split(',')) : [];
-			
-	var allTagsFalse = true;
-
-	var allTagsFalseFade = true,
-		findappssize = $('#findapps').attr('size'),
-		findlabel = 'search by title...';
+	const locationTags = location.hash ? 
+		[...new Set(location.hash.split('#')[1].split(','))] : [];
 	
-	function checkAllTagsFalse()  //se tutti i tag sono disattivi mostra tutto!
-	{
-		var allFalse = true;
-		for(var t in allTags)
-			if(allTags[t])
-				allFalse = false;
-		allTagsFalse = allFalse;
+	let allTagsFalse = true;
+	let allTagsFalseFade = true;
+	const findappssize = $('#findapps').getAttribute('size');
+	const findlabel = 'search by title...';
+	
+	function checkAllTagsFalse() {
+		allTagsFalse = Object.values(allTags).every(tag => !tag);
 	}
 	
-	function filterBox(box$, active)
-	{		
-		if(active)
-		{
-			if(box$.parent().is('#deactives'))
-				box$.fadeOut('fast',function() { box$.appendTo('#actives').fadeIn('slow'); });
-		}else{
-			if(box$.parent().is('#actives'))
-				box$.fadeOut('fast',function() { box$.appendTo('#deactives').fadeIn('slow'); });
-		}	
+	function filterBox(box, active) {
+		const actives = $('#actives');
+		const deactives = $('#deactives');
+		
+		if (active) {
+			if (box.parentElement === deactives) {
+				box.style.display = 'none';
+				setTimeout(() => {
+					actives.appendChild(box);
+					box.style.display = '';
+				}, 200);
+			}
+		} else {
+			if (box.parentElement === actives) {
+				box.style.display = 'none';
+				setTimeout(() => {
+					deactives.appendChild(box);
+					box.style.display = '';
+				}, 200);
+			}
+		}
 	}
 	
-	function filterBoxesForTags()	//mostra/nasconde box che hanno/non hanno tag tra quelli attivi
-	{	
-		boxes$.each(function() {
-			
-			var boxTags = $(this).data('tags').split(',');
-			//i tags del box
-			
-			var active = false;
-			for(var t in boxTags)
-				if(allTags[boxTags[t]])
-					active = true;
-				//se il tag e' tra quell attivi show=true senno show RIMANE INVARIATO al valore precedente
-
-			if(allTagsFalse)	//se tutti i tags sono disattivi non filtra nulla! e li mostra tutti
-				active = true;
-			
-			filterBox($(this), active);
-
-		});//*/
+	function filterBoxesForTags() {
+		boxes.forEach(box => {
+			const boxTags = box.dataset.tags.split(',');
+			const active = allTagsFalse || boxTags.some(tag => allTags[tag]);
+			filterBox(box, active);
+		});
 	}
 	
-	function filterBoxesForTitle(tit)	//nasconde i box tra quelli attivi che non contengono tit nel titolo
-	{
-		boxes$.each(function() {
-
-			var boxTitle = $(this).data('title');
-			var reg = new RegExp(tit,'ig');
-			var hastit = boxTitle.search(reg)>-1;
-
-			if( $(this).parent().attr('id')=='actives' )
-				filterBox($(this),hastit);
-		});		
-	}	
-
-	$('article').on('click', '.tag', function(e) {
+	function filterBoxesForTitle(tit) {
+		boxes.forEach(box => {
+			const boxTitle = box.dataset.title;
+			const reg = new RegExp(tit, 'ig');
+			const hastit = reg.test(boxTitle);
+			
+			if (box.parentElement.id === 'actives') {
+				filterBox(box, hastit);
+			}
+		});
+	}
+	
+	$('article').addEventListener('click', e => {
+		const tagEl = e.target.closest('.tag');
+		if (!tagEl) return;
+		
 		e.preventDefault();
+		const tag = tagEl.querySelector('span').textContent;
 		
-		var tag = $(this).children('span').text();
+		allTags[tag] = !allTags[tag];
 		
-		allTags[tag] = allTags[tag] ? 0 : 1;
-		
-		if(allTags[tag])
+		if (allTags[tag]) {
 			locationTags.push(tag);
-		else
-			locationTags.splice(locationTags.indexOf(tag),1);
-
-		checkAllTagsFalse();  //se tutti i tag sono disattivi mostra tutto!
-		filterBoxesForTags();
-
-		$(".tag[href='#"+tag+"']").toggleClass('sel');
+		} else {
+			locationTags.splice(locationTags.indexOf(tag), 1);
+		}
 		
-		if(locationTags.length>0) {
-			window.location.hash = $.unique(locationTags).join();
+		checkAllTagsFalse();
+		filterBoxesForTags();
+		
+		$$('.tag[href="#' + tag + '"]').forEach(el => 
+			el.classList.toggle('sel'));
+		
+		if (locationTags.length > 0) {
+			window.location.hash = [...new Set(locationTags)].join();
 		}
 	});
-
-	$('#findapps')		// Ricerca tags
-		.on('keyup', function() {
-
-			var t = $(this).val();
-			
-			if(t.length<1) {
-
-				checkAllTagsFalse();  //se tutti i tag sono disattivi mostra tutto!
-				filterBoxesForTags();
-				//mostra tutte le apps!!!
-				//boxes$.fadeTo(0,1);
-				
-				return false;
-			}
-			
-			if(t.length > parseInt(findappssize))
-				$(this).attr('size',t.length+1);
-			
-			filterBoxesForTitle(t);
-			//nasconde le apps che non contengono la parola!!
-		})
-		.on('click',function() {
-			$(this).removeClass('inactive').val('');
-		})
-		.on('blur', function() {
-			tf = setTimeout(function() {	//senza non funziona il link agli album nell'albero
-				
-				checkAllTagsFalse();  //se tutti i tag sono disattivi mostra tutto!
-				filterBoxesForTags();
-				//mostra tutte le apps!!!
-				//boxes$.fadeTo(0,1);
-				
-			},500);
-			$(this).addClass('inactive').val(findlabel).attr('size',findappssize);
-		})
-		.addClass('inactive').val(findlabel);
 	
-	for(var t in locationTags)
-	{
-		var tag = locationTags[t];
+	const findapps = $('#findapps');
+	let tf;
+	
+	findapps.addEventListener('keyup', function() {
+		const t = this.value;
+		
+		if (t.length < 1) {
+			checkAllTagsFalse();
+			filterBoxesForTags();
+			return false;
+		}
+		
+		if (t.length > parseInt(findappssize)) {
+			this.setAttribute('size', t.length + 1);
+		}
+		
+		filterBoxesForTitle(t);
+	});
+	
+	findapps.addEventListener('click', function() {
+		this.classList.remove('inactive');
+		this.value = '';
+	});
+	
+	findapps.addEventListener('blur', function() {
+		tf = setTimeout(() => {
+			checkAllTagsFalse();
+			filterBoxesForTags();
+		}, 500);
+		
+		this.classList.add('inactive');
+		this.value = findlabel;
+		this.setAttribute('size', findappssize);
+	});
+	
+	findapps.classList.add('inactive');
+	findapps.value = findlabel;
+	
+	locationTags.forEach(tag => {
 		allTags[tag] = 1;
-		$(".tag[href='#"+tag+"']").addClass('sel');
-	}
+		$$('.tag[href="#' + tag + '"]').forEach(el => 
+			el.classList.add('sel'));
+	});
 	
 	checkAllTagsFalse();
-
 	filterBoxesForTags();
-
-  setTimeout(()=>{
-    $('h1').addClass('hover')
-  },2000)
+	
+	$('h1').addEventListener('mouseenter', function(e) {
+		this.classList.add('hover');
+	}, { once: true });
 });
 
