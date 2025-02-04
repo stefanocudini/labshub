@@ -31,7 +31,7 @@
 		</h1>
 		<p>
 			Created by <a href="{{pkg.author.url}}" rel="author"><b>{{pkg.author.name}}</b></a> as a showcase of projects and works about open source geospatial technologies.
-			<a class="tag sel" style="float:none;display:inline-block;" href="https://opengeo.tech/stefano-cudini/">Curriculum Vitae - Web Developer</a>
+			<a class="tag sel" style="font-weight:bold;float:none;display:inline-block;" href="https://opengeo.tech/stefano-cudini/">Curriculum Vitae - Web Developer</a>
 		</p>
 		<p>
 			This space is a playground where the more adventurous visitors can play
@@ -39,24 +39,18 @@
 			feedback directly to the author who developed them.
 			Most of the projects is freely available on <a href="https://github.com/{{pkg.author.git}}">GitHub</a>
 			distributed under <b>open source</b> license.
-			<br />
-		  If any of these open source solutions help your work and saved you time consider sending a donation
-			<form style="text-align: center;" action="https://www.paypal.com/donate" method="post" target="_top">
-				<input type="hidden" name="business" value="RK9Z26RBUTG4U" />
-				<input type="hidden" name="no_recurring" value="0" />
-				<input type="hidden" name="item_name" value="Your donation helps me keep alive the open source projects that I share for you" />
-				<input type="hidden" name="currency_code" value="EUR" />
-				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-				<img alt="" border="0" src="https://www.paypal.com/en_IT/i/scr/pixel.gif" width="1" height="1" />
-			</form>
 		</p>
 		<p>
-			This website has itself been created with an tool named <a href="https://github.com/opengeo-tech/labshub">LabsHub</a> a modern software for organizing a collection of <a href="https://docs.npmjs.com/files/package.json">NPM packages</a> by keywords.
-		</p>
-		<p>
+			<a id="xbtn" class="tag" href="https://twitter.com/{{pkg.author.twitter}}">
+				<svg viewBox="0 0 12 12" aria-hidden="true" width="10" height="10" version="1.1">
+				  <path d="M 9.450702,0 H 11.29078 L 7.2707551,5.0830769 12,12 H 8.297038 L 5.3967459,7.804923 2.0781532,12 H 0.2369629 L 4.5367821,6.5630769 0,0 H 3.7969684 L 6.4185788,3.8344615 Z M 8.804895,10.781538 H 9.824503 L 3.2429426,1.1544615 H 2.1487971 Z" />
+				</svg>
+				Follow @{{pkg.author.twitter}}
+			</a>
 			<iframe id="githubbtn" src="https://ghbtns.com/github-btn.html?user={{pkg.author.git}}&count=true&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe>
-			<a href="https://twitter.com/{{pkg.author.twitter}}?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="true">@{{pkg.author.twitter}}</a>
-			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</p>
+		<p style="color:#888;font-size:small;">
+			( this website online <a href="https://web.archive.org/web/20130516114608/http://labs.easyblog.it/">since 2013</a>, previously known as <b>labs.easyblog.it</b>. While many open-source libs may still reference the old domain, the content and author have remained unchanged )
 		</p>
 		<nav>
 		  <h2 class="grey">Sections</h2>
@@ -109,16 +103,14 @@
 
 		<section id="deactives">
 		</section>
-
+		<p>
+			This webapp has itself been created with <a href="https://github.com/opengeo-tech/labshub">LabsHub</a> a modern software for organizing NPM packages by keywords.
+		</p>
 	</article>
 
 	<footer class="blue-bg">
 		powered by <a href="https://github.com/opengeo-tech/labshub">LabsHub</a> <small>v{{pkg.version}}</small>
 	</footer>
-
-	<a id="ribbon" href="{{pkg.repository.url}}">
-		<img src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
-	</a>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>

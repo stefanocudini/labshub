@@ -102,6 +102,26 @@ h1:hover .bounce.marker2 {
 	animation-direction: initial;
 	animation-fill-mode: forwards;
 }
+#xbtn {
+	display: inline-block;
+	height: 16px;
+	font-family: 'Open Sans';
+	color: #333;
+	font-weight: bold;
+	font-size: 11px;
+	letter-spacing: 0px;
+	margin: 0 4px;
+	padding: 1px 4px;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), to(#eee));
+    background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
+    background-repeat: no-repeat;
+    border: 1px solid #d5d5d5;
+}
+#xbtn svg {
+	vertical-align: middle;
+	margin: 2px;
+}
 @keyframes bounce {
   0%,
   25%,
@@ -244,6 +264,7 @@ footer a{
 }
 #findapps:focus {
 	border:1px solid #e5edf4;
+		color: #333;
 }
 
 
@@ -402,8 +423,9 @@ footer a{
 	margin:.125em;
 	background: #fff;
 	border:1px solid #e3e3e3;
+	border-radius: 4px;
 	color:#7A738B;
-	padding:3px 6px;
+	padding:2px 6px 0;
 	text-decoration:none;
 	font-size:.85em;
 	letter-spacing: 1px;
@@ -450,6 +472,7 @@ footer a{
 	width:20%;
 	height:10em;
 	background: #fff;
+	opacity: .65;
 }
 #deactives a {
 	color: #5a6770
@@ -477,6 +500,10 @@ footer a{
 		padding: 0;
 		overflow-x: hidden;
 		font-size:1.1em;
+		line-height: 1.25em;
+	}
+	#topics {
+		padding-top: .5em;
 	}
 	#content {
 		border: none;
