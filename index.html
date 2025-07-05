@@ -1,0 +1,604 @@
+<html>
+<head>
+	<title>opengeo.tech</title>
+	<meta name="description" content="demo and open source geospatial projects" />
+	<meta name="author" content="Stefano Cudini" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="google-site-verification" content="rO0NU6dhQAZpHrpdYc8J0m55wJ7xwUk7eDO8Ahj6k5U" />
+	<link rel="image_src" href="/images/logo.png" />
+	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="/index.css" />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="opengeo.tech">
+	<meta property="og:url" content="https://opengeo.tech/">
+	<meta property="og:image" content="https://opengeo.tech/images/logo.png">
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="200" />
+	<meta property="og:image:height" content="200" />
+	<meta property="og:description" content="demo and open source projects">
+	<meta property="og:site_name" content="opengeo.tech">
+</head>
+<body>
+<div id="content">
+	<header>
+		<h1 class="orange">
+			<div class="bounce marker2"></div>
+			<div class="bounce marker1"></div>
+			<div id="logo"></div>
+			<span class="green">OpenGeo</span><span class="orange">.</span><small class="blue">tech</small>
+		</h1>
+		<p>
+			Created by <a href="https://opengeo.tech/stefano-cudini/" rel="author"><b>Stefano Cudini</b></a> as a showcase of projects and works about open source geospatial technologies.
+		</p>
+		<p style="text-align: center;">
+			<a id="cv" class="tag sel" href="https://opengeo.tech/stefano-cudini/">Curriculum Vitae - Web Developer</a>
+		</p>
+		<p style="text-align: justify">
+			This space is a playground where the more adventurous visitors can play
+			around with prototypes of some wild and crazy ideas and offer
+			feedback directly to the author who developed them.
+			Most of the projects is freely available on <a href="https://github.com/stefanocudini">GitHub</a>
+			distributed under <b>open source</b> license.
+		</p>
+		<p>
+			<a id="xbtn" class="tag" href="https://twitter.com/zakis">
+				<svg viewBox="0 0 12 12" aria-hidden="true" width="10" height="10" version="1.1">
+				  <path d="M 9.450702,0 H 11.29078 L 7.2707551,5.0830769 12,12 H 8.297038 L 5.3967459,7.804923 2.0781532,12 H 0.2369629 L 4.5367821,6.5630769 0,0 H 3.7969684 L 6.4185788,3.8344615 Z M 8.804895,10.781538 H 9.824503 L 3.2429426,1.1544615 H 2.1487971 Z" />
+				</svg>
+				Follow @zakis
+			</a>
+			<iframe id="githubbtn" src="https://ghbtns.com/github-btn.html?user=stefanocudini&count=true&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe>
+		</p>
+		<small>
+			( this website online <a href="https://web.archive.org/web/20130516114608/http://labs.easyblog.it/">since 2013</a>, previously known as <b>labs.easyblog.it</b>. While many open-source libraries may still reference the old domain, the content and author have remained unchanged )
+		</small>
+
+		<div id="donation">
+			If any of these open source solutions saved you time consider sending a donation
+			<br><br>
+			<form style="text-align: center;" action="https://www.paypal.com/donate" method="post" target="_top">
+				<input type="hidden" name="business" value="RK9Z26RBUTG4U">
+				<input type="hidden" name="no_recurring" value="0">
+				<input type="hidden" name="item_name" value="Your donation helps me keep alive the open source projects that I share for you">
+				<input type="hidden" name="currency_code" value="EUR">
+				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
+				<img alt="" src="https://www.paypal.com/en_IT/i/scr/pixel.gif" width="1" height="1">
+			</form>
+		</div>
+		<nav>
+		  <h2 class="grey">Sections</h2>
+		  <ul id="sections">
+		    <li><a href="maps/#webgis-projects"><span>Geospatial projects</span></a></li>
+		  	<li><a href="maps/#leaflet-plugins"><span>Leaflet plugins</span></a></li>
+		  	<li><a target="_blank" href="https://stefcud.medium.com/"><span>Blog</span></a></li>
+		  </ul>
+		</nav>
+
+	</header>
+
+	<article>
+
+		<section id="topics">
+			<h2 class="grey">Topics</h2>
+			<div id="tags">
+				<a class="tag" href="#ajax"><span>ajax</span></a>
+				<a class="tag" href="#api"><span>api</span></a>
+				<a class="tag" href="#bash"><span>bash</span></a>
+				<a class="tag" href="#bootstrap"><span>bootstrap</span></a>
+				<a class="tag" href="#crawler"><span>crawler</span></a>
+				<a class="tag" href="#css3"><span>css3</span></a>
+				<a class="tag" href="#debian"><span>debian</span></a>
+				<a class="tag" href="#dom"><span>dom</span></a>
+				<a class="tag" href="#elevation"><span>elevation</span></a>
+				<a class="tag" href="#fastify"><span>fastify</span></a>
+				<a class="tag" href="#fetch"><span>fetch</span></a>
+				<a class="tag" href="#gdal"><span>gdal</span></a>
+				<a class="tag" href="#geocoder"><span>geocoder</span></a>
+				<a class="tag" href="#geocoder-library"><span>geocoder-library</span></a>
+				<a class="tag" href="#geocoding"><span>geocoding</span></a>
+				<a class="tag" href="#geojson"><span>geojson</span></a>
+				<a class="tag" href="#geosocial"><span>geosocial</span></a>
+				<a class="tag" href="#geospatial"><span>geospatial</span></a>
+				<a class="tag" href="#geotiff"><span>geotiff</span></a>
+				<a class="tag" href="#gis"><span>gis</span></a>
+				<a class="tag" href="#gps"><span>gps</span></a>
+				<a class="tag" href="#gpx"><span>gpx</span></a>
+				<a class="tag" href="#gruntjs"><span>gruntjs</span></a>
+				<a class="tag" href="#html5"><span>html5</span></a>
+				<a class="tag" href="#hub"><span>hub</span></a>
+				<a class="tag" href="#javascript"><span>javascript</span></a>
+				<a class="tag" href="#jquery"><span>jquery</span></a>
+				<a class="tag" href="#jquery-ui"><span>jquery-ui</span></a>
+				<a class="tag" href="#json"><span>json</span></a>
+				<a class="tag" href="#jsonp"><span>jsonp</span></a>
+				<a class="tag" href="#keywords"><span>keywords</span></a>
+				<a class="tag" href="#leaflet"><span>leaflet</span></a>
+				<a class="tag" href="#map"><span>map</span></a>
+				<a class="tag" href="#maps"><span>maps</span></a>
+				<a class="tag" href="#meteor"><span>meteor</span></a>
+				<a class="tag" href="#mysql"><span>mysql</span></a>
+				<a class="tag" href="#nodejs"><span>nodejs</span></a>
+				<a class="tag" href="#npm"><span>npm</span></a>
+				<a class="tag" href="#ogr"><span>ogr</span></a>
+				<a class="tag" href="#openlayers"><span>openlayers</span></a>
+				<a class="tag" href="#osm"><span>osm</span></a>
+				<a class="tag" href="#pelias"><span>pelias</span></a>
+				<a class="tag" href="#php"><span>php</span></a>
+				<a class="tag" href="#postgis"><span>postgis</span></a>
+				<a class="tag" href="#raster"><span>raster</span></a>
+				<a class="tag" href="#scraping"><span>scraping</span></a>
+				<a class="tag" href="#server"><span>server</span></a>
+				<a class="tag" href="#shapefile"><span>shapefile</span></a>
+				<a class="tag" href="#site generator"><span>site generator</span></a>
+				<a class="tag" href="#tags"><span>tags</span></a>
+				<a class="tag" href="#websocket"><span>websocket</span></a>
+			</div>
+		</section>
+
+		<section id="apps">
+			<h2 class="grey">Applications</h2>
+			<input id="findapps" class="grey" type="text" size="16" />
+			<div id="actives">
+				<div class="box" data-name="keplerJs" data-title="Kepler js" data-tags="geosocial,gis,javascript,map,meteor,nodejs,osm">
+					<h3 class="title"><a href="https://kepler.opengeo.tech/">Kepler js</a></h3>
+					<a class="icon repo " title="Github repository" target="_blank" href="https://github.com/Keplerjs"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">The open source full-stack geosocial network platform</p>
+					<div class="tags">
+						<a class="tag" href="#geosocial"><span>geosocial</span></a>
+						<a class="tag" href="#gis"><span>gis</span></a>
+						<a class="tag" href="#javascript"><span>javascript</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+						<a class="tag" href="#meteor"><span>meteor</span></a>
+						<a class="tag" href="#nodejs"><span>nodejs</span></a>
+						<a class="tag" href="#osm"><span>osm</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="geopicker" data-title="Geopicker" data-tags="api,elevation,fastify,gdal,geospatial,geotiff,gis,maps,ogr,raster,shapefile">
+					<h3 class="title"><a href="geopicker">Geopicker</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/opengeo-tech/geopicker"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">Geospatial data picker via fast http rest interface</p>
+					<div class="tags">
+						<a class="tag" href="#api"><span>api</span></a>
+						<a class="tag" href="#elevation"><span>elevation</span></a>
+						<a class="tag" href="#fastify"><span>fastify</span></a>
+						<a class="tag" href="#gdal"><span>gdal</span></a>
+						<a class="tag" href="#geospatial"><span>geospatial</span></a>
+						<a class="tag" href="#geotiff"><span>geotiff</span></a>
+						<a class="tag" href="#gis"><span>gis</span></a>
+						<a class="tag" href="#maps"><span>maps</span></a>
+						<a class="tag" href="#ogr"><span>ogr</span></a>
+						<a class="tag" href="#raster"><span>raster</span></a>
+						<a class="tag" href="#shapefile"><span>shapefile</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="peliaslite" data-title="Peliaslite" data-tags="geocoder,geocoder-library,geocoding,geospatial,gis,pelias">
+					<h3 class="title"><a href="https://github.com/stefanocudini/PeliasLite">Peliaslite</a></h3>
+					<a class="icon repo " title="Github repository" target="_blank" href="https://github.com/stefanocudini/PeliasLite"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">Minimal Single Service Interface of Pelias Geocoder in Nodejs</p>
+					<div class="tags">
+						<a class="tag" href="#geocoder"><span>geocoder</span></a>
+						<a class="tag" href="#geocoder-library"><span>geocoder-library</span></a>
+						<a class="tag" href="#geocoding"><span>geocoding</span></a>
+						<a class="tag" href="#geospatial"><span>geospatial</span></a>
+						<a class="tag" href="#gis"><span>gis</span></a>
+						<a class="tag" href="#pelias"><span>pelias</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="node-fetch-dom" data-title="Node fetch dom" data-tags="crawler,dom,fetch,nodejs,scraping">
+					<h3 class="title"><a href="node-fetch-dom">Node fetch dom</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="git+https://github.com/stefanocudini/node-fetch-dom"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">Magic utility that extract javascript global variables from a remote html page.</p>
+					<div class="tags">
+						<a class="tag" href="#crawler"><span>crawler</span></a>
+						<a class="tag" href="#dom"><span>dom</span></a>
+						<a class="tag" href="#fetch"><span>fetch</span></a>
+						<a class="tag" href="#nodejs"><span>nodejs</span></a>
+						<a class="tag" href="#scraping"><span>scraping</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="mixtags.com" data-title="Mixtags.com" data-tags="css3,gruntjs,html5,jquery,json,mysql,php">
+					<h3 class="title"><a href="https://mixtags.com/">Mixtags.com</a></h3>
+					<a class="icon repo " title="Github repository" target="_blank" href="https://github.com/mixtags"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">Advanced service of bookmarking with folksonomy</p>
+					<div class="tags">
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#gruntjs"><span>gruntjs</span></a>
+						<a class="tag" href="#html5"><span>html5</span></a>
+						<a class="tag" href="#jquery"><span>jquery</span></a>
+						<a class="tag" href="#json"><span>json</span></a>
+						<a class="tag" href="#mysql"><span>mysql</span></a>
+						<a class="tag" href="#php"><span>php</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="Leaflet Control Search" data-title="Leaflet control search" data-tags="ajax,css3,json,jsonp,leaflet,map">
+					<h3 class="title"><a href="maps/leaflet-search">Leaflet control search</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/leaflet-search"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">Leaflet Control for searching markers/features by attribute on map or remote searching in jsonp/ajax</p>
+					<div class="tags">
+						<a class="tag" href="#ajax"><span>ajax</span></a>
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#json"><span>json</span></a>
+						<a class="tag" href="#jsonp"><span>jsonp</span></a>
+						<a class="tag" href="#leaflet"><span>leaflet</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="leaflet-panel-layers" data-title="Leaflet panel layers" data-tags="css3,json,leaflet,map">
+					<h3 class="title"><a href="maps/leaflet-panel-layers">Leaflet panel layers</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/leaflet-panel-layers"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">Leaflet Control Layers extended for group of layers and icons legend</p>
+					<div class="tags">
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#json"><span>json</span></a>
+						<a class="tag" href="#leaflet"><span>leaflet</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="leaflet-layerjson" data-title="Leaflet layerjson" data-tags="ajax,css3,json,jsonp,leaflet,map">
+					<h3 class="title"><a href="maps/leaflet-layerjson">Leaflet layerjson</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/leaflet-layerjson"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">A Dynamic Leaflet Layer that load/filter dinamically JSON data from Ajax/Jsonp, with caching</p>
+					<div class="tags">
+						<a class="tag" href="#ajax"><span>ajax</span></a>
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#json"><span>json</span></a>
+						<a class="tag" href="#jsonp"><span>jsonp</span></a>
+						<a class="tag" href="#leaflet"><span>leaflet</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="leaflet-gps" data-title="Leaflet gps" data-tags="ajax,css3,gps,html5,json,jsonp,leaflet,map">
+					<h3 class="title"><a href="maps/leaflet-gps">Leaflet gps</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/leaflet-gps"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">Leaflet Control plugin for tracking gps position, with more options</p>
+					<div class="tags">
+						<a class="tag" href="#ajax"><span>ajax</span></a>
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#gps"><span>gps</span></a>
+						<a class="tag" href="#html5"><span>html5</span></a>
+						<a class="tag" href="#json"><span>json</span></a>
+						<a class="tag" href="#jsonp"><span>jsonp</span></a>
+						<a class="tag" href="#leaflet"><span>leaflet</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="leaflet-compass" data-title="Leaflet compass" data-tags="css3,html5,leaflet,map">
+					<h3 class="title"><a href="maps/leaflet-compass">Leaflet compass</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/leaflet-compass"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">A leaflet control plugin to make simple rotating compass</p>
+					<div class="tags">
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#html5"><span>html5</span></a>
+						<a class="tag" href="#leaflet"><span>leaflet</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="gpsdata-server" data-title="Gpsdata server" data-tags="bash,debian,gps,mysql,nodejs,server,websocket">
+					<h3 class="title"><a href="maps/gpsdata-server">Gpsdata server</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/gpsdata-server"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">NodeJs daemon for remote data acquisitions from mobile devices</p>
+					<div class="tags">
+						<a class="tag" href="#bash"><span>bash</span></a>
+						<a class="tag" href="#debian"><span>debian</span></a>
+						<a class="tag" href="#gps"><span>gps</span></a>
+						<a class="tag" href="#mysql"><span>mysql</span></a>
+						<a class="tag" href="#nodejs"><span>nodejs</span></a>
+						<a class="tag" href="#server"><span>server</span></a>
+						<a class="tag" href="#websocket"><span>websocket</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="gps-network-tracking-system" data-title="Gps network tracking system" data-tags="ajax,gis,gps,jquery-ui,map,openlayers,postgis,server">
+					<h3 class="title"><a href="maps/gps-network-tracking-system">Gps network tracking system</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/gps-network-tracking-system"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">GPS tracking system of remote multiple devices and tracks spatial search</p>
+					<div class="tags">
+						<a class="tag" href="#ajax"><span>ajax</span></a>
+						<a class="tag" href="#gis"><span>gis</span></a>
+						<a class="tag" href="#gps"><span>gps</span></a>
+						<a class="tag" href="#jquery-ui"><span>jquery-ui</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+						<a class="tag" href="#openlayers"><span>openlayers</span></a>
+						<a class="tag" href="#postgis"><span>postgis</span></a>
+						<a class="tag" href="#server"><span>server</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="gpx-simplify-optimizer" data-title="Gpx simplify optimizer" data-tags="bootstrap,gis,html5,leaflet,map">
+					<h3 class="title"><a href="gpx-simplify-optimizer">Gpx simplify optimizer</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/gpx-simplify-optimizer"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+					</div>
+					<p class="desc">Online Simplifier and Optimizer for GPX tracks.</p>
+					<div class="tags">
+						<a class="tag" href="#bootstrap"><span>bootstrap</span></a>
+						<a class="tag" href="#gis"><span>gis</span></a>
+						<a class="tag" href="#html5"><span>html5</span></a>
+						<a class="tag" href="#leaflet"><span>leaflet</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="ultra-light-gallery" data-title="Ultra light gallery" data-tags="ajax,css3,jquery">
+					<h3 class="title"><a href="https://github.com/stefanocudini/UltraLightGallery">Ultra light gallery</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="git@github.com/stefanocudini/UltraLightGallery"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">Lightweight database-less Gallery written in PHP/Javascript</p>
+					<div class="tags">
+						<a class="tag" href="#ajax"><span>ajax</span></a>
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#jquery"><span>jquery</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="leaflet-locationpicker" data-title="Leaflet locationpicker" data-tags="gps,gpx,leaflet,map">
+					<h3 class="title"><a href="maps/leaflet-locationpicker">Leaflet locationpicker</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/leaflet-locationpicker"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">Simple location picker with Leaflet map</p>
+					<div class="tags">
+						<a class="tag" href="#gps"><span>gps</span></a>
+						<a class="tag" href="#gpx"><span>gpx</span></a>
+						<a class="tag" href="#leaflet"><span>leaflet</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="leaflet-geojson-selector" data-title="Leaflet geojson selector" data-tags="geojson,gis,leaflet,map">
+					<h3 class="title"><a href="maps/leaflet-geojson-selector">Leaflet geojson selector</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/leaflet-geojson-selector"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">Leaflet Control for select GeoJSON properties in a interactive menu and map</p>
+					<div class="tags">
+						<a class="tag" href="#geojson"><span>geojson</span></a>
+						<a class="tag" href="#gis"><span>gis</span></a>
+						<a class="tag" href="#leaflet"><span>leaflet</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="bootstrap-list-filter" data-title="Bootstrap list filter" data-tags="bootstrap,css3,jquery">
+					<h3 class="title"><a href="bootstrap-list-filter">Bootstrap list filter</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/bootstrap-list-filter"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">Search elements in Bootstrap lists</p>
+					<div class="tags">
+						<a class="tag" href="#bootstrap"><span>bootstrap</span></a>
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#jquery"><span>jquery</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="bootstrap-confirm-button" data-title="Bootstrap confirm button" data-tags="bootstrap,css3,jquery">
+					<h3 class="title"><a href="bootstrap-confirm-button">Bootstrap confirm button</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/bootstrap-confirm-button"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star orange ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">A simple button to confirm a task, inline unobtrusive button confirmation</p>
+					<div class="tags">
+						<a class="tag" href="#bootstrap"><span>bootstrap</span></a>
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#jquery"><span>jquery</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="scacchi" data-title="Scacchi" data-tags="jquery,php,websocket">
+					<h3 class="title"><a href="https://github.com/stefanocudini/websocket-chess">Scacchi</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/scacchi"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star grey ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">Chess game multiplayer online via websocket</p>
+					<div class="tags">
+						<a class="tag" href="#jquery"><span>jquery</span></a>
+						<a class="tag" href="#php"><span>php</span></a>
+						<a class="tag" href="#websocket"><span>websocket</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="share-tracks" data-title="Share tracks" data-tags="gpx,leaflet,map">
+					<h3 class="title"><a href="maps/share-tracks">Share tracks</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/share-tracks"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star grey ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">Share and Embedding GPX tracks online</p>
+					<div class="tags">
+						<a class="tag" href="#gpx"><span>gpx</span></a>
+						<a class="tag" href="#leaflet"><span>leaflet</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="leaflet-loader" data-title="Leaflet loader" data-tags="css3,json,leaflet,map">
+					<h3 class="title"><a href="maps/leaflet-loader">Leaflet loader</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/leaflet-loader"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star grey ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">Simple control to show a gif loader to the center of the map</p>
+					<div class="tags">
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#json"><span>json</span></a>
+						<a class="tag" href="#leaflet"><span>leaflet</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="leaflet-list-markers" data-title="Leaflet list markers" data-tags="css3,json,leaflet,map">
+					<h3 class="title"><a href="maps/leaflet-list-markers">Leaflet list markers</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/leaflet-list-markers"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star grey ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">Leaflet Control for listing visible markers/features in a interactive box</p>
+					<div class="tags">
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#json"><span>json</span></a>
+						<a class="tag" href="#leaflet"><span>leaflet</span></a>
+						<a class="tag" href="#map"><span>map</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="json-indent-beautifier" data-title="Json indent beautifier" data-tags="ajax,javascript,json,php">
+					<h3 class="title"><a href="json-indent-beautifier">Json indent beautifier</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/json-indent-beautifier"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star grey ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">Simple and interactive JSON beatifier online</p>
+					<div class="tags">
+						<a class="tag" href="#ajax"><span>ajax</span></a>
+						<a class="tag" href="#javascript"><span>javascript</span></a>
+						<a class="tag" href="#json"><span>json</span></a>
+						<a class="tag" href="#php"><span>php</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="dns-320-command-line" data-title="Dns 320 command line" data-tags="bash,php">
+					<h3 class="title"><a href="dns-320-command-line">Dns 320 command line</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/stefanocudini/dns-320-command-line"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star orange ">*</i>
+						<i class="icon star grey ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">command-line interface for d-link sharecenter dns-320</p>
+					<div class="tags">
+						<a class="tag" href="#bash"><span>bash</span></a>
+						<a class="tag" href="#php"><span>php</span></a>
+					</div>
+				</div>
+				<div class="box" data-name="labshub" data-title="Labshub" data-tags="css3,html5,hub,keywords,npm,site generator,tags">
+					<h3 class="title"><a href=".">Labshub</a></h3>
+					<a class="icon repo git" title="Github repository" target="_blank" href="https://github.com/opengeo-tech/labshub"></a>
+					<div class="stars" title="complexity">
+						<i class="icon star grey ">*</i>
+						<i class="icon star grey ">*</i>
+						<i class="icon star grey ">*</i>
+					</div>
+					<p class="desc">A static site generator to create an Hub to organizing a set of NPM packages by keywords</p>
+					<div class="tags">
+						<a class="tag" href="#css3"><span>css3</span></a>
+						<a class="tag" href="#html5"><span>html5</span></a>
+						<a class="tag" href="#hub"><span>hub</span></a>
+						<a class="tag" href="#keywords"><span>keywords</span></a>
+						<a class="tag" href="#npm"><span>npm</span></a>
+						<a class="tag" href="#site generator"><span>site generator</span></a>
+						<a class="tag" href="#tags"><span>tags</span></a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="deactives">
+		</section>
+		<p>
+			This webapp has itself been created with <a href="https://github.com/opengeo-tech/labshub">LabsHub</a> a modern software for organizing NPM packages by keywords.
+		</p>
+	</article>
+
+	<footer class="blue-bg">
+		powered by <a href="https://github.com/opengeo-tech/labshub">LabsHub</a> <small>v0.7.5</small>
+	</footer>
+</div>
+
+<!--script src="https://code.jquery.com/jquery-3.0.0.min.js"></script-->
+<script>
+	var allTags = {"ajax":0,"api":0,"bash":0,"bootstrap":0,"crawler":0,"css3":0,"debian":0,"dom":0,"elevation":0,"fastify":0,"fetch":0,"gdal":0,"geocoder":0,"geocoder-library":0,"geocoding":0,"geojson":0,"geosocial":0,"geospatial":0,"geotiff":0,"gis":0,"gps":0,"gpx":0,"gruntjs":0,"html5":0,"hub":0,"javascript":0,"jquery":0,"jquery-ui":0,"json":0,"jsonp":0,"keywords":0,"leaflet":0,"map":0,"maps":0,"meteor":0,"mysql":0,"nodejs":0,"npm":0,"ogr":0,"openlayers":0,"osm":0,"pelias":0,"php":0,"postgis":0,"raster":0,"scraping":0,"server":0,"shapefile":0,"site generator":0,"tags":0,"websocket":0};
+</script>
+<script src="index.js"></script>
+<!--script>
+	$(function() {
+		$('header').on('mouseenter',function(e) {
+			const $el = $(this);
+			$el.find('h1').addClass('hover');
+			setTimeout(() => {
+				$el.find('h1').addClass('hover');
+			}, 250)
+		})
+	})
+</script-->
+
+</body>
+</html>

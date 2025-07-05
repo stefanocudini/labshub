@@ -7,6 +7,8 @@ body {
 	line-height: 1.3em;
 	background-color: #e3ece9;
 	background-image: url('images/backmap.jpg');
+
+		position: relative;
 }
 .green {
 	color: rgb(154,204,4,1);
@@ -36,6 +38,9 @@ a {
 a:hover {
 	text-decoration:underline;
 }
+header {
+		position: relative;
+}
 h1 {
 	display: inline;
 	font-weight: normal;
@@ -59,7 +64,7 @@ h1 big {
 	background-position: 0 -300px;
 }
 .bounce {
-	position: fixed;
+	position: absolute;
 	background-image: url('images/logo.svg');
 	background-repeat: no-repeat;
 }
@@ -112,11 +117,11 @@ h1:hover .bounce.marker2 {
 	letter-spacing: 0px;
 	margin: 0 4px;
 	padding: 1px 4px;
-    background-color: #eee;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), to(#eee));
-    background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
-    background-repeat: no-repeat;
-    border: 1px solid #d5d5d5;
+  background-color: #eee;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), to(#eee));
+  background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
+  background-repeat: no-repeat;
+  border: 1px solid #d5d5d5;
 }
 #xbtn svg {
 	vertical-align: middle;
@@ -137,6 +142,8 @@ h1:hover .bounce.marker2 {
     transform: translateY(-12px);
   }
 }
+
+
 @keyframes colors {
   from {
   	filter: hue-rotate(360deg);
@@ -257,9 +264,9 @@ footer a{
 	border:1px solid #e5edf4;
     background:#fff;
 	margin: 10px 0 2px 0;
-	background:url('images/sprite.png') no-repeat 0 -26px;
-	padding-left:26px;
-	height:24px;
+	background:url('images/sprite.png') no-repeat 3px -24px;
+	padding: 6px 6px 6px 30px;
+	height:30px;
 	line-height:24px;
 }
 #findapps:focus {
@@ -320,14 +327,15 @@ footer a{
 	user-select: none;	
 }
 .box {
-	position:relative;
-	float:left;
-	width:25%;
-	height:12em;
-	margin:10px;
-	padding:16px;
+	position: relative;
+	float: left;
+	width: calc((100% - 60px) / 3); /* 2*margin (10px each side per box, 3 boxes per row: 4 gaps) */
+	height: 14em;
+	margin: 10px;
+	padding: 16px;
 	border: 1px dotted rgb(114,145,169,1);
 	/*background-image: radial-gradient(farthest-side at left top, #f4f4f4, rgba(244,244,244,0))*/
+	box-sizing: border-box;
 }
 .box:before {
 	content: '';
@@ -402,7 +410,7 @@ footer a{
 	display: inline-block;
 	clear:both;
 	height: 3.8em;
-	font-size:1em;
+	font-size:.85em;
 	color: #888;
 	padding:0;
 	margin:4px 0;
@@ -433,10 +441,7 @@ footer a{
 .tag span:before {
 	font-size: 18px;
 	vertical-align: middle;
-	line-height: 15px;
-	margin-left: -4px;	
-/*	content: '∘';	
-	content: '#';	*/
+	margin-left: -4px
 	color: #e3e3e3;
 }
 #tags a.tag {
@@ -465,12 +470,23 @@ footer a{
 .tag.sel:hover {
 	background:#fec;
 }
+#cv.tag.sel {
+	font-weight:bold;
+	float:none;
+	display:inline-block;
+}
+#donation {
+	text-align: center;
+	margin: 10px -18px;
+	padding: 5px;
+	background: rgba(255, 170, 0, 0.278);
+}
 
 #deactives .box {
 	color: #666;
 	font-size:.85em;
 	width:20%;
-	height:10em;
+	height:12em;
 	background: #fff;
 	opacity: .65;
 }
