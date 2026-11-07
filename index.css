@@ -550,6 +550,9 @@ footer a{
 		float: none;
 		width: auto;
 	}
+	.box .tags {
+		display: none;
+	}
 }
 
 
