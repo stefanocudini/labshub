@@ -3,7 +3,7 @@ maps/index.html
 sitemap.xml
 npm-debug.log
 node_modules
-*/*
+/*/
 packages*
 d.js
 redir.php
